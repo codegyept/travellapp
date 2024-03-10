@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
+import 'package:rehlatyuae/features/splash_screen/presentation/views/splash_screen.dart';
 
-import '../../features/splash_screen/presentaion/views/splash_screen.dart';
 
 abstract class AppRouter {
   static final router = GoRouter(
