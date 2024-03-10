@@ -23,6 +23,9 @@ class MyApp extends StatelessWidget {
         builder:(context,child)
         {
           return MaterialApp.router(
+            theme: ThemeData(
+              fontFamily: "Switzer"
+            ),
             debugShowCheckedModeBanner:false,
             routerConfig:AppRouter.router,
           );
