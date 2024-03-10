@@ -1,4 +1,7 @@
 import 'package:go_router/go_router.dart';
+
+import 'package:rehlatyuae/features/splash_screen/presentation/views/splash_screen.dart';
+
 import 'package:rehlatyuae/features/home_screen/presentaion/views/about_us_screen.dart';
 import 'package:rehlatyuae/features/home_screen/presentaion/views/faq_screen.dart';
 import 'package:rehlatyuae/features/home_screen/presentaion/views/payment_options_step1_screen.dart';
@@ -6,7 +9,7 @@ import 'package:rehlatyuae/features/home_screen/presentaion/views/payment_option
 import 'package:rehlatyuae/features/home_screen/presentaion/views/privacy_policy_screen.dart';
 import 'package:rehlatyuae/features/home_screen/presentaion/views/terms_conditions_screen.dart';
 
-import '../../features/splash_screen/presentaion/views/splash_screen.dart';
+
 
 abstract class AppRouter {
   static final router = GoRouter(
