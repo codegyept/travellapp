@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
+import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/custom_text_button.dart';
 import 'package:rehlatyuae/features/home_screen/presentaion/components/number_ticket_card.dart';
 
@@ -35,14 +37,18 @@ class _PaymentOptionsStep1ScreenState extends State<PaymentOptionsStep1Screen> {
             children: [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 20.h),
-                child: const Text(
-                  "Select Number off ticket",
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w700,
-                    height: 1.25,
-                  ),
+                child: const Column(
+                  children: [
+                    Text(
+                      "Select Number off ticket",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700,
+                        height: 1.25,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               CountTicketCard(
@@ -58,10 +64,10 @@ class _PaymentOptionsStep1ScreenState extends State<PaymentOptionsStep1Screen> {
                 onDecreasePressed: adultNumber <= 1
                     ? null
                     : () {
-                  setState(() {
-                    --adultNumber;
-                  });
-                },
+                        setState(() {
+                          --adultNumber;
+                        });
+                      },
               ),
               CountTicketCard(
                 name: 'Children',
@@ -76,10 +82,10 @@ class _PaymentOptionsStep1ScreenState extends State<PaymentOptionsStep1Screen> {
                 onDecreasePressed: childCount <= 0
                     ? null
                     : () {
-                  setState(() {
-                    --childCount;
-                  });
-                },
+                        setState(() {
+                          --childCount;
+                        });
+                      },
               ),
             ],
           ),
@@ -112,10 +118,17 @@ class _PaymentOptionsStep1ScreenState extends State<PaymentOptionsStep1Screen> {
                     )
                   ],
                 ),
-                const DefaultTextButton(
-                  onPressed: null,
-                  text: "Next payment",
-                )
+                CustomActionButton(
+                  text: 'Next payment',
+                  borderRadius: BorderRadius.circular(16),
+                  backGroundColor: AppColors.textAndBackgroundColorButton,
+                  onTap: () {
+                    context.push('/paymentOptionsStep2Screen');
+                  },
+                  style: const TextStyle(color: AppColors.white),
+                  width: 160,
+                  height: 50,
+                ),
               ],
             ),
           ),
