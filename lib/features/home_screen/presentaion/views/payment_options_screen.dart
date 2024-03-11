@@ -6,14 +6,14 @@ import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/custom_text_button.dart';
 import 'package:rehlatyuae/features/home_screen/presentaion/components/number_ticket_card.dart';
 
-class PaymentOptionsStep1Screen extends StatefulWidget {
-  const PaymentOptionsStep1Screen({super.key});
+class PaymentOptionsScreen extends StatefulWidget {
+  const PaymentOptionsScreen({super.key});
 
   @override
-  State<PaymentOptionsStep1Screen> createState() => _PaymentOptionsStep1ScreenState();
+  State<PaymentOptionsScreen> createState() => _PaymentOptionsScreenState();
 }
 
-class _PaymentOptionsStep1ScreenState extends State<PaymentOptionsStep1Screen> {
+class _PaymentOptionsScreenState extends State<PaymentOptionsScreen> {
   String selectedCard = '';
   int adultNumber = 1, childCount = 0;
 

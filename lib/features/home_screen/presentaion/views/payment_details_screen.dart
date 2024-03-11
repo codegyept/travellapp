@@ -8,14 +8,14 @@ import 'package:rehlatyuae/core/utils/custom_text_button.dart';
 import 'package:rehlatyuae/features/home_screen/presentaion/components/cusotm_bottom_sheet.dart';
 import 'package:rehlatyuae/features/home_screen/presentaion/components/cusotm_radio_tile.dart';
 
-class PaymentOptionsStep2Screen extends StatefulWidget {
-  const PaymentOptionsStep2Screen({super.key});
+class PaymentDetailsScreen extends StatefulWidget {
+  const PaymentDetailsScreen({super.key});
 
   @override
-  State<PaymentOptionsStep2Screen> createState() => _PaymentOptionsStep2ScreenState();
+  State<PaymentDetailsScreen> createState() => _PaymentDetailsScreenState();
 }
 
-class _PaymentOptionsStep2ScreenState extends State<PaymentOptionsStep2Screen> {
+class _PaymentDetailsScreenState extends State<PaymentDetailsScreen> {
   String selectedCard = '';
   int adultNumber = 1, childCount = 0;
 
