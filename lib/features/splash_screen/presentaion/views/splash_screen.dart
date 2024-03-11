@@ -1,6 +1,4 @@
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:rehlatyuae/features/splash_screen/presentaion/views/onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
