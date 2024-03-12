@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/custom_circle_avatar.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/row_details.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/row_details.dart';
 
 class CustomBottomSheet extends StatelessWidget {
   final String totalPayment;

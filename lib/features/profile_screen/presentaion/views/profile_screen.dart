@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/custom_circle_avatar.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/profile_card_details.dart';
+import 'package:rehlatyuae/features/profile_screen/presentaion/views/widgets/profile_card_details.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

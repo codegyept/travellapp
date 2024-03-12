@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/custom_expansion_tile.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/title_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/title_section.dart';
 
 class FAQsScreen extends StatelessWidget {
   const FAQsScreen({super.key});

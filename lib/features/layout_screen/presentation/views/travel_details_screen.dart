@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/custom_expansion_tile.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/bolg_travel_title_section.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/preview_travels_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/bolg_travel_title_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/preview_travels_section.dart';
 
 class TravelDetailsScreen extends StatelessWidget {
   const TravelDetailsScreen({super.key});

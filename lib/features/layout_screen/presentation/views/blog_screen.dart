@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/comment_card.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/bolg_travel_title_section.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/preview_travels_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/bolg_travel_title_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/preview_travels_section.dart';
 
 class BlogScreen extends StatelessWidget {
   const BlogScreen({super.key});
