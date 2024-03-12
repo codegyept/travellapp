@@ -1,13 +1,13 @@
 import 'package:go_router/go_router.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/views/about_us_screen.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/views/blog_screen.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/views/faq_screen.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/views/payment_details_screen.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/views/payment_options_screen.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/views/privacy_policy_screen.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/views/profile_screen.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/views/terms_conditions_screen.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/views/travel_details_screen.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/about_us_screen.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/blog_screen.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/faq_screen.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/payment_details_screen.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/payment_options_screen.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/privacy_policy_screen.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/terms_conditions_screen.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/travel_details_screen.dart';
+import 'package:rehlatyuae/features/profile_screen/presentaion/views/profile_screen.dart';
 import 'package:rehlatyuae/features/splash_screen/presentation/views/splash_screen.dart';
 
 abstract class AppRouter {

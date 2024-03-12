@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/custom_text_button.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/number_ticket_card.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/number_ticket_card.dart';
 
 class PaymentOptionsScreen extends StatefulWidget {
   const PaymentOptionsScreen({super.key});
