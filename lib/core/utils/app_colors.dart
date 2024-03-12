@@ -11,6 +11,7 @@ class AppColors
   static const blogItemBackgroundColor= Color(0xff000000);
   static const blogItemContainerBackgroundColor= Color(0xff00a6e7);
   static const backgroundColorExpansionAndText = Color(0xFF263238);
+  static const grayLight = Color(0xFF8D94A2);
   static const white = Colors.white;
   static const backgroundWhite = Color(0xFFFAFAFA);
   static const backgroundAvatarPayment = Color(0xFFAE9F60);
