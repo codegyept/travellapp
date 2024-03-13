@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
@@ -24,7 +25,9 @@ class ProfileScreen extends StatelessWidget {
         ),
         actions: [
           DefaultTextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.push('/editProfileScreen');
+            },
             text: "Edit",
           ),
         ],
@@ -138,7 +141,9 @@ class ProfileScreen extends StatelessWidget {
               alignment: Alignment.center,
               padding: EdgeInsets.only(top: 10.h),
               child: DefaultTextButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.push('/verificationScreen');
+                },
                 text: "Reset Password",
               ),
             ),
