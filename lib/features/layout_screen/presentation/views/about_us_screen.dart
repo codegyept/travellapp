@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/custom_expansion_tile.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/preview_travels_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/experiences_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/title_section.dart';
 
 class AboutUsScreen extends StatelessWidget {
@@ -56,7 +57,8 @@ class AboutUsScreen extends StatelessWidget {
             title: "Number of evaluations received",
             content: "1000+ Reviews on Rehlatyuae by our Travelers",
           ),
-          const PreviewTravelsSection(imagesPaths: []),
+          const PreviewTravelsSection(),
+          const ExperiencesSections(),
         ],
       ),
     );

@@ -1,7 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
-import 'package:rehlatyuae/core/utils/icon_button_with_white_background.dart';
+import 'package:rehlatyuae/core/utils/custom_icon_button.dart';
 
 class CustomContainerTrip extends StatelessWidget {
   const CustomContainerTrip({
@@ -23,22 +24,17 @@ class CustomContainerTrip extends StatelessWidget {
             borderRadius: BorderRadiusDirectional.circular(15.0.r),
           ),
           child: Image.asset(
-            "assets/images/Rectangle 427.png",
+            'assets/images/preview1.png',
             fit: BoxFit.cover,
           ),
         ),
         Positioned(
           top: 10,
           right: 18,
-          child: IconButtonWithWhiteBackground(
+          child: CustomIconButton(
+            icon: CupertinoIcons.heart,
+            iconColor: AppColors.redAppColor,
             onPressed: () {},
-            width: 40.0.w,
-            height: 48.0.h,
-            icon: Icon(
-              Icons.favorite_outline,
-              color: AppColors.redAppColor,
-              size: 28.0.sp,
-            ),
           ),
         ),
         Positioned(
@@ -47,7 +43,7 @@ class CustomContainerTrip extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "Dubai",
                 style: TextStyle(color: AppColors.whiteAppColor),
               ),
