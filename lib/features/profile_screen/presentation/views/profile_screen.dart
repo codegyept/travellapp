@@ -7,7 +7,7 @@ import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/custom_circle_avatar.dart';
 import 'package:rehlatyuae/core/utils/custom_text_button.dart';
-import 'package:rehlatyuae/features/profile_screen/presentaion/views/widgets/profile_card_details.dart';
+import 'package:rehlatyuae/features/profile_screen/presentation/views/widgets/profile_card_details.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

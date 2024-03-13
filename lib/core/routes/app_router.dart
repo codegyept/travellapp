@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
-import 'package:rehlatyuae/features/auth_screen/presentaion/views/reset_password_screen.dart';
-import 'package:rehlatyuae/features/auth_screen/presentaion/views/verification_screen.dart';
-import 'package:rehlatyuae/features/auth_screen/presentaion/views/widgets/forget_password_screen.dart';
+import 'package:rehlatyuae/features/auth_screen/presentation/views/reset_password_screen.dart';
+import 'package:rehlatyuae/features/auth_screen/presentation/views/verification_screen.dart';
+import 'package:rehlatyuae/features/auth_screen/presentation/views/widgets/forget_password_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/about_us_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/blog_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/faq_screen.dart';
@@ -10,8 +10,8 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/payment_opt
 import 'package:rehlatyuae/features/layout_screen/presentation/views/privacy_policy_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/terms_conditions_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/travel_details_screen.dart';
-import 'package:rehlatyuae/features/profile_screen/presentaion/views/edit_profile_screen.dart';
-import 'package:rehlatyuae/features/profile_screen/presentaion/views/profile_screen.dart';
+import 'package:rehlatyuae/features/profile_screen/presentation/views/edit_profile_screen.dart';
+import 'package:rehlatyuae/features/profile_screen/presentation/views/profile_screen.dart';
 import 'package:rehlatyuae/features/splash_screen/presentation/views/splash_screen.dart';
 
 abstract class AppRouter {
