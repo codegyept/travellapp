@@ -1,4 +1,7 @@
 import 'package:go_router/go_router.dart';
+import 'package:rehlatyuae/features/auth_screen/presentaion/views/reset_password_screen.dart';
+import 'package:rehlatyuae/features/auth_screen/presentaion/views/verification_screen.dart';
+import 'package:rehlatyuae/features/auth_screen/presentaion/views/widgets/forget_password_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/about_us_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/blog_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/faq_screen.dart';
@@ -7,6 +10,7 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/payment_opt
 import 'package:rehlatyuae/features/layout_screen/presentation/views/privacy_policy_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/terms_conditions_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/travel_details_screen.dart';
+import 'package:rehlatyuae/features/profile_screen/presentaion/views/edit_profile_screen.dart';
 import 'package:rehlatyuae/features/profile_screen/presentaion/views/profile_screen.dart';
 import 'package:rehlatyuae/features/splash_screen/presentation/views/splash_screen.dart';
 
@@ -46,12 +50,28 @@ abstract class AppRouter {
         builder: (context, state) => const ProfileScreen(),
       ),
       GoRoute(
+        path: "/editProfileScreen",
+        builder: (context, state) => const EditProfileScreen(),
+      ),
+      GoRoute(
         path: "/travelDetailsScreen",
         builder: (context, state) => const TravelDetailsScreen(),
       ),
       GoRoute(
         path: "/blogScreen",
         builder: (context, state) => const BlogScreen(),
+      ),
+      GoRoute(
+        path: "/verificationScreen",
+        builder: (context, state) => const VerificationScreen(),
+      ),
+      GoRoute(
+        path: "/resetPasswordScreen",
+        builder: (context, state) => const ResetPasswordScreen(),
+      ),
+      GoRoute(
+        path: "/forgetPasswordScreen",
+        builder: (context, state) => const ForgetPasswordScreen(),
       ),
     ],
   );
