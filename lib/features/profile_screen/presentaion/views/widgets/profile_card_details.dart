@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rehlatyuae/core/utils/custom_text_button.dart';
 
 class ProfileCardDetails extends StatelessWidget {
   final String title;
@@ -16,37 +15,28 @@ class ProfileCardDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 15,
-                  color: Color(0xFF606060),
-                  fontWeight: FontWeight.w400,
-                  height: 1.3,
-                ),
-              ),
-              SizedBox(
-                height: 7.h,
-              ),
-              Text(
-                value,
-                style: TextStyle(
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ],
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 15,
+              color: Color(0xFF606060),
+              fontWeight: FontWeight.w400,
+              height: 1.3,
+            ),
           ),
-          DefaultTextButton(
-            onPressed: () {},
-            text: "Edit",
-          )
+          SizedBox(
+            height: 7.h,
+          ),
+          Text(
+            value,
+            style: TextStyle(
+              fontSize: 12.sp,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
         ],
       ),
     );
