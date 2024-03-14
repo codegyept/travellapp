@@ -26,13 +26,13 @@ class _CustomOTPTextFieldState extends State<CustomOTPTextField> {
         child: RawKeyboardListener(
           focusNode: focusNode,
           onKey: (value) {
-            if (otp.isNotEmpty && value.data.logicalKey.keyLabel == "Backspace") {
-              List.generate(
-                6,
-                (index) => otpFieldController.setValue('', index),
-              );
-              otpFieldController.setFocus(0);
-            }
+            // if (otp.isNotEmpty && value.data.logicalKey.keyLabel == "Backspace") {
+            //   List.generate(
+            //     6,
+            //     (index) => otpFieldController.setValue('', index),
+            //   );
+            //   otpFieldController.setFocus(0);
+            // }
           },
           child: OTPTextField(
             controller: otpFieldController,

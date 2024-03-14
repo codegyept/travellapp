@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
+import 'package:rehlatyuae/core/utils/custom_dialog.dart';
 import 'package:rehlatyuae/core/utils/primary_text_field.dart';
 
 class UpdatePasswordScreen extends StatelessWidget {
@@ -46,9 +47,11 @@ class UpdatePasswordScreen extends StatelessWidget {
           PrimaryTextField(
             controller: TextEditingController(),
             hint: AppStrings.newPassword,
+            isObscureText: true,
           ),
           PrimaryTextField(
             controller: TextEditingController(),
+            isObscureText: true,
             hint: AppStrings.renterPassword,
           ),
           Padding(
@@ -59,7 +62,17 @@ class UpdatePasswordScreen extends StatelessWidget {
               text: AppStrings.updatePassword,
               borderRadius: BorderRadius.circular(16.sp),
               backGroundColor: AppColors.textAndBackgroundColorButton,
-              onTap: () {},
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => CustomDialog(
+                    title: "Change Password Success",
+                    subtitle: 'Success',
+                    labelText: "Back to Homepage",
+                    color: AppColors.green,
+                  ),
+                );
+              },
               style: const TextStyle(color: AppColors.white),
               width: double.infinity,
               height: 50.h,
