@@ -10,9 +10,12 @@ class PrimaryTextField extends StatefulWidget {
   final bool autofocus;
   final bool readOnly;
   final bool isEnabled;
+  final bool isTextAria;
   final TextInputType inputType;
   final TextInputAction textInputAction;
   final FormFieldValidator? validator;
+  final Widget? suffix;
+  final EdgeInsets? padding;
   final void Function()? onTap;
 
   const PrimaryTextField({
@@ -27,6 +30,9 @@ class PrimaryTextField extends StatefulWidget {
     this.validator,
     this.readOnly = false,
     this.isEnabled = true,
+    this.isTextAria = false,
+    this.suffix,
+    this.padding,
     this.onTap,
   });
 
@@ -40,7 +46,7 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+      padding: widget.padding ?? EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -75,6 +81,7 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
                         ? TextDirection.ltr
                         : TextDirection.rtl
                     : null,
+            maxLines: widget.isTextAria ? 3 : 1,
             decoration: InputDecoration(
               hintText: widget.hint,
               contentPadding: EdgeInsets.symmetric(
@@ -104,7 +111,7 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
                           ? const Icon(Icons.visibility_off_outlined)
                           : const Icon(Icons.visibility_outlined),
                     )
-                  : null,
+                  : widget.suffix,
               errorStyle: Theme.of(context).textTheme.labelSmall!.copyWith(
                     color: AppColors.redAppColor,
                     fontSize: 10.sp,
