@@ -6,18 +6,6 @@ ThemeData apptheme() {
   return ThemeData(
     primaryColor: AppColors.textAndBackgroundColorButton,
     scaffoldBackgroundColor: AppColors.backgroundWhite,
-    // textButtonTheme:TextButtonThemeData(
-    //   style:ButtonStyle(
-    //     foregroundColor:
-    //     MaterialStateColor.resolveWith((states) => AppColors.backgroundAvatarPayment,),
-    //     textStyle:MaterialStateTextStyle.resolveWith((states) =>const TextStyle(
-    //       fontFamily: 'Switzer',
-    //       fontSize:24,
-    //     ))
-    //   ),
-    //
-    //
-    // ),
     textTheme: TextTheme(
       displayLarge: TextStyle(
           fontFamily: 'Switzer',
