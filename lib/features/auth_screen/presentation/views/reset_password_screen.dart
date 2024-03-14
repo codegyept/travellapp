@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/primary_text_field.dart';
@@ -60,9 +59,7 @@ class ResetPasswordScreen extends StatelessWidget {
               text: 'Update Password',
               borderRadius: BorderRadius.circular(16),
               backGroundColor: AppColors.textAndBackgroundColorButton,
-              onTap: () {
-                context.push('/forgetPasswordScreen');
-              },
+              onTap: () {},
               style: const TextStyle(color: AppColors.white),
               width: double.infinity,
               height: 50,
