@@ -13,10 +13,12 @@ void main()
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget
+{
   const MyApp({super.key});
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return ScreenUtilInit(
       designSize:  const Size(300, 800),
         minTextAdapt: true,

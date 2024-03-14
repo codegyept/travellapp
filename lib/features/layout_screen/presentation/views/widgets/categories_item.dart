@@ -8,7 +8,7 @@ class CategoriesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height:35.0.h,
+      height:40.0.h,
       width:70.0.w,
       decoration:BoxDecoration(
         color:AppColors.categoriesItemBackgroundColor,

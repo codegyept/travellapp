@@ -10,13 +10,13 @@ class BlogContainerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 350.0.h,
-      width: 240.0.w,
+      height: 330.0.h,
+      width: 220.0.w,
       child: Stack(
         children: [
           Container(
-            height: 350.0.h,
-            width: 240.0.w,
+            height: 330.0.h,
+            width: 220.0.w,
             clipBehavior: Clip.antiAliasWithSaveLayer,
             decoration: BoxDecoration(
               borderRadius: BorderRadiusDirectional.circular(15.0.r),
