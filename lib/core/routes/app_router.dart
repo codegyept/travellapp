@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/home_screen.dart';
 
 import 'package:rehlatyuae/features/splash_screen/presentation/views/splash_screen.dart';
 
@@ -17,6 +18,10 @@ abstract class AppRouter {
       GoRoute(
         path: "/",
         builder: (context, state) => const SplashScreen(),
+      ),
+      GoRoute(
+        path: "/",
+        builder: (context, state) =>  HomeScreen(),
       ),
       GoRoute(
         path: "/aboutUsScreen",

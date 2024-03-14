@@ -27,8 +27,8 @@ class IconButtonWithWhiteBackground extends StatelessWidget {
         borderRadius:BorderRadius.circular(12.0.r),
       ),
       child: IconButton(
-        onPressed: onPressed,
-        icon: icon,
+        onPressed:onPressed,
+        icon:icon,
       ),
     );
   }
