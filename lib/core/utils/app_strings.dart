@@ -412,4 +412,7 @@ Official Channels:
   static const creditDebitCards = "Credit & Debit Cards";
   static const addNewCard = "Add New Card";
   static const payment = "Payment";
+  static const privacyPolicy = "Privacy Policy";
+  static const termsConditions = "Terms & Conditions";
+  static const faqs = "FAQs";
 }

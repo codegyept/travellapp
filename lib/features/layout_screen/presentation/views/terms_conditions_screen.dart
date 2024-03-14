@@ -13,12 +13,12 @@ class TermsConditionsScreen extends StatelessWidget {
       body: ListView(
         children: const [
           TitleSection(
-            title: "Terms & Conditions",
-            subTitle: "Terms & Conditions",
+            title: AppStrings.termsConditions,
+            subTitle: AppStrings.termsConditions,
             imagePath: AppAssets.rectangle,
           ),
           PrivacySection(
-            title: "Terms & Conditions",
+            title: AppStrings.termsConditions,
             content: AppStrings.termsConditionsContent,
           ),
         ],

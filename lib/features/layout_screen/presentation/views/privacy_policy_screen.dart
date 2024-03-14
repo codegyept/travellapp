@@ -13,12 +13,12 @@ class PrivacyPolicyScreen extends StatelessWidget {
       body: ListView(
         children: const [
           TitleSection(
-            title: "Privacy Policy",
-            subTitle: "Privacy Policy",
+            title: AppStrings.privacyPolicy,
+            subTitle: AppStrings.privacyPolicy,
             imagePath: AppAssets.rectangle,
           ),
           PrivacySection(
-            title: "Privacy Policy",
+            title: AppStrings.privacyPolicy,
             content: AppStrings.privacyPolicyContent,
           ),
         ],
