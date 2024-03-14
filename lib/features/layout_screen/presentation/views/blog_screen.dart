@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
-import 'package:rehlatyuae/core/utils/comment_card.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
-import 'package:rehlatyuae/core/utils/custom_expansion_tile.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/bolg_travel_title_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/experiences_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/preview_travels_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/ratings_reviews_section.dart';
 
 class BlogScreen extends StatelessWidget {
   const BlogScreen({super.key});
@@ -127,32 +126,7 @@ class BlogScreen extends StatelessWidget {
               height: 50,
             ),
           ),
-          ...List.generate(
-            3,
-            (index) => const CommentCard(
-              imageUrl: AppAssets.profile,
-              name: "Lee Mohammad",
-              date: "12/12/2024",
-              comment:
-                  "The mighty Rinjani mountain of Gunung Rinjani is a massive volcano which towers over the island of Lombok. A  you can have in Indonesia. At 3,726 meters tall, Gunung Rinjani is the second highest mountain in Indonesia,",
-            ),
-          ),
-          const CustomExpansionTile(
-            title: "Highlights",
-            content:
-            "With more techy bells n’ webullish than our free version.With more techy bells n’ webullish than our free version.",
-            initiallyExpanded: false,
-          ),
-          const CustomExpansionTile(
-            title: "Inclusions",
-            content: "14,000+ Guests served",
-            initiallyExpanded: false,
-          ),
-          const CustomExpansionTile(
-            title: "Cancellation policy",
-            content: "1000+ Reviews on Rehlatyuae by our Travelers",
-            initiallyExpanded: false,
-          ),
+          const RatingsReviewsSection(),
           const ExperiencesSections(),
         ],
       ),
