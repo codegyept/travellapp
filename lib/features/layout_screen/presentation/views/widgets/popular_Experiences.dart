@@ -5,7 +5,7 @@ import 'package:rehlatyuae/core/utils/custom_container_trip.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_row_title.dart';
 
 class PopularExperiencesSection extends StatelessWidget {
-  const PopularExperiencesSection({Key? key}) : super(key: key);
+  const PopularExperiencesSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,17 +16,16 @@ class PopularExperiencesSection extends StatelessWidget {
           onPressed: () {},
         ),
         SizedBox(
-          height:130.0.h,
+          height: 130.0.h,
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: 10,
               itemBuilder: (context, index) {
                 return CustomContainerTrip(
-                  width:100.0.w,
+                  width: 100.0.w,
                 );
               },
-              separatorBuilder: (context, index)
-              {
+              separatorBuilder: (context, index) {
                 return SizedBox(
                   width: 5.0.w,
                 );

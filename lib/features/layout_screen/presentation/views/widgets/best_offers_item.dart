@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/icon_button_with_white_background.dart';
@@ -70,7 +68,9 @@ class BestOffersItem extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(width: 5.5.w,),
+          SizedBox(
+            width: 5.5.w,
+          ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -84,7 +84,9 @@ class BestOffersItem extends StatelessWidget {
                   ),
                   textAlign: TextAlign.justify,
                 ),
-                SizedBox(height: 2.5.w,),
+                SizedBox(
+                  height: 2.5.w,
+                ),
                 Row(
                   children: [
                     Icon(
@@ -92,7 +94,7 @@ class BestOffersItem extends StatelessWidget {
                       color: AppColors.textAndBackgroundColorButton,
                       size: 14.0.sp,
                     ),
-                    Text(
+                    const Text(
                       "Dubai, United Arab Emirates",
                       style: TextStyle(
                         color: AppColors.textAndBackgroundColorButton,
@@ -101,8 +103,10 @@ class BestOffersItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 2.5.w,),
-                Text(
+                SizedBox(
+                  height: 2.5.w,
+                ),
+                const Text(
                   "This exceptional beach gets sasafadvdavdsdsfcasvsdvsdvsdvsd",
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
@@ -111,30 +115,32 @@ class BestOffersItem extends StatelessWidget {
                   ),
                   textAlign: TextAlign.justify,
                 ),
-                SizedBox(height: 5.0.w,),
+                SizedBox(
+                  height: 5.0.w,
+                ),
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       "48",
                       style: TextStyle(
                         color: AppColors.blackColorForTitleTexts,
                       ),
                       textAlign: TextAlign.justify,
                     ),
-                    Text(
+                    const Text(
                       "/Person",
                       style: TextStyle(
                         color: AppColors.greySearchText,
                       ),
                       textAlign: TextAlign.justify,
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Icon(
                       Icons.star_border_outlined,
                       color: AppColors.textAndBackgroundColorButton,
                       size: 16.0.sp,
                     ),
-                    Text(
+                    const Text(
                       "4.2 (852)",
                       style: TextStyle(
                         color: AppColors.blackColorForTitleTexts,

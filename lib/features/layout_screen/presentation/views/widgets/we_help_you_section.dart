@@ -1,8 +1,4 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
@@ -98,26 +94,26 @@ class WeHelpYouSection extends StatelessWidget {
         Row(
           children: [
             WhyChooseUSItem(
-              text:AppStrings.weHelpYouMakeBestTripSecondDescription,
-              style:TextStyle(
-                color:AppColors.blackColorForTitleTexts,
-                fontSize:10.0.sp,
+              text: AppStrings.weHelpYouMakeBestTripSecondDescription,
+              style: TextStyle(
+                color: AppColors.blackColorForTitleTexts,
+                fontSize: 10.0.sp,
               ),
               child: Icon(
                 Icons.check_box_outlined,
-                color:AppColors.textAndBackgroundColorButton,
+                color: AppColors.textAndBackgroundColorButton,
                 size: 14.0.sp,
               ),
             ),
             WhyChooseUSItem(
-              text:AppStrings.weHelpYouMakeBestTripSecondDescription,
-              style:TextStyle(
-                color:AppColors.blackColorForTitleTexts,
-                fontSize:10.0.sp,
+              text: AppStrings.weHelpYouMakeBestTripSecondDescription,
+              style: TextStyle(
+                color: AppColors.blackColorForTitleTexts,
+                fontSize: 10.0.sp,
               ),
               child: Icon(
                 Icons.check_box_outlined,
-                color:AppColors.textAndBackgroundColorButton,
+                color: AppColors.textAndBackgroundColorButton,
                 size: 14.0.sp,
               ),
             ),
@@ -129,27 +125,29 @@ class WeHelpYouSection extends StatelessWidget {
         Row(
           children: [
             WhyChooseUSItem(
-              text:AppStrings.weHelpYouMakeBestTripSecondDescription,
-              style:TextStyle(
-                color:AppColors.blackColorForTitleTexts,
-                fontSize:10.0.sp,
+              text: AppStrings.weHelpYouMakeBestTripSecondDescription,
+              style: TextStyle(
+                color: AppColors.blackColorForTitleTexts,
+                fontSize: 10.0.sp,
               ),
               child: Icon(
                 Icons.check_box_outlined,
-                color:AppColors.textAndBackgroundColorButton,
+                color: AppColors.textAndBackgroundColorButton,
                 size: 14.0.sp,
               ),
             ),
-            SizedBox(width:5.0.w,),
+            SizedBox(
+              width: 5.0.w,
+            ),
             WhyChooseUSItem(
-              text:AppStrings.weHelpYouMakeBestTripSecondDescription,
-              style:TextStyle(
-                color:AppColors.blackColorForTitleTexts,
-                fontSize:10.0.sp,
+              text: AppStrings.weHelpYouMakeBestTripSecondDescription,
+              style: TextStyle(
+                color: AppColors.blackColorForTitleTexts,
+                fontSize: 10.0.sp,
               ),
               child: Icon(
                 Icons.check_box_outlined,
-                color:AppColors.textAndBackgroundColorButton,
+                color: AppColors.textAndBackgroundColorButton,
                 size: 14.0.sp,
               ),
             ),

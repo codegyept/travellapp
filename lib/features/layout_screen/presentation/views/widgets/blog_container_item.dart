@@ -1,11 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class BlogContainerItem extends StatelessWidget {
-  const BlogContainerItem({Key? key}) : super(key: key);
+  const BlogContainerItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -68,12 +66,12 @@ class BlogContainerItem extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.calendar_month,
-                    color:AppColors.whiteAppColor,
+                    color: AppColors.whiteAppColor,
                   ),
                   Text(
                     "2/2/2024",
-                    style:TextStyle(
-                      color:AppColors.whiteAppColor,
+                    style: TextStyle(
+                      color: AppColors.whiteAppColor,
                     ),
                   ),
                 ],
@@ -100,7 +98,7 @@ class BlogContainerItem extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Blog name",
                       style: TextStyle(
                         color: AppColors.whiteAppColor,
@@ -109,7 +107,7 @@ class BlogContainerItem extends StatelessWidget {
                     SizedBox(
                       height: 6.0.h,
                     ),
-                    Text(
+                    const Text(
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       "Short Description Short Description Short Description",

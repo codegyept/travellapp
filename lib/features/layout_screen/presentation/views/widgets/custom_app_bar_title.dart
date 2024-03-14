@@ -6,6 +6,8 @@ import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
 
 class CustomAppBarTitle extends StatelessWidget {
+  const CustomAppBarTitle({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -16,31 +18,35 @@ class CustomAppBarTitle extends StatelessWidget {
           width: 80.0.w,
           height: 80.0.h,
         ),
-        SizedBox(width: 20.0.w,),
-         Column(
+        SizedBox(
+          width: 20.0.w,
+        ),
+        Column(
           children: [
             Text(
               "00,00 USD",
               style: TextStyle(
                 color: AppColors.black,
-                fontSize:16.0.sp,
+                fontSize: 16.0.sp,
               ),
             ),
-            SizedBox(height:4.0.h,),
+            SizedBox(
+              height: 4.0.h,
+            ),
             Row(
               children: [
                 Text(
                   "Hello,",
                   style: TextStyle(
                     color: AppColors.black,
-                    fontSize:16.0.sp,
+                    fontSize: 16.0.sp,
                   ),
                 ),
                 Text(
                   " Belal",
                   style: TextStyle(
                     color: AppColors.textAndBackgroundColorButton,
-                    fontSize:16.0.sp,
+                    fontSize: 16.0.sp,
                   ),
                 ),
               ],

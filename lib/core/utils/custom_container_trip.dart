@@ -46,7 +46,7 @@ class CustomContainerTrip extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Dubai",
                   style: TextStyle(color: AppColors.whiteAppColor),
                 ),

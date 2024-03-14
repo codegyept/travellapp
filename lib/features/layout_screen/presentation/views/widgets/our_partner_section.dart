@@ -5,30 +5,28 @@ import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/our_partners_item.dart';
 
 class OurPartnerSection extends StatelessWidget {
-  const OurPartnerSection({Key? key}) : super(key: key);
+  const OurPartnerSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment:CrossAxisAlignment.start,
-      children:
-      [
-        Text(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
           AppStrings.ourPartnerTitle,
-          style: const TextStyle(
+          style: TextStyle(
             color: AppColors.blackColorForTitleTexts,
           ),
         ),
         SizedBox(
-          height:75.0.h,
+          height: 75.0.h,
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: 10,
               itemBuilder: (context, index) {
                 return const OurPartnersItem();
               },
-              separatorBuilder: (context, index)
-              {
+              separatorBuilder: (context, index) {
                 return SizedBox(
                   width: 5.0.w,
                 );

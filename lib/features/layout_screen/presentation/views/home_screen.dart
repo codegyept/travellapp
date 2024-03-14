@@ -1,9 +1,4 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
@@ -34,7 +29,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         surfaceTintColor: AppColors.whiteAppColor,
-        title: CustomAppBarTitle(),
+        title: const CustomAppBarTitle(),
         actions: [
           InkWell(
             onTap: () {},
@@ -66,19 +61,19 @@ class HomeScreen extends StatelessWidget {
               const CustomSizedBox(),
               const TopDestinationSection(),
               const CustomSizedBox(),
-              BestOffersSection(),
+              const BestOffersSection(),
               const CustomSizedBox(),
-              BestTripsSection(),
+              const BestTripsSection(),
               const CustomSizedBox(),
-              PopularExperiencesSection(),
+              const PopularExperiencesSection(),
               const CustomSizedBox(),
-              OurBlogSection(),
+              const OurBlogSection(),
               const CustomSizedBox(),
-              OurPartnerSection(),
+              const OurPartnerSection(),
               const CustomSizedBox(),
-              WhyChooseUsSection(),
+              const WhyChooseUsSection(),
               const CustomSizedBox(),
-              WeHelpYouSection(),
+              const WeHelpYouSection(),
               CustomActionButton(
                 onTap: () {},
                 text: AppStrings.actionButtonName,
@@ -86,15 +81,12 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 borderRadius: BorderRadius.circular(12.0.r),
                 backGroundColor: AppColors.yellow,
-                style: TextStyle(
-                    color: AppColors.whiteAppColor,
-                    fontSize: 20.0.sp,
-                    fontWeight: FontWeight.bold),
+                style: TextStyle(color: AppColors.whiteAppColor, fontSize: 20.0.sp, fontWeight: FontWeight.bold),
               ),
               const CustomSizedBox(),
-              BestOffersHorizontal(),
+              const BestOffersHorizontal(),
               const CustomSizedBox(),
-              ReviewsSection(),
+              const ReviewsSection(),
             ],
           ),
         ),

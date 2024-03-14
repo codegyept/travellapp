@@ -13,7 +13,7 @@ class ReviewsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
+        const Text(
           AppStrings.reviewTitle,
           style: TextStyle(
             color: AppColors.blackColorForTitleTexts,
@@ -26,7 +26,7 @@ class ReviewsSection extends StatelessWidget {
             "assets/images/Ellipse 1.png",
           ),
         ),
-        Text(
+        const Text(
           AppStrings.weHelpYouMakeBestTripDescription,
           style: TextStyle(
             color: AppColors.blackColorForTitleTexts,
@@ -85,7 +85,7 @@ class ReviewsSection extends StatelessWidget {
         SizedBox(
           height: 40.0.h,
         ),
-        Text(
+        const Text(
           AppStrings.subscribeToNewsletterTitle,
           style: TextStyle(
             color: AppColors.blackColorForTitleTexts,
@@ -143,9 +143,9 @@ class ReviewsSection extends StatelessWidget {
               text: AppStrings.reviewActionButtonName,
               borderRadius: BorderRadius.circular(10.0.r),
               backGroundColor: AppColors.textAndBackgroundColorButton,
-              onTap: (){},
-              style: TextStyle(
-                color:AppColors.whiteAppColor,
+              onTap: () {},
+              style: const TextStyle(
+                color: AppColors.whiteAppColor,
               ),
               width: 50.0.w,
               height: 40.0.h,
@@ -155,7 +155,7 @@ class ReviewsSection extends StatelessWidget {
         SizedBox(
           height: 50.0.h,
         ),
-        Text(
+        const Text(
           AppStrings.copyRight,
           style: TextStyle(
             color: AppColors.greySearchText,

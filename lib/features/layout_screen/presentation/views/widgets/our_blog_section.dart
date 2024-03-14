@@ -5,7 +5,7 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/blo
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_row_title.dart';
 
 class OurBlogSection extends StatelessWidget {
-  const OurBlogSection({Key? key}) : super(key: key);
+  const OurBlogSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +16,12 @@ class OurBlogSection extends StatelessWidget {
           onPressed: () {},
         ),
         SizedBox(
-          height:330.0.h,
+          height: 330.0.h,
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: 10,
               itemBuilder: (context, index) {
-                return BlogContainerItem();
+                return const BlogContainerItem();
               },
               separatorBuilder: (context, index) {
                 return SizedBox(

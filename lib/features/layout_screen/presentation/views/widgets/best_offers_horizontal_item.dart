@@ -4,8 +4,10 @@ import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/icon_button_with_white_background.dart';
 
 class BestOffersHorizontalItem extends StatelessWidget {
-  const BestOffersHorizontalItem({Key? key, required this.width}) : super(key: key);
-final double width;
+  const BestOffersHorizontalItem({super.key, required this.width});
+
+  final double width;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -63,7 +65,9 @@ final double width;
               ],
             ),
           ),
-          SizedBox(width: 5.5.w,),
+          SizedBox(
+            width: 5.5.w,
+          ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,9 +79,11 @@ final double width;
                     color: AppColors.blackColorForTitleTexts,
                     fontSize: 12.0.sp,
                   ),
-                  overflow:TextOverflow.ellipsis,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                SizedBox(height: 2.5.w,),
+                SizedBox(
+                  height: 2.5.w,
+                ),
                 Row(
                   children: [
                     Icon(
@@ -85,17 +91,19 @@ final double width;
                       color: AppColors.textAndBackgroundColorButton,
                       size: 14.0.sp,
                     ),
-                    Text(
+                    const Text(
                       "Dubai",
                       style: TextStyle(
                         color: AppColors.textAndBackgroundColorButton,
                       ),
-                      overflow:TextOverflow.ellipsis,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
-                SizedBox(height: 1.5.w,),
-                Text(
+                SizedBox(
+                  height: 1.5.w,
+                ),
+                const Text(
                   "This exceptional beach  ",
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
@@ -103,22 +111,24 @@ final double width;
                     color: AppColors.greySearchText,
                   ),
                 ),
-                SizedBox(height: 5.0.w,),
+                SizedBox(
+                  height: 5.0.w,
+                ),
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       "48",
                       style: TextStyle(
                         color: AppColors.blackColorForTitleTexts,
                       ),
-                      overflow:TextOverflow.ellipsis,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    Text(
+                    const Text(
                       "/Person",
                       style: TextStyle(
                         color: AppColors.greySearchText,
                       ),
-                      overflow:TextOverflow.ellipsis,
+                      overflow: TextOverflow.ellipsis,
                     ),
                     const Spacer(),
                     Icon(
@@ -126,12 +136,12 @@ final double width;
                       color: AppColors.textAndBackgroundColorButton,
                       size: 16.0.sp,
                     ),
-                    Text(
+                    const Text(
                       "4.2 (852)",
                       style: TextStyle(
                         color: AppColors.blackColorForTitleTexts,
                       ),
-                      overflow:TextOverflow.ellipsis,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),

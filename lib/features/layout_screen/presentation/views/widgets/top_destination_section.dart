@@ -5,23 +5,24 @@ import 'package:rehlatyuae/core/utils/custom_container_trip.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_row_title.dart';
 
 class TopDestinationSection extends StatelessWidget {
-  const TopDestinationSection({Key? key}) : super(key: key);
+  const TopDestinationSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-         CustomRowTitle(
-          onPressed:(){},
+        CustomRowTitle(
+          onPressed: () {},
           text: AppStrings.topDestinationTitle,
         ),
         SizedBox(
-          height:200.0.h,
+          height: 200.0.h,
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: 10,
               itemBuilder: (context, index) {
                 return CustomContainerTrip(
-                  width:200.0.w,
+                  width: 200.0.w,
                 );
               },
               separatorBuilder: (context, index) {
