@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:rehlatyuae/core/utils/app_colors.dart';
+import 'package:rehlatyuae/core/utils/custom_button.dart';
 
 class PreviewTravelsSection extends StatelessWidget {
   const PreviewTravelsSection({super.key});
@@ -65,6 +69,20 @@ class PreviewTravelsSection extends StatelessWidget {
               ),
             ),
             separatorBuilder: (context, index) => const SizedBox(width: 12),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 35.h),
+          child: CustomActionButton(
+            text: 'Book Now',
+            borderRadius: BorderRadius.circular(16),
+            backGroundColor: AppColors.textAndBackgroundColorButton,
+            onTap: () {
+              context.push('/paymentOptionsScreen');
+            },
+            style: const TextStyle(color: AppColors.white),
+            width: double.infinity,
+            height: 50,
           ),
         ),
       ],
