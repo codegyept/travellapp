@@ -6,6 +6,7 @@ import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/custom_circle_avatar.dart';
+import 'package:rehlatyuae/core/utils/custom_dialog.dart';
 import 'package:rehlatyuae/core/utils/default_text_button.dart';
 import 'package:rehlatyuae/features/profile_screen/presentation/views/widgets/profile_card_details.dart';
 
@@ -132,7 +133,17 @@ class ProfileScreen extends StatelessWidget {
               text: 'Delete Account',
               borderRadius: BorderRadius.circular(16),
               backGroundColor: AppColors.redAppColor,
-              onTap: () {},
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => const CustomDialog(
+                    title: "Are you sure to delete the account?",
+                    subtitle: "\$12.00",
+                    labelText: "Yes !",
+                    color: AppColors.redAppColor,
+                  ),
+                );
+              },
               style: const TextStyle(color: AppColors.white),
               width: double.infinity,
               height: 50,
