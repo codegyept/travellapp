@@ -52,6 +52,7 @@ class AddCardBottomSheet extends StatelessWidget {
               controller: TextEditingController(),
               label: "Card Number",
               hint: "Enter 12 digit card number",
+              inputType: TextInputType.number,
             ),
             SizedBox(
               height: 10.h,
@@ -66,6 +67,7 @@ class AddCardBottomSheet extends StatelessWidget {
                       label: "Valid Thru",
                       hint: "MM",
                       padding: EdgeInsets.zero,
+                      inputType: TextInputType.number,
                     ),
                   ),
                   SizedBox(
@@ -77,6 +79,7 @@ class AddCardBottomSheet extends StatelessWidget {
                       label: "",
                       hint: "DD",
                       padding: EdgeInsets.zero,
+                      inputType: TextInputType.number,
                     ),
                   ),
                   SizedBox(
@@ -88,6 +91,7 @@ class AddCardBottomSheet extends StatelessWidget {
                       label: "CVV",
                       hint: "--0",
                       padding: EdgeInsets.zero,
+                      inputType: TextInputType.number,
                     ),
                   ),
                 ],
