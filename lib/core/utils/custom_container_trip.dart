@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/icon_button_with_white_background.dart';
 
 class CustomContainerTrip extends StatelessWidget {
   const CustomContainerTrip({
-    Key? key,
+    super.key,
     required this.width,
-  }) : super(key: key);
+  });
+
   final double width;
 
   @override
@@ -103,7 +103,59 @@ class CustomContainerTrip extends StatelessWidget {
                 ),
               ],
             ),
+        ),
+        Positioned(
+          bottom: 10,
+          left: 10,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Dubai",
+                style: TextStyle(color: AppColors.whiteAppColor),
+              ),
+              SizedBox(
+                height: 5.0.h,
+              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.location_on_sharp,
+                    color: AppColors.whiteAppColor,
+                    size: 14.0.sp,
+                  ),
+                  SizedBox(
+                    width: 2.0.w,
+                  ),
+                  const Text(
+                    "United Arab Emirates",
+                    style: TextStyle(color: AppColors.whiteAppColor),
+                  ),
+                ],
+              ),
+            ],
           ),
+        ),
+        Positioned(
+          bottom: 10,
+          right: 10,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Text(
+                "43",
+                style: TextStyle(color: AppColors.whiteAppColor),
+              ),
+              SizedBox(
+                height: 4.0.h,
+              ),
+              const Text(
+                "/Person",
+                style: TextStyle(color: AppColors.whiteAppColor),
+              ),
+            ],
+          ),
+        ),
         ],
       ),
     );

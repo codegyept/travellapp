@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
+import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/custom_icon_button.dart';
 import 'package:rehlatyuae/core/utils/default_text_button.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/cusotm_bottom_sheet.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/cusotm_radio_tile.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/cusotm_bottom_sheet.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/cusotm_radio_tile.dart';
 
-class PaymentOptionsStep2Screen extends StatefulWidget {
-  const PaymentOptionsStep2Screen({super.key});
+class PaymentDetailsScreen extends StatefulWidget {
+  const PaymentDetailsScreen({super.key});
 
   @override
-  State<PaymentOptionsStep2Screen> createState() => _PaymentOptionsStep2ScreenState();
+  State<PaymentDetailsScreen> createState() => _PaymentDetailsScreenState();
 }
 
-class _PaymentOptionsStep2ScreenState extends State<PaymentOptionsStep2Screen> {
+class _PaymentDetailsScreenState extends State<PaymentDetailsScreen> {
   String selectedCard = '';
   int adultNumber = 1, childCount = 0;
 
@@ -284,8 +285,11 @@ class _PaymentOptionsStep2ScreenState extends State<PaymentOptionsStep2Screen> {
                     )
                   ],
                 ),
-                DefaultTextButton(
-                  onPressed: () {
+                CustomActionButton(
+                  text: 'Payment',
+                  borderRadius: BorderRadius.circular(16),
+                  backGroundColor: AppColors.textAndBackgroundColorButton,
+                  onTap: () {
                     showModalBottomSheet(
                       context: context,
                       builder: (context) => const CustomBottomSheet(
@@ -303,8 +307,10 @@ class _PaymentOptionsStep2ScreenState extends State<PaymentOptionsStep2Screen> {
                       ),
                     );
                   },
-                  text: "Payment",
-                ),
+                  style: const TextStyle(color: AppColors.white),
+                  width: 160,
+                  height: 50,
+                )
               ],
             ),
           ),

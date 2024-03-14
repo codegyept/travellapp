@@ -15,9 +15,9 @@ class CustomIconButton extends StatelessWidget {
     required this.icon,
     this.iconColor = AppColors.black,
     this.backgroundColor = AppColors.white,
-    this.size = 50,
+    this.size = 45,
     this.radius = 10,
-    this.iconSize,
+    this.iconSize = 20,
     this.onPressed,
     super.key,
   });
@@ -25,19 +25,20 @@ class CustomIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: size,
-        height: size,
-        decoration: BoxDecoration(
-          color: backgroundColor,
-          borderRadius: BorderRadius.circular(radius.r),
+      width: size.h,
+      height: size.h,
+      decoration: BoxDecoration(
+        color: backgroundColor,
+        borderRadius: BorderRadius.circular(radius.r),
+      ),
+      child: IconButton(
+        onPressed: onPressed,
+        icon: Icon(
+          icon,
+          color: iconColor,
+          size: iconSize?.h,
         ),
-        child: IconButton(
-          onPressed: onPressed,
-          icon: Icon(
-            icon,
-            color: iconColor,
-            size: iconSize,
-          ),
-        ));
+      ),
+    );
   }
 }

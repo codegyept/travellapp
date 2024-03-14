@@ -6,10 +6,12 @@ import 'package:rehlatyuae/core/utils/app_colors.dart';
 class CustomExpansionTile extends StatefulWidget {
   final String title;
   final String content;
+  final bool initiallyExpanded;
 
   const CustomExpansionTile({
     required this.title,
     required this.content,
+    this.initiallyExpanded = true,
     super.key,
   });
 
@@ -54,7 +56,7 @@ class _CustomExpansionTileState extends State<CustomExpansionTile> {
           });
         },
         childrenPadding: EdgeInsets.zero,
-        initiallyExpanded: true,
+        initiallyExpanded: widget.initiallyExpanded,
         children: [
           Container(
             width: double.infinity,
