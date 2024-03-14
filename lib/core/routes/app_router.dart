@@ -27,6 +27,50 @@ abstract class AppRouter {
         builder: (context, state) => HomeScreen(),
       ),
       GoRoute(
+        path: "/travelDetailsScreen",
+        builder: (context, state) => const TravelDetailsScreen(),
+      ),
+      GoRoute(
+        path: "/blogScreen",
+        builder: (context, state) => const BlogScreen(),
+      ),
+
+      /// Payment Screens
+      GoRoute(
+        path: "/paymentOptionsScreen",
+        builder: (context, state) => const PaymentOptionsScreen(),
+      ),
+      GoRoute(
+        path: "/paymentDetailsScreen",
+        builder: (context, state) => const PaymentDetailsScreen(),
+      ),
+
+      /// Profile Screens
+      GoRoute(
+        path: "/profileScreen",
+        builder: (context, state) => const ProfileScreen(),
+      ),
+      GoRoute(
+        path: "/editProfileScreen",
+        builder: (context, state) => const EditProfileScreen(),
+      ),
+
+      /// Auth Screens
+      GoRoute(
+        path: "/forgetPasswordScreen",
+        builder: (context, state) => const ForgetPasswordScreen(),
+      ),
+      GoRoute(
+        path: "/verificationScreen",
+        builder: (context, state) => const VerificationScreen(),
+      ),
+      GoRoute(
+        path: "/updatePasswordScreen",
+        builder: (context, state) => const UpdatePasswordScreen(),
+      ),
+
+      /// Info Screens
+      GoRoute(
         path: "/aboutUsScreen",
         builder: (context, state) => const AboutUsScreen(),
       ),
@@ -41,42 +85,6 @@ abstract class AppRouter {
       GoRoute(
         path: "/faqsScreen",
         builder: (context, state) => const FAQsScreen(),
-      ),
-      GoRoute(
-        path: "/paymentOptionsScreen",
-        builder: (context, state) => const PaymentOptionsScreen(),
-      ),
-      GoRoute(
-        path: "/paymentDetailsScreen",
-        builder: (context, state) => const PaymentDetailsScreen(),
-      ),
-      GoRoute(
-        path: "/profileScreen",
-        builder: (context, state) => const ProfileScreen(),
-      ),
-      GoRoute(
-        path: "/editProfileScreen",
-        builder: (context, state) => const EditProfileScreen(),
-      ),
-      GoRoute(
-        path: "/travelDetailsScreen",
-        builder: (context, state) => const TravelDetailsScreen(),
-      ),
-      GoRoute(
-        path: "/blogScreen",
-        builder: (context, state) => const BlogScreen(),
-      ),
-      GoRoute(
-        path: "/verificationScreen",
-        builder: (context, state) => const VerificationScreen(),
-      ),
-      GoRoute(
-        path: "/updatePasswordScreen",
-        builder: (context, state) => const UpdatePasswordScreen(),
-      ),
-      GoRoute(
-        path: "/forgetPasswordScreen",
-        builder: (context, state) => const ForgetPasswordScreen(),
       ),
     ],
   );

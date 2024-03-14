@@ -16,6 +16,7 @@ class PrimaryTextField extends StatefulWidget {
   final FormFieldValidator? validator;
   final Widget? suffix;
   final EdgeInsets? padding;
+  final Color textColor;
   final void Function()? onTap;
 
   const PrimaryTextField({
@@ -31,6 +32,7 @@ class PrimaryTextField extends StatefulWidget {
     this.readOnly = false,
     this.isEnabled = true,
     this.isTextAria = false,
+    this.textColor = AppColors.black,
     this.suffix,
     this.padding,
     this.onTap,
@@ -53,11 +55,10 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
           if (widget.label != null)
             Text(
               widget.label!,
-              style: const TextStyle(
-                fontSize: 16,
+              style: TextStyle(
+                fontSize: 14.sp,
                 color: AppColors.black,
-                fontWeight: FontWeight.w400,
-                height: 1.42,
+                fontWeight: FontWeight.w700,
               ),
             ),
           if (widget.label != null)
@@ -74,6 +75,11 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
             onChanged: (value) {
               setState(() {});
             },
+            style: TextStyle(
+              fontSize: 14.sp,
+              color: widget.textColor,
+              fontWeight: FontWeight.w400,
+            ),
             textDirection: widget.inputType == TextInputType.phone
                 ? TextDirection.ltr
                 : widget.controller.text.isNotEmpty && widget.controller.text.trim().isNotEmpty
@@ -84,6 +90,11 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
             maxLines: widget.isTextAria ? 3 : 1,
             decoration: InputDecoration(
               hintText: widget.hint,
+              hintStyle: TextStyle(
+                fontSize: 12.sp,
+                color: widget.textColor,
+                fontWeight: FontWeight.w400,
+              ),
               contentPadding: EdgeInsets.symmetric(
                 horizontal: 15.w,
                 vertical: 10.h,

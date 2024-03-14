@@ -394,4 +394,22 @@ Official Channels:
   static const youCanNowUpdate = "You can now update your password...!";
   static const newPassword = "New Password";
   static const renterPassword = "R-enter Password";
+  static const paymentOptions = "Payment Options";
+  static const yourDateBooking = "Your date booking";
+  static const selectDate = "Select a date";
+  static const selectNumberTicket = "Select Number off ticket";
+  static const adult = "Adult";
+  static const above4Yrs = "Above 4 yrs";
+  static const children = "Children";
+  static const under3Yrs = "Under 3 yrs";
+  static const youHaveCoupon = "You Have Coupon!";
+  static const yourCoupon = "Your Coupon!";
+  static const description = "Description";
+  static const pleaseInsertAllNotes = "Please insert all notes";
+  static const nextPayment = "Next payment";
+  static const orderSummary = "Order Summary";
+  static const totalAmount = "Total Amount";
+  static const creditDebitCards = "Credit & Debit Cards";
+  static const addNewCard = "Add New Card";
+  static const payment = "Payment";
 }
