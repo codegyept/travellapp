@@ -23,7 +23,7 @@ class _PaymentDetailsScreenState extends State<PaymentDetailsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          AppStrings.paymentOptions,
+          AppStrings.paymentDetails,
           style: TextStyle(
             fontSize: 15.sp,
             fontWeight: FontWeight.w700,

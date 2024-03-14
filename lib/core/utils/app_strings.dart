@@ -395,6 +395,7 @@ Official Channels:
   static const newPassword = "New Password";
   static const renterPassword = "R-enter Password";
   static const paymentOptions = "Payment Options";
+  static const paymentDetails = "Payment Details";
   static const yourDateBooking = "Your date booking";
   static const selectDate = "Select a date";
   static const selectNumberTicket = "Select Number off ticket";
