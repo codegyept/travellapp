@@ -350,16 +350,22 @@ Official Channels:
   static const ourPartnerTitle = "Our Partner";
   static const whyChooseUsTitle = "Why Choose Us";
   static const whyChooseUsFastBooking = "Fast booking";
-  static const whyChooseUsFastBookingDescription = "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
+  static const whyChooseUsFastBookingDescription =
+      "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
   static const whyChooseUsEasyToShop = "Easy to Shop";
-  static const whyChooseUsEasyToShopDescription = "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
+  static const whyChooseUsEasyToShopDescription =
+      "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
   static const whyChooseUs247Support = "24/7 Support";
-  static const whyChooseUs247SupportDescription = "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
+  static const whyChooseUs247SupportDescription =
+      "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
   static const whyChooseUsUniqueexPerience = "Unique experience";
-  static const whyChooseUsUniqueexPerienceDescription = "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
+  static const whyChooseUsUniqueexPerienceDescription =
+      "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
   static const weHelpYouMakeBestTrip = "We Help You Make Best Trip";
-  static const weHelpYouMakeBestTripDescription = "Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada";
-  static const weHelpYouMakeBestTripSecondDescription = "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
+  static const weHelpYouMakeBestTripDescription =
+      "Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada";
+  static const weHelpYouMakeBestTripSecondDescription =
+      "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
   static const actionButtonName = "Explore More";
   static const reviewTitle = "Our Client Reviews";
   static const subscribeToNewsletterTitle = "Subscribe to Newsletter";
@@ -367,5 +373,13 @@ Official Channels:
   static const reviewTextFieldEmail = "Your Email";
   static const reviewActionButtonName = "Send";
   static const copyRight = "Copyright ©2024. All Rights Reserved. — by Rehlatyuai";
-
+  static const profile = "Profile";
+  static const edit = "Edit";
+  static const about = "About";
+  static const fullName = "Full Name";
+  static const email = "Email";
+  static const phone = "Phone";
+  static const dateOfBirth = "Date Of Birth";
+  static const editProfile = "Edit Profile";
+  static const save = "Save";
 }

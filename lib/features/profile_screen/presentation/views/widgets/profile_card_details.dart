@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class ProfileCardDetails extends StatelessWidget {
   final String title;
@@ -14,17 +15,16 @@ class ProfileCardDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
+      padding: EdgeInsets.only(bottom: 20.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             title,
-            style: const TextStyle(
-              fontSize: 15,
-              color: Color(0xFF606060),
+            style: TextStyle(
+              fontSize: 14.sp,
+              color: AppColors.grayLight,
               fontWeight: FontWeight.w400,
-              height: 1.3,
             ),
           ),
           SizedBox(
@@ -33,8 +33,8 @@ class ProfileCardDetails extends StatelessWidget {
           Text(
             value,
             style: TextStyle(
-              fontSize: 12.sp,
-              fontWeight: FontWeight.w700,
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w400,
             ),
           ),
         ],

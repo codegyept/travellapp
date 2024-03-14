@@ -1,14 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
+import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
-import 'package:rehlatyuae/core/utils/custom_circle_avatar.dart';
 import 'package:rehlatyuae/core/utils/custom_dialog.dart';
 import 'package:rehlatyuae/core/utils/default_text_button.dart';
 import 'package:rehlatyuae/features/profile_screen/presentation/views/widgets/profile_card_details.dart';
+import 'package:rehlatyuae/features/profile_screen/presentation/views/widgets/profile_photo_section.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -17,10 +16,10 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Profile",
+        title: Text(
+          AppStrings.profile,
           style: TextStyle(
-            fontSize: 18,
+            fontSize: 16.sp,
             fontWeight: FontWeight.w700,
           ),
         ),
@@ -29,109 +28,61 @@ class ProfileScreen extends StatelessWidget {
             onPressed: () {
               context.push('/editProfileScreen');
             },
-            text: "Edit",
+            text: AppStrings.edit,
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                        const CustomCircleAvatar(
-                          backgroundImage: AssetImage(AppAssets.profile),
-                          borderWidth: 10,
-                          radius: 70,
+          children: [
+            const ProfilePhotoSection(),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 15.h),
+              child: Row(
+                children: [
+                  Column(
+                    children: [
+                      Text(
+                        AppStrings.about,
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w700,
                         ),
-                        Positioned(
-                          right: 0,
-                          bottom: 0,
-                          child: CustomCircleAvatar(
-                            backgroundColor: AppColors.blogItemContainerBackgroundColor.withOpacity(0.5),
-                            radius: 30,
-                            iconData: CupertinoIcons.camera,
-                            iconSize: 30,
-                          ),
+                      ),
+                      SizedBox(
+                        width: 60.w,
+                        child: Divider(
+                          color: AppColors.blogItemContainerBackgroundColor,
+                          thickness: 2.h,
+                          height: 10.h,
                         ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20.h,
-                    ),
-                    const Text(
-                      "Ryo Elif radioman",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
                       ),
-                    ),
-                    SizedBox(
-                      height: 7.h,
-                    ),
-                    const Text(
-                      "S1 Information",
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Color(0xFF606060),
-                        fontWeight: FontWeight.w400,
-                        height: 1.3,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 30.h,
-            ),
-            Row(
-              children: [
-                Column(
-                  children: [
-                    Text(
-                      "About",
-                      style: TextStyle(
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 60.w,
-                      child: Divider(
-                        color: AppColors.blogItemContainerBackgroundColor,
-                        thickness: 2,
-                        height: 10.h,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 30.h,
+                    ],
+                  ),
+                ],
+              ),
             ),
             const ProfileCardDetails(
-              title: "Full Name",
+              title: AppStrings.fullName,
               value: "Ryo Elif radioman",
             ),
             const ProfileCardDetails(
-              title: "Email",
+              title: AppStrings.email,
               value: "ryoalif1998@gmail.com",
             ),
             const ProfileCardDetails(
-              title: "Juryman",
-              value: "S1 Informatika",
+              title: AppStrings.phone,
+              value: "00962 000000000",
+            ),
+            const ProfileCardDetails(
+              title: AppStrings.dateOfBirth,
+              value: "12/12/2024",
             ),
             CustomActionButton(
               text: 'Delete Account',
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(16.r),
               backGroundColor: AppColors.redAppColor,
               onTap: () {
                 showDialog(
@@ -146,7 +97,7 @@ class ProfileScreen extends StatelessWidget {
               },
               style: const TextStyle(color: AppColors.white),
               width: double.infinity,
-              height: 50,
+              height: 50.h,
             ),
             Container(
               alignment: Alignment.center,

@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
+import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
-import 'package:rehlatyuae/core/utils/custom_circle_avatar.dart';
 import 'package:rehlatyuae/core/utils/primary_text_field.dart';
+import 'package:rehlatyuae/features/profile_screen/presentation/views/widgets/profile_photo_section.dart';
 
 class EditProfileScreen extends StatelessWidget {
   const EditProfileScreen({super.key});
@@ -14,66 +13,17 @@ class EditProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Edit Profile",
+        title: Text(
+          AppStrings.editProfile,
           style: TextStyle(
-            fontSize: 18,
+            fontSize: 16.sp,
             fontWeight: FontWeight.w700,
           ),
         ),
       ),
       body: ListView(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Column(
-                children: [
-                  Stack(
-                    children: [
-                      const CustomCircleAvatar(
-                        backgroundImage: AssetImage(AppAssets.profile),
-                        borderWidth: 10,
-                        radius: 70,
-                      ),
-                      Positioned(
-                        right: 0,
-                        bottom: 0,
-                        child: CustomCircleAvatar(
-                          backgroundColor: AppColors.blogItemContainerBackgroundColor.withOpacity(0.5),
-                          radius: 30,
-                          iconData: CupertinoIcons.camera,
-                          iconSize: 30,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  const Text(
-                    "Ryo Elif radioman",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 7.h,
-                  ),
-                  const Text(
-                    "S1 Information",
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Color(0xFF606060),
-                      fontWeight: FontWeight.w400,
-                      height: 1.3,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+          const ProfilePhotoSection(),
           SizedBox(
             height: 30.h,
           ),
@@ -95,16 +45,16 @@ class EditProfileScreen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w).copyWith(
-              top: 30,
+              top: 30.h,
             ),
             child: CustomActionButton(
-              text: 'Save',
-              borderRadius: BorderRadius.circular(16),
+              text: AppStrings.save,
+              borderRadius: BorderRadius.circular(16.r),
               backGroundColor: AppColors.orange,
               onTap: () {},
               style: const TextStyle(color: AppColors.white),
               width: double.infinity,
-              height: 50,
+              height: 50.h,
             ),
           ),
         ],
