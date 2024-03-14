@@ -142,9 +142,9 @@ class ProfileScreen extends StatelessWidget {
               padding: EdgeInsets.only(top: 10.h),
               child: DefaultTextButton(
                 onPressed: () {
-                  context.push('/verificationScreen');
+                  context.push('/forgetPasswordScreen');
                 },
-                text: "Reset Password",
+                text: "Forget Password",
               ),
             ),
           ],

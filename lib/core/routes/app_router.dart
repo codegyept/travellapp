@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
-import 'package:rehlatyuae/features/auth_screen/presentation/views/reset_password_screen.dart';
+import 'package:rehlatyuae/features/auth_screen/presentation/views/update_password_screen.dart';
 import 'package:rehlatyuae/features/auth_screen/presentation/views/verification_screen.dart';
-import 'package:rehlatyuae/features/auth_screen/presentation/views/widgets/forget_password_screen.dart';
+import 'package:rehlatyuae/features/auth_screen/presentation/views/forget_password_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/about_us_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/blog_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/faq_screen.dart';
@@ -66,8 +66,8 @@ abstract class AppRouter {
         builder: (context, state) => const VerificationScreen(),
       ),
       GoRoute(
-        path: "/resetPasswordScreen",
-        builder: (context, state) => const ResetPasswordScreen(),
+        path: "/updatePasswordScreen",
+        builder: (context, state) => const UpdatePasswordScreen(),
       ),
       GoRoute(
         path: "/forgetPasswordScreen",

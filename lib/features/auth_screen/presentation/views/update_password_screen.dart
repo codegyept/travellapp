@@ -4,8 +4,8 @@ import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/primary_text_field.dart';
 
-class ResetPasswordScreen extends StatelessWidget {
-  const ResetPasswordScreen({super.key});
+class UpdatePasswordScreen extends StatelessWidget {
+  const UpdatePasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
