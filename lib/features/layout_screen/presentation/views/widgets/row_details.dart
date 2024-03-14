@@ -18,7 +18,7 @@ class RowDetails extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 30.h,
+          height: 20.h,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

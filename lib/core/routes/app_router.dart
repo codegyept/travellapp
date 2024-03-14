@@ -5,10 +5,7 @@ import 'package:rehlatyuae/features/home_screen/presentaion/views/payment_option
 import 'package:rehlatyuae/features/home_screen/presentaion/views/payment_options_step2_screen.dart';
 import 'package:rehlatyuae/features/home_screen/presentaion/views/privacy_policy_screen.dart';
 import 'package:rehlatyuae/features/home_screen/presentaion/views/terms_conditions_screen.dart';
-import 'package:rehlatyuae/features/splash_screen/presentaion/views/onboarding.dart';
 
-import '../../features/outh/login/presention/views/login.dart';
-import '../../features/outh/register.dart';
 import '../../features/splash_screen/presentaion/views/splash_screen.dart';
 
 abstract class AppRouter {
@@ -17,10 +14,6 @@ abstract class AppRouter {
       GoRoute(
         path: "/",
         builder: (context, state) => const SplashScreen(),
-      ),
-      GoRoute(
-        path: "/onboarding",
-        builder: (context, state) => const Onbording(),
       ),
       GoRoute(
         path: "/aboutUsScreen",
@@ -39,12 +32,24 @@ abstract class AppRouter {
         builder: (context, state) => const FAQsScreen(),
       ),
       GoRoute(
-        path: "/paymentOptionsStep1Screen",
-        builder: (context, state) => const PaymentOptionsStep1Screen(),
+        path: "/paymentOptionsScreen",
+        builder: (context, state) => const PaymentOptionsScreen(),
       ),
       GoRoute(
-        path: "/paymentOptionsStep2Screen",
-        builder: (context, state) => const PaymentOptionsStep2Screen(),
+        path: "/paymentDetailsScreen",
+        builder: (context, state) => const PaymentDetailsScreen(),
+      ),
+      GoRoute(
+        path: "/profileScreen",
+        builder: (context, state) => const ProfileScreen(),
+      ),
+      GoRoute(
+        path: "/travelDetailsScreen",
+        builder: (context, state) => const TravelDetailsScreen(),
+      ),
+      GoRoute(
+        path: "/blogScreen",
+        builder: (context, state) => const BlogScreen(),
       ),
       GoRoute(
         path: "/register",

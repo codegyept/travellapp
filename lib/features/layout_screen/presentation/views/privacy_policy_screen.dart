@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/privacy_section.dart';
-import 'package:rehlatyuae/features/home_screen/presentaion/components/title_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/privacy_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/title_section.dart';
 
 class PrivacyPolicyScreen extends StatelessWidget {
   const PrivacyPolicyScreen({super.key});
