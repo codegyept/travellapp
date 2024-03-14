@@ -382,4 +382,16 @@ Official Channels:
   static const dateOfBirth = "Date Of Birth";
   static const editProfile = "Edit Profile";
   static const save = "Save";
+  static const forgotPassword = "Forgot Password?";
+  static const enterYourInformation = "Enter your information's below or login with a other account";
+  static const tryAnotherWay = "Try another way";
+  static const send = "Send";
+  static const verification = "Verification";
+  static const checkYourEmail = "Check your email. We’ve sent you the PIN at your email.";
+  static const didYouReceive = "Did you receive any code?";
+  static const verify = "Verify";
+  static const updatePassword = "Update Password";
+  static const youCanNowUpdate = "You can now update your password...!";
+  static const newPassword = "New Password";
+  static const renterPassword = "R-enter Password";
 }

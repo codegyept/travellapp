@@ -1,23 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:otp_text_field/otp_field.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
+import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/features/auth_screen/presentation/views/widgets/custom_otp_text_field.dart';
 
-class VerificationScreen extends StatefulWidget {
+class VerificationScreen extends StatelessWidget {
   const VerificationScreen({super.key});
-
-  @override
-  State<VerificationScreen> createState() => _VerificationScreenState();
-}
-
-class _VerificationScreenState extends State<VerificationScreen> {
-  final FocusNode focusNode = FocusNode();
-  final OtpFieldController otpFieldController = OtpFieldController();
-  String otp = '';
-  bool otpHasError = false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,26 +15,25 @@ class _VerificationScreenState extends State<VerificationScreen> {
       appBar: AppBar(),
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 20.w).copyWith(
-          top: 30,
+          top: 30.h,
         ),
         children: [
-          const Text(
-            "Verification",
+          Text(
+            AppStrings.verification,
             style: TextStyle(
-              fontSize: 32,
+              fontSize: 30.sp,
               fontWeight: FontWeight.w700,
             ),
           ),
           SizedBox(
             height: 7.h,
           ),
-          const Text(
-            "Check your email. We’ve sent you the PIN at your email.",
+          Text(
+            AppStrings.checkYourEmail,
             style: TextStyle(
-              fontSize: 16,
-              color: Color(0xFF606060),
+              fontSize: 16.sp,
+              color: AppColors.greySearchText,
               fontWeight: FontWeight.w400,
-              height: 1.3,
             ),
           ),
           SizedBox(
@@ -54,25 +43,24 @@ class _VerificationScreenState extends State<VerificationScreen> {
           SizedBox(
             height: 100.h,
           ),
-          const Text(
-            "Did you receive any code?",
+          Text(
+            AppStrings.didYouReceive,
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 16,
+              fontSize: 14.sp,
               color: AppColors.black,
               fontWeight: FontWeight.w700,
-              height: 1.3,
             ),
           ),
           SizedBox(
             height: 30.h,
           ),
           CustomActionButton(
-            text: 'Verify',
-            borderRadius: BorderRadius.circular(16),
+            text: AppStrings.verify,
+            borderRadius: BorderRadius.circular(16.sp),
             backGroundColor: AppColors.textAndBackgroundColorButton,
             onTap: () {
-              context.push('/resetPasswordScreen');
+              context.push('/updatePasswordScreen');
             },
             style: const TextStyle(color: AppColors.white),
             width: double.infinity,
