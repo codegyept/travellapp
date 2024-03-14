@@ -136,6 +136,7 @@ class _PaymentOptionsScreenState extends State<PaymentOptionsScreen> {
             CustomExpansionTile(
               title: "You Have Coupon!",
               content: 'Your Coupon!',
+              initiallyExpanded: false,
               children: [
                 PrimaryTextField(
                   controller: TextEditingController(),

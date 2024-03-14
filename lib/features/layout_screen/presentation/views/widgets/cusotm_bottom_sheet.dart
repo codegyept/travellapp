@@ -16,6 +16,7 @@ class CustomBottomSheet extends StatelessWidget {
   final String discount;
   final String total;
   final Color avatarColor;
+  final bool isPaymentDone;
 
   const CustomBottomSheet({
     required this.totalPayment,
@@ -25,6 +26,7 @@ class CustomBottomSheet extends StatelessWidget {
     required this.account,
     required this.discount,
     required this.total,
+    this.isPaymentDone = false,
     this.avatarColor = AppColors.backgroundAvatarPayment,
     super.key,
   });
@@ -184,9 +186,9 @@ class CustomBottomSheet extends StatelessWidget {
           ],
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30.w,vertical: 10.h),
+          padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
           child: CustomActionButton(
-            text: 'Payment',
+            text: isPaymentDone ? 'Back to Homepage' : 'Payment',
             borderRadius: BorderRadius.circular(16.r),
             backGroundColor: AppColors.textAndBackgroundColorButton,
             onTap: () {
