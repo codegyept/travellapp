@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rehlatyuae/core/routes/app_router.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/home_screen.dart';
 import 'core/utils/bloc_observer.dart';
 import 'core/utils/injector.dart';
@@ -25,16 +26,12 @@ class MyApp extends StatelessWidget
         splitScreenMode: true,
         builder:(context,child)
         {
-          // return MaterialApp.router(
-          //   theme: ThemeData(
-          //     fontFamily: "Switzer"
-          //   ),
-          //   debugShowCheckedModeBanner:false,
-          //   routerConfig:AppRouter.router,
-          // );
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            home:HomeScreen(),
+          return MaterialApp.router(
+            theme: ThemeData(
+              fontFamily: "Switzer"
+            ),
+            debugShowCheckedModeBanner:false,
+            routerConfig:AppRouter.router,
           );
         }
     );
