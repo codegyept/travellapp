@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -11,14 +12,16 @@ class CustomTextField extends StatelessWidget {
   final Widget? suffixIcon;
 
   const CustomTextField(
-      {super.key,
+      {
+        super.key,
       required this.controller,
       this.keyboardType = TextInputType.text,
       required this.isObsureText,
       required this.obsureCharacters,
       required this.hintText,
       this.prefixIcon,
-      this.suffixIcon});
+      this.suffixIcon,
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -32,30 +35,32 @@ class CustomTextField extends StatelessWidget {
         keyboardType: keyboardType,
         obscureText: isObsureText,
         obscuringCharacter: obsureCharacters,
-        style: const TextStyle(
-            fontFamily: "Switzer", color: Colors.grey, fontSize: 14),
+        style:  TextStyle(
+            fontFamily: "Switzer", color: Colors.grey, fontSize: 14.sp),
         decoration: InputDecoration(
-            contentPadding: const EdgeInsets.only(top: 12),
-            constraints: BoxConstraints(
-              maxHeight: height * 0.065,
-              maxWidth: width,
+          contentPadding:  EdgeInsets.only(top: 12.h),
+          constraints: BoxConstraints(
+            maxHeight: height * 0.065,
+            maxWidth: width,
+          ),
+          filled: true,
+          hintText: hintText,
+          hintStyle:  TextStyle(
+              fontFamily: "Switzer", color: Colors.grey, fontSize: 14.sp),
+          prefixIcon: prefixIcon,
+          suffixIcon: suffixIcon,
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(30.0.r),
+              borderSide:  BorderSide(
+                  color: AppColors.textAndBackgroundColorButton, width: 1.0.w)),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30.0.r),
+            borderSide:  BorderSide(
+              color: AppColors.textAndBackgroundColorButton,
+              width: 1.0.w,
             ),
-            filled: true,
-            hintText: hintText,
-            hintStyle: const TextStyle(
-                fontFamily: "Switzer", color: Colors.grey, fontSize: 14),
-            prefixIcon: prefixIcon,
-            suffixIcon: suffixIcon,
-            border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(30.0),
-                borderSide: const BorderSide(
-                    color: AppColors.textAndBackgroundColorButton, width: 1.0)),
-            enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(30.0),
-                borderSide: const BorderSide(
-                  color: AppColors.textAndBackgroundColorButton,
-                  width: 1.0,
-                ))),
+          ),
+        ),
       ),
     );
   }

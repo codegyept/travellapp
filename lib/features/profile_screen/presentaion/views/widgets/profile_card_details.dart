@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rehlatyuae/core/utils/custom_text_button.dart';
+import 'package:rehlatyuae/core/utils/default_text_button.dart';
 
 class ProfileCardDetails extends StatelessWidget {
   final String title;

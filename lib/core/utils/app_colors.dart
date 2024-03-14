@@ -16,11 +16,14 @@ class AppColors
   static const backgroundWhite = Color(0xFFFAFAFA);
   static const backgroundAvatarPayment = Color(0xFFAE9F60);
   static const black = Colors.black;
+  static const greySearchText = Color(0xFF979797);
   static const grey = Colors.grey;
   static const backgroundColor = Colors.white70;
   static const orange = Colors.amber;
   static  Color green = Colors.green.shade900;
   static  Color red = Colors.red.shade900;
+  static const Color yellow = Color(0xFFE09A1E);
+  static const  Color blackColorForTitleTexts =  Color(0xFF2A2A2A);
 
 
 

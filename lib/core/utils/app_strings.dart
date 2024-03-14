@@ -329,4 +329,43 @@ Official Channels:
 •	Phone - +971 4 341 7419
 •	Email - support@Rehlatyuae.com
 ''';
+
+  static const appLogo = "assets/images/Group.svg";
+  static const ourPartnersLogo = "assets/images/download 1.png";
+  static const whyChooseUsFastBookingImage = "assets/images/Vector.png";
+  static const whyChooseUsEasyToShopImage = "assets/images/Vector(1).png";
+  static const whyChooseUs247SupportImage = "assets/images/Group(1).png";
+  static const whyChooseUsUniqueexPerienceImage = "assets/images/Group(2).png";
+  static const weHelpYouMakeBestTripImage1 = "assets/images/Rectangle 9897.png";
+  static const weHelpYouMakeBestTripImage2 = "assets/images/Rectangle 9899.png";
+  static const weHelpYouMakeBestTripImage3 = "assets/images/Rectangle 9898.png";
+  static const searchTextFieldHintText = "Search by activities...";
+  static const textButtonNameOfHomeScreen = "View all";
+  static const categoriesTitle = "Categories";
+  static const topDestinationTitle = "Top Destinations";
+  static const bestOffersTitle = "Best Offers";
+  static const bestTripsTitle = "Best Trips";
+  static const popularExperiencesTitle = "Popular Experiences";
+  static const ourBlogTitle = "Our Blog";
+  static const ourPartnerTitle = "Our Partner";
+  static const whyChooseUsTitle = "Why Choose Us";
+  static const whyChooseUsFastBooking = "Fast booking";
+  static const whyChooseUsFastBookingDescription = "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
+  static const whyChooseUsEasyToShop = "Easy to Shop";
+  static const whyChooseUsEasyToShopDescription = "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
+  static const whyChooseUs247Support = "24/7 Support";
+  static const whyChooseUs247SupportDescription = "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
+  static const whyChooseUsUniqueexPerience = "Unique experience";
+  static const whyChooseUsUniqueexPerienceDescription = "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
+  static const weHelpYouMakeBestTrip = "We Help You Make Best Trip";
+  static const weHelpYouMakeBestTripDescription = "Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada";
+  static const weHelpYouMakeBestTripSecondDescription = "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.";
+  static const actionButtonName = "Explore More";
+  static const reviewTitle = "Our Client Reviews";
+  static const subscribeToNewsletterTitle = "Subscribe to Newsletter";
+  static const reviewTextFieldName = "Your Name";
+  static const reviewTextFieldEmail = "Your Email";
+  static const reviewActionButtonName = "Send";
+  static const copyRight = "Copyright ©2024. All Rights Reserved. — by Rehlatyuai";
+
 }
