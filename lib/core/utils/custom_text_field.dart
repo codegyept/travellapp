@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class CustomTextField extends StatelessWidget {
-  final TextEditingController controller;
   final TextInputType? keyboardType;
-  final bool isObsureText;
-  final String obsureCharacters;
   final String hintText;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
 
   const CustomTextField(
       {super.key,
-      required this.controller,
       this.keyboardType = TextInputType.text,
-      required this.isObsureText,
-      required this.obsureCharacters,
       required this.hintText,
       this.prefixIcon,
       this.suffixIcon});
@@ -26,35 +21,33 @@ class CustomTextField extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     return Opacity(
-      opacity: 0.1,
+      opacity: 0.5,
       child: TextFormField(
-        controller: controller,
         keyboardType: keyboardType,
-        obscureText: isObsureText,
-        obscuringCharacter: obsureCharacters,
-        style: const TextStyle(
-            fontFamily: "Switzer", color: Colors.grey, fontSize: 14),
+        style: TextStyle(
+            fontFamily: "Switzer", color: Colors.grey, fontSize: 14.sp),
         decoration: InputDecoration(
-            contentPadding: const EdgeInsets.only(top: 12),
+            contentPadding: EdgeInsets.only(top: 12.sp),
             constraints: BoxConstraints(
-              maxHeight: height * 0.065,
+              maxHeight: height * 0.065.h,
               maxWidth: width,
             ),
             filled: true,
             hintText: hintText,
-            hintStyle: const TextStyle(
-                fontFamily: "Switzer", color: Colors.grey, fontSize: 14),
+            hintStyle: TextStyle(
+                fontFamily: "Switzer", color: Colors.grey, fontSize: 14.sp),
             prefixIcon: prefixIcon,
             suffixIcon: suffixIcon,
             border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(30.0),
-                borderSide: const BorderSide(
-                    color: AppColors.textAndBackgroundColorButton, width: 1.0)),
+                borderRadius: BorderRadius.circular(30.0.r),
+                borderSide: BorderSide(
+                    color: AppColors.textAndBackgroundColorButton,
+                    width: 1.0.w)),
             enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(30.0),
-                borderSide: const BorderSide(
+                borderRadius: BorderRadius.circular(30.0.r),
+                borderSide: BorderSide(
                   color: AppColors.textAndBackgroundColorButton,
-                  width: 1.0,
+                  width: 1.0.w,
                 ))),
       ),
     );
