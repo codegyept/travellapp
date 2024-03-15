@@ -102,7 +102,13 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12.r),
                 borderSide: const BorderSide(
-                  color: AppColors.redAppColor,
+                  color: AppColors.textAndBackgroundColorButton,
+                ),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12.r),
+                borderSide: const BorderSide(
+                  color: AppColors.textAndBackgroundColorButton,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
@@ -119,8 +125,14 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
                         });
                       },
                       icon: isVisibleText
-                          ? const Icon(Icons.visibility_off_outlined)
-                          : const Icon(Icons.visibility_outlined),
+                          ? const Icon(
+                              Icons.visibility_off_outlined,
+                              color: AppColors.textAndBackgroundColorButton,
+                            )
+                          : const Icon(
+                              Icons.visibility_outlined,
+                              color: AppColors.textAndBackgroundColorButton,
+                            ),
                     )
                   : widget.suffix,
               errorStyle: Theme.of(context).textTheme.labelSmall!.copyWith(
