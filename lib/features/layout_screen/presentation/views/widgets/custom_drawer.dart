@@ -11,6 +11,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      width: 270.w,
       child: SingleChildScrollView(
         padding: EdgeInsets.symmetric(vertical: 30.h),
         child: Column(
@@ -19,7 +20,7 @@ class CustomDrawer extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: 10.w,
-                vertical: 10.h,
+                vertical: 20.h,
               ),
               child: Row(
                 children: [
@@ -56,7 +57,7 @@ class CustomDrawer extends StatelessWidget {
                 Text(
                   "USD\$",
                   style: TextStyle(
-                    fontSize: 15.sp,
+                    fontSize: 12.sp,
                     color: AppColors.backgroundColorExpansionAndText,
                     fontWeight: FontWeight.w400,
                   ),
@@ -73,7 +74,7 @@ class CustomDrawer extends StatelessWidget {
                 Text(
                   "English",
                   style: TextStyle(
-                    fontSize: 15.sp,
+                    fontSize: 12.sp,
                     color: AppColors.backgroundColorExpansionAndText,
                     fontWeight: FontWeight.w400,
                   ),
@@ -87,9 +88,25 @@ class CustomDrawer extends StatelessWidget {
               title: 'Notifications',
               iconPath: AppAssets.notifications,
               trailing: [
-                Switch(
-                  value: true,
-                  onChanged: (value) {},
+                Transform.scale(
+                  scale: 0.8,
+                  child: Switch(
+                    value: true,
+                    onChanged: (value) {},
+                    trackOutlineWidth: MaterialStateProperty.resolveWith<double?>(
+                      (Set<MaterialState> states) {
+                        if (states.contains(MaterialState.disabled)) {
+                          return 2.0;
+                        }
+                        return 2.0;
+                      },
+                    ),
+                    trackColor: MaterialStateProperty.resolveWith<Color?>(
+                      (Set<MaterialState> states) {
+                        return AppColors.textAndBackgroundColorButton;
+                      },
+                    ),
+                  ),
                 ),
               ],
             ),
