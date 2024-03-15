@@ -10,6 +10,8 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/bes
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_trips_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/categories_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_app_bar_title.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_bottom_navigation_bar.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_drawer.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/our_blog_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/our_partner_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/popular_Experiences.dart';
@@ -42,7 +44,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      drawer: const Drawer(),
+      drawer: const CustomDrawer(),
       body: Padding(
         padding: EdgeInsetsDirectional.symmetric(
           vertical: 20.0.h,
@@ -91,6 +93,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 }
