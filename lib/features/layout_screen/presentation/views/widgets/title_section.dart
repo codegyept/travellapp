@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/custom_icon_button.dart';
 
@@ -38,10 +39,13 @@ class TitleSection extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 25.h),
-            child: const Row(
+            child: Row(
               children: [
                 CustomIconButton(
                   icon: Icons.arrow_back,
+                  onPressed: () {
+                    context.pop();
+                  },
                 ),
               ],
             ),

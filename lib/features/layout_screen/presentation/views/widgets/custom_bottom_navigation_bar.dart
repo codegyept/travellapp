@@ -66,9 +66,9 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         ),
       ],
       index: index,
-      onTap: (selctedIndex) {
+      onTap: (selectedIndex) {
         setState(() {
-          index = selctedIndex;
+          index = selectedIndex;
         });
       },
       backgroundColor: AppColors.white,

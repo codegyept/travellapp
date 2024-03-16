@@ -107,7 +107,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     DefaultTextButton(
                       onPressed: () {
-                        GoRouter.of(context).go('/register');
+                        context.pop();
                       },
                       text: ' Sign In here',
                     ),
@@ -129,7 +129,7 @@ class RegisterScreen extends StatelessWidget {
                   children: [
                     DefaultTextButton(
                       onPressed: () {
-                        GoRouter.of(context).go('/register');
+                        context.push('/termsConditionsScreen');
                       },
                       text: 'Terms',
                     ),
@@ -144,7 +144,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     DefaultTextButton(
                       onPressed: () {
-                        GoRouter.of(context).go('/register');
+                        context.push('/privacyPolicyScreen');
                       },
                       text: 'Privacy Policy',
                     ),
