@@ -1,5 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/features/auth_screen/presentation/views/forget_password_screen.dart';
+import 'package:rehlatyuae/features/auth_screen/presentation/views/login_screen.dart';
+import 'package:rehlatyuae/features/auth_screen/presentation/views/register_screen.dart';
 import 'package:rehlatyuae/features/auth_screen/presentation/views/update_password_screen.dart';
 import 'package:rehlatyuae/features/auth_screen/presentation/views/verification_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/about_us_screen.dart';
@@ -56,6 +58,14 @@ abstract class AppRouter {
       ),
 
       /// Auth Screens
+      GoRoute(
+        path: "/loginScreen",
+        builder: (context, state) => const LoginScreen(),
+      ),
+      GoRoute(
+        path: "/registerScreen",
+        builder: (context, state) => const RegisterScreen(),
+      ),
       GoRoute(
         path: "/forgetPasswordScreen",
         builder: (context, state) => const ForgetPasswordScreen(),
