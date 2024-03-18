@@ -16,7 +16,7 @@ final double width;
         vertical: 10.0.h,
       ),
       decoration: BoxDecoration(
-        color: AppColors.yellow,
+        color: AppColors.orange,
         borderRadius: BorderRadiusDirectional.circular(12.0.r),
         boxShadow: [
           BoxShadow(
@@ -72,7 +72,7 @@ final double width;
                   "IMG Worlds of Adventure",
                   maxLines: 1,
                   style: TextStyle(
-                    color: AppColors.blackColorForTitleTexts,
+                    color: AppColors.black,
                     fontSize: 12.0.sp,
                   ),
                   overflow:TextOverflow.ellipsis,
@@ -109,7 +109,7 @@ final double width;
                     Text(
                       "48",
                       style: TextStyle(
-                        color: AppColors.blackColorForTitleTexts,
+                        color: AppColors.black,
                       ),
                       overflow:TextOverflow.ellipsis,
                     ),
@@ -129,7 +129,7 @@ final double width;
                     Text(
                       "4.2 (852)",
                       style: TextStyle(
-                        color: AppColors.blackColorForTitleTexts,
+                        color: AppColors.black,
                       ),
                       overflow:TextOverflow.ellipsis,
                     ),

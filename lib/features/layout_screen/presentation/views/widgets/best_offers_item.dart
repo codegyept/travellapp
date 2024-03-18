@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/icon_button_with_white_background.dart';
@@ -79,7 +77,7 @@ class BestOffersItem extends StatelessWidget {
                   "IMG Worlds of Adventure",
                   maxLines: 1,
                   style: TextStyle(
-                    color: AppColors.blackColorForTitleTexts,
+                    color: AppColors.black,
                     fontSize: 12.0.sp,
                   ),
                   textAlign: TextAlign.justify,
@@ -117,7 +115,7 @@ class BestOffersItem extends StatelessWidget {
                     Text(
                       "48",
                       style: TextStyle(
-                        color: AppColors.blackColorForTitleTexts,
+                        color: AppColors.black,
                       ),
                       textAlign: TextAlign.justify,
                     ),
@@ -137,7 +135,7 @@ class BestOffersItem extends StatelessWidget {
                     Text(
                       "4.2 (852)",
                       style: TextStyle(
-                        color: AppColors.blackColorForTitleTexts,
+                        color: AppColors.black,
                       ),
                       textAlign: TextAlign.justify,
                     ),

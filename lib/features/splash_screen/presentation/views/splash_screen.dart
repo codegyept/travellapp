@@ -1,37 +1,41 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:rehlatyuae/features/splash_screen/presentation/views/onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>
-    with SingleTickerProviderStateMixin {
+class _SplashScreenState extends State<SplashScreen> {
   @override
-  // void initState() {
-  //   super.initState();
-  //   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-  //   Future.delayed(Duration(milliseconds: 500), () {
-  //     GoRouter.of(context).go('/onboarding');
-  //   });
-  // }
+  void initState() {
+    super.initState();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+    Future.delayed(const Duration(milliseconds: 500), () {
+      GoRouter.of(context).go('/onboarding');
+    });
+  }
 
-  // @override
-  // void dispose() {
-  //   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-  //       overlays: SystemUiOverlay.values);
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: SystemUiOverlay.values);
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
@@ -40,14 +44,12 @@ class _SplashScreenState extends State<SplashScreen>
               ),
             ),
           ),
-          // Container(
-          //   padding:  const EdgeInsets.all(30),
-          //   child: AnimatedSplashScreen(
-          //     splash: SvgPicture.asset('assets/images/main_logo.svg'),
-          //     nextScreen: Onbording(),
-          //     splashTransition: SplashTransition.scaleTransition,
-          //   ),
-          // ),
+          AnimatedSplashScreen(
+            splash: SvgPicture.asset('assets/images/splash.png'),
+            nextScreen: const Onbording(),
+            splashTransition: SplashTransition.scaleTransition,
+            duration: 3500,
+          ),
         ],
       ),
     );
