@@ -85,11 +85,6 @@ class LoginScreen extends StatelessWidget {
                   backGroundColor: AppColors.textAndBackgroundColorButton,
                   height: 60.h,
                   width: double.infinity,
-                  style: TextStyle(
-                    fontFamily: "Switzer",
-                    color: AppColors.white,
-                    fontSize: 20.sp,
-                  ),
                 ),
                 SizedBox(height: 30.h),
                 Row(

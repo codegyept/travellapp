@@ -52,7 +52,6 @@ class EditProfileScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(16.r),
               backGroundColor: AppColors.orange,
               onTap: () {},
-              style: const TextStyle(color: AppColors.white),
               width: double.infinity,
               height: 50.h,
             ),

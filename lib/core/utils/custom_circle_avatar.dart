@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class CustomCircleAvatar extends StatelessWidget {
   final double radius;
   final double borderWidth;
   final double iconSize;
+  final String? avatarText;
   final Color backgroundColor;
   final ImageProvider<Object>? backgroundImage;
   final IconData? iconData;
@@ -16,6 +18,7 @@ class CustomCircleAvatar extends StatelessWidget {
     this.backgroundColor = AppColors.textAndBackgroundColorButton,
     this.backgroundImage,
     this.iconData,
+    this.avatarText,
     super.key,
   });
 
@@ -28,11 +31,22 @@ class CustomCircleAvatar extends StatelessWidget {
         radius: radius,
         backgroundColor: backgroundColor,
         backgroundImage: backgroundImage,
-        child: Icon(
-          iconData,
-          color: AppColors.white,
-          size: iconSize,
-        ),
+        child: iconData != null
+            ? Icon(
+                iconData,
+                color: AppColors.white,
+                size: iconSize,
+              )
+            : avatarText != null
+                ? Text(
+                    avatarText!,
+                    style: TextStyle(
+                      fontSize: 30.sp,
+                      color: AppColors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  )
+                : null,
       ),
     );
   }

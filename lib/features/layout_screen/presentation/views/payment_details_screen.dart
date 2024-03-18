@@ -8,16 +8,12 @@ import 'package:rehlatyuae/core/utils/primary_text_field.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/credit_debit_cards_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/cusotm_bottom_sheet.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/order_summary_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/payment_content_sheet.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/total_payment_section.dart';
 
-class PaymentDetailsScreen extends StatefulWidget {
+class PaymentDetailsScreen extends StatelessWidget {
   const PaymentDetailsScreen({super.key});
 
-  @override
-  State<PaymentDetailsScreen> createState() => _PaymentDetailsScreenState();
-}
-
-class _PaymentDetailsScreenState extends State<PaymentDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,15 +75,18 @@ class _PaymentDetailsScreenState extends State<PaymentDetailsScreen> {
                     borderRadius: BorderRadius.zero,
                   ),
                   builder: (context) => const CustomBottomSheet(
-                    totalPayment: '12.00',
-                    date: '12 / 12 / 2021',
-                    details: 'IMG World',
-                    referenceNum: 'A06453826151',
-                    account: 'Mike Wazowsky',
-                    discount: '1.00',
-                    total: '11.00',
-                    avatarColor: AppColors.textAndBackgroundColorButton,
-                    isPaymentDone: true,
+                    title: 'Payment Details',
+                    labelButton: 'Payment',
+                    contentSheet: PaymentContentSheet(
+                      totalPayment: "12.00",
+                      date: '12 / 12 / 2021',
+                      tripDate: '12 / 2 / 2024',
+                      details: 'IMG World ',
+                      referenceNum: 'A06453826151',
+                      account: 'Mike Wazowsky',
+                      discount: '1.00',
+                      total: '11.00',
+                    ),
                   ),
                 );
               },
@@ -99,13 +98,19 @@ class _PaymentDetailsScreenState extends State<PaymentDetailsScreen> {
                     borderRadius: BorderRadius.zero,
                   ),
                   builder: (context) => const CustomBottomSheet(
-                    totalPayment: '12.00',
-                    date: '12 / 12 / 2021',
-                    details: 'IMG World',
-                    referenceNum: 'A06453826151',
-                    account: 'Mike Wazowsky',
-                    discount: '1.00',
-                    total: '11.00',
+                    title: 'Payment Details',
+                    labelButton: 'Payment',
+                    contentSheet: PaymentContentSheet(
+                      totalPayment: "12.00",
+                      date: '12 / 12 / 2021',
+                      tripDate: '12 / 2 / 2024',
+                      details: 'IMG World',
+                      referenceNum: 'A06453826151',
+                      account: 'Mike Wazowsky',
+                      discount: '1.00',
+                      total: '11.00',
+                    ),
+                    avatarColor: AppColors.backgroundAvatarPayment,
                   ),
                 );
               },

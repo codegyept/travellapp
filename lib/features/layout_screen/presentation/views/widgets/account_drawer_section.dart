@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/currency_content_sheet.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/cusotm_bottom_sheet.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/drawer_item.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/language_content_sheet.dart';
 
 class AccountDrawerSection extends StatelessWidget {
   const AccountDrawerSection({super.key});
@@ -60,6 +63,20 @@ class AccountDrawerSection extends StatelessWidget {
               Icons.arrow_forward_ios_sharp,
             ),
           ],
+          onTap: () {
+            showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.zero,
+              ),
+              builder: (context) => const CustomBottomSheet(
+                title: 'Select Currency',
+                avatarText: '\$',
+                contentSheet: CurrencyContentSheet(),
+              ),
+            );
+          },
         ),
         DrawerItem(
           title: 'Language',
@@ -77,6 +94,20 @@ class AccountDrawerSection extends StatelessWidget {
               Icons.arrow_forward_ios_sharp,
             ),
           ],
+          onTap: () {
+            showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.zero,
+              ),
+              builder: (context) => const CustomBottomSheet(
+                title: 'Select Language',
+                avatarText: 'AR',
+                contentSheet: LanguageContentSheet(),
+              ),
+            );
+          },
         ),
         DrawerItem(
           title: 'Notifications',

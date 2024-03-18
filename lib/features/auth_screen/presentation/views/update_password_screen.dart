@@ -73,7 +73,6 @@ class UpdatePasswordScreen extends StatelessWidget {
                   ),
                 );
               },
-              style: const TextStyle(color: AppColors.white),
               width: double.infinity,
               height: 50.h,
             ),

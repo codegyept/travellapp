@@ -72,7 +72,6 @@ class ForgetPasswordScreen extends StatelessWidget {
               onTap: () {
                 context.push('/verificationScreen');
               },
-              style: const TextStyle(color: AppColors.white),
               width: double.infinity,
               height: 50.h,
             ),

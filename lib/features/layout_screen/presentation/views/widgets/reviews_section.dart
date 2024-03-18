@@ -144,9 +144,6 @@ class ReviewsSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(10.0.r),
               backGroundColor: AppColors.textAndBackgroundColorButton,
               onTap: () {},
-              style: const TextStyle(
-                color: AppColors.whiteAppColor,
-              ),
               width: 50.0.w,
               height: 40.0.h,
             ),

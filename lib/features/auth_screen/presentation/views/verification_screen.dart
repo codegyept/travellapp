@@ -62,7 +62,6 @@ class VerificationScreen extends StatelessWidget {
             onTap: () {
               context.push('/updatePasswordScreen');
             },
-            style: const TextStyle(color: AppColors.white),
             width: double.infinity,
             height: 50.h,
           ),

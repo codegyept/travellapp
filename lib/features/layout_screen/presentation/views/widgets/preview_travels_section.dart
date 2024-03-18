@@ -86,7 +86,6 @@ class PreviewTravelsSection extends StatelessWidget {
               onTap: () {
                 context.push('/paymentOptionsScreen');
               },
-              style: const TextStyle(color: AppColors.white),
               width: double.infinity,
               height: 50,
             ),

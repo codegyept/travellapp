@@ -5,29 +5,22 @@ import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/custom_circle_avatar.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/row_details.dart';
 
 class CustomBottomSheet extends StatelessWidget {
-  final String totalPayment;
-  final String date;
-  final String details;
-  final String referenceNum;
-  final String account;
-  final String discount;
-  final String total;
+  final String title;
+  final String? labelButton;
+  final String? avatarText;
+  final Widget contentSheet;
   final Color avatarColor;
-  final bool isPaymentDone;
+  final bool hasButton;
 
   const CustomBottomSheet({
-    required this.totalPayment,
-    required this.date,
-    required this.details,
-    required this.referenceNum,
-    required this.account,
-    required this.discount,
-    required this.total,
-    this.isPaymentDone = false,
-    this.avatarColor = AppColors.backgroundAvatarPayment,
+    required this.title,
+    required this.contentSheet,
+    this.labelButton,
+    this.avatarText,
+    this.avatarColor = AppColors.textAndBackgroundColorButton,
+    this.hasButton = true,
     super.key,
   });
 
@@ -52,9 +45,9 @@ class CustomBottomSheet extends StatelessWidget {
                     },
                     icon: const Icon(Icons.clear),
                   ),
-                  const Text(
-                    "Payment Details",
-                    style: TextStyle(
+                  Text(
+                    title,
+                    style: const TextStyle(
                       fontSize: 16,
                       color: Colors.black,
                       fontWeight: FontWeight.w700,
@@ -81,75 +74,14 @@ class CustomBottomSheet extends StatelessWidget {
                       width: double.infinity,
                       margin: EdgeInsets.symmetric(horizontal: 30.w).copyWith(top: 30.h),
                       padding: EdgeInsets.symmetric(horizontal: 20.w).copyWith(
-                        top: 100.h,
+                        top: 90.h,
                         bottom: 20.h,
                       ),
                       decoration: BoxDecoration(
                         color: AppColors.backgroundWhite,
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Total Amount",
-                            style: TextStyle(
-                              fontSize: 15.sp,
-                              color: AppColors.backgroundColorExpansionAndText,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3,
-                            ),
-                          ),
-                          Text(
-                            "\$ $totalPayment",
-                            style: TextStyle(
-                              fontSize: 30.sp,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w700,
-                              height: 1.32,
-                            ),
-                          ),
-                          RowDetails(
-                            title: "Date",
-                            value: date,
-                          ),
-                          RowDetails(
-                            title: "Details",
-                            value: details,
-                          ),
-                          RowDetails(
-                            title: "Reference num",
-                            value: referenceNum,
-                          ),
-                          RowDetails(
-                            title: "Account",
-                            value: account,
-                          ),
-                          SizedBox(
-                            height: 20.h,
-                          ),
-                          DottedLine(
-                            dashLength: 8.w,
-                            alignment: WrapAlignment.spaceBetween,
-                            dashColor: AppColors.grey,
-                          ),
-                          RowDetails(
-                            title: "Total Payment",
-                            value: "\$$totalPayment",
-                          ),
-                          RowDetails(
-                            title: "Discount",
-                            value: "\$$discount",
-                          ),
-                          RowDetails(
-                            title: "Total",
-                            value: "\$$total",
-                            textValueColor: AppColors.textAndBackgroundColorButton,
-                          ),
-                          SizedBox(
-                            height: 10.h,
-                          ),
-                        ],
-                      ),
+                      child: contentSheet,
                     ),
                     Positioned(
                       bottom: -10.h,
@@ -166,16 +98,17 @@ class CustomBottomSheet extends StatelessWidget {
                   ],
                 ),
                 Positioned(
-                  top: -30.h,
+                  top: -15.h,
                   right: 0,
                   left: 0,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomCircleAvatar(
-                        iconData: Icons.check,
-                        radius: 60.h,
-                        borderWidth: 15.h,
+                        iconData: avatarText == null ? Icons.check : null,
+                        avatarText: avatarText,
+                        radius: 50.h,
+                        borderWidth: 10.h,
                         backgroundColor: avatarColor,
                       ),
                     ],
@@ -185,20 +118,20 @@ class CustomBottomSheet extends StatelessWidget {
             ),
           ],
         ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
-          child: CustomActionButton(
-            text: isPaymentDone ? 'Back to Homepage' : 'Payment',
-            borderRadius: BorderRadius.circular(16.r),
-            backGroundColor: AppColors.textAndBackgroundColorButton,
-            onTap: () {
-              context.pop();
-            },
-            style: const TextStyle(color: AppColors.white),
-            width: 250.w,
-            height: 50.h,
+        if (hasButton && labelButton != null)
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
+            child: CustomActionButton(
+              text: labelButton!,
+              borderRadius: BorderRadius.circular(16.r),
+              backGroundColor: AppColors.textAndBackgroundColorButton,
+              onTap: () {
+                context.pop();
+              },
+              width: 250.w,
+              height: 50.h,
+            ),
           ),
-        ),
       ],
     );
   }

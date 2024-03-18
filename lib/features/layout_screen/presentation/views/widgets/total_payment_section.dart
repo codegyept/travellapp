@@ -55,7 +55,6 @@ class TotalPaymentSection extends StatelessWidget {
             borderRadius: BorderRadius.circular(16.sp),
             backGroundColor: AppColors.textAndBackgroundColorButton,
             onTap: onButtonTap,
-            style: const TextStyle(color: AppColors.white),
             width: 140.w,
             height: 50.h,
           ),

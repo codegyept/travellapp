@@ -116,7 +116,6 @@ class AddCardBottomSheet extends StatelessWidget {
             onTap: () {
               context.pop();
             },
-            style: const TextStyle(color: AppColors.white),
             width: double.infinity,
             height: 50.h,
           ),
