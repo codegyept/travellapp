@@ -16,7 +16,7 @@ class ReviewsSection extends StatelessWidget {
         const Text(
           AppStrings.reviewTitle,
           style: TextStyle(
-            color: AppColors.blackColorForTitleTexts,
+            color: AppColors.black,
           ),
         ),
         const CustomSizedBox(),
@@ -29,7 +29,7 @@ class ReviewsSection extends StatelessWidget {
         const Text(
           AppStrings.weHelpYouMakeBestTripDescription,
           style: TextStyle(
-            color: AppColors.blackColorForTitleTexts,
+            color: AppColors.black,
           ),
           overflow: TextOverflow.ellipsis,
           maxLines: 6,
@@ -88,7 +88,7 @@ class ReviewsSection extends StatelessWidget {
         const Text(
           AppStrings.subscribeToNewsletterTitle,
           style: TextStyle(
-            color: AppColors.blackColorForTitleTexts,
+            color: AppColors.black,
           ),
         ),
         Row(

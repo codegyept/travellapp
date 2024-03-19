@@ -18,7 +18,7 @@ class BestOffersHorizontalItem extends StatelessWidget {
         vertical: 10.0.h,
       ),
       decoration: BoxDecoration(
-        color: AppColors.yellow,
+        color: AppColors.orange,
         borderRadius: BorderRadiusDirectional.circular(12.0.r),
         boxShadow: [
           BoxShadow(
@@ -76,7 +76,7 @@ class BestOffersHorizontalItem extends StatelessWidget {
                   "IMG Worlds of Adventure",
                   maxLines: 1,
                   style: TextStyle(
-                    color: AppColors.blackColorForTitleTexts,
+                    color: AppColors.black,
                     fontSize: 12.0.sp,
                   ),
                   overflow: TextOverflow.ellipsis,
@@ -119,7 +119,7 @@ class BestOffersHorizontalItem extends StatelessWidget {
                     const Text(
                       "48",
                       style: TextStyle(
-                        color: AppColors.blackColorForTitleTexts,
+                        color: AppColors.black,
                       ),
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -139,7 +139,7 @@ class BestOffersHorizontalItem extends StatelessWidget {
                     const Text(
                       "4.2 (852)",
                       style: TextStyle(
-                        color: AppColors.blackColorForTitleTexts,
+                        color: AppColors.black,
                       ),
                       overflow: TextOverflow.ellipsis,
                     ),

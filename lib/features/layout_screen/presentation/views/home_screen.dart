@@ -21,6 +21,8 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/top
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/we_help_you_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/why_choose_us_section.dart';
 
+import 'widgets/drawer.dart';
+
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
@@ -45,6 +47,10 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       drawer: const CustomDrawer(),
+//       drawer: Drawer(
+//         width: 220.w,
+//         child: DrawerScreen(),
+//       ),
       body: Padding(
         padding: EdgeInsetsDirectional.symmetric(
           vertical: 20.0.h,
@@ -83,7 +89,10 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 borderRadius: BorderRadius.circular(12.0.r),
                 backGroundColor: AppColors.yellow,
-                style: TextStyle(color: AppColors.whiteAppColor, fontSize: 20.0.sp, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    color: AppColors.whiteAppColor,
+                    fontSize: 20.0.sp,
+                    fontWeight: FontWeight.bold),
               ),
               const CustomSizedBox(),
               const BestOffersHorizontal(),

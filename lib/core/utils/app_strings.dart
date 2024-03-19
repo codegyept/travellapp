@@ -330,8 +330,10 @@ Official Channels:
 •	Email - support@Rehlatyuae.com
 ''';
 
+  // aseets images names
   static const appLogo = "assets/images/Group.svg";
   static const ourPartnersLogo = "assets/images/download 1.png";
+  static const containerTripBackgroundImage = "assets/images/Rectangle 427.png";
   static const whyChooseUsFastBookingImage = "assets/images/Vector.png";
   static const whyChooseUsEasyToShopImage = "assets/images/Vector(1).png";
   static const whyChooseUs247SupportImage = "assets/images/Group(1).png";
@@ -339,6 +341,8 @@ Official Channels:
   static const weHelpYouMakeBestTripImage1 = "assets/images/Rectangle 9897.png";
   static const weHelpYouMakeBestTripImage2 = "assets/images/Rectangle 9899.png";
   static const weHelpYouMakeBestTripImage3 = "assets/images/Rectangle 9898.png";
+
+  //text names
   static const searchTextFieldHintText = "Search by activities...";
   static const textButtonNameOfHomeScreen = "View all";
   static const categoriesTitle = "Categories";
@@ -416,4 +420,23 @@ Official Channels:
   static const privacyPolicy = "Privacy Policy";
   static const termsConditions = "Terms & Conditions";
   static const faqs = "FAQs";
+  static const allTripsTitle = "All Trip";
+
+  // navigator pages name
+  static const homeScreen = "/HomeScreen";
+  static const allTripsScreen = "/AllTripsScreen";
+  static const bestOffersScreen = "/BestOffersScreen";
+  static const bestTripsScreen = "/BestTripsScreen";
+  static const ourBlogsScreen = "/OurBlogsScreen";
+  static const popularExperiencesScreen = "/PopularExperiencesScreen";
+  static const topDestinationScreen = "/TopDestinationScreen";
+  static const aboutUsScreen = "/aboutUsScreen";
+  static const termsConditionsScreen = "/termsConditionsScreen";
+  static const privacyPolicyScreen = "/privacyPolicyScreen";
+  static const faqsScreen = "/faqsScreen";
+  static const paymentOptionsScreen =  "/paymentOptionsScreen";
+  static const paymentDetailsScreen =  "/paymentDetailsScreen";
+  static const profileScreen =  "/profileScreen";
+  static const travelDetailsScreen =   "/travelDetailsScreen";
+  static const blogScreen =  "/blogScreen";
 }

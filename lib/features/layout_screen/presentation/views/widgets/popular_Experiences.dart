@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
-import 'package:rehlatyuae/core/utils/custom_container_trip.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_row_title.dart';
+import 'package:rehlatyuae/features/popular_experiences/presentation/views/widgets/popular_experiences_contanier_item.dart';
 
 class PopularExperiencesSection extends StatelessWidget {
   const PopularExperiencesSection({super.key});
@@ -13,16 +14,19 @@ class PopularExperiencesSection extends StatelessWidget {
       children: [
         CustomRowTitle(
           text: AppStrings.popularExperiencesTitle,
-          onPressed: () {},
+          onPressed: ()
+          {
+            context.go(AppStrings.popularExperiencesScreen);
+          },
         ),
         SizedBox(
-          height: 130.0.h,
+          height:160.0.h,
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: 10,
               itemBuilder: (context, index) {
-                return CustomContainerTrip(
-                  width: 100.0.w,
+                return PopularExperiencesContainerItem(
+                  width : 120.0.w,
                 );
               },
               separatorBuilder: (context, index) {

@@ -9,12 +9,12 @@ class BlogContainerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 330.0.h,
-      width: 220.0.w,
+      width: 240.0.w,
       child: Stack(
         children: [
           Container(
             height: 330.0.h,
-            width: 220.0.w,
+            width: 240.0.w,
             clipBehavior: Clip.antiAliasWithSaveLayer,
             decoration: BoxDecoration(
               borderRadius: BorderRadiusDirectional.circular(15.0.r),
@@ -53,7 +53,7 @@ class BlogContainerItem extends StatelessWidget {
           ),
           Positioned(
             top: 10,
-            right: 8,
+            right: 17,
             child: Container(
               width: 92.0.w,
               height: 30.0.h,

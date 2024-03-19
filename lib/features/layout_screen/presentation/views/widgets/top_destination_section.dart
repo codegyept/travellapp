@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_container_trip.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_row_title.dart';
@@ -11,8 +12,11 @@ class TopDestinationSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomRowTitle(
-          onPressed: () {},
+         CustomRowTitle(
+          onPressed:()
+          {
+            context.go(AppStrings.topDestinationScreen);
+          },
           text: AppStrings.topDestinationTitle,
         ),
         SizedBox(
@@ -22,7 +26,12 @@ class TopDestinationSection extends StatelessWidget {
               itemCount: 10,
               itemBuilder: (context, index) {
                 return CustomContainerTrip(
-                  width: 200.0.w,
+                  width:200.0.w,
+                  cityName: "Dubai",
+                  countryName:"United Arab Emirates",
+                  imageName: AppStrings.containerTripBackgroundImage,
+                  tripPrice:"43",
+                  reservationType:"/person",
                 );
               },
               separatorBuilder: (context, index) {
