@@ -27,6 +27,11 @@ class ExperiencesSections extends StatelessWidget {
             itemCount: 15,
             itemBuilder: (context, index) => CustomContainerTrip(
               width: 225.w,
+              imageName: 'assets/images/preview1.png',
+              cityName: 'Dubai',
+              countryName: 'United Arab Emirates',
+              tripPrice: '43',
+              reservationType: '/Person',
             ),
             separatorBuilder: (context, index) => const SizedBox(width: 12),
           ),
@@ -46,6 +51,11 @@ class ExperiencesSections extends StatelessWidget {
             itemCount: 15,
             itemBuilder: (context, index) => CustomContainerTrip(
               width: 140.w,
+              imageName: 'assets/images/preview1.png',
+              cityName: 'Dubai',
+              countryName: 'United Arab Emirates',
+              tripPrice: '43',
+              reservationType: '/Person',
             ),
             separatorBuilder: (context, index) => const SizedBox(width: 12),
           ),

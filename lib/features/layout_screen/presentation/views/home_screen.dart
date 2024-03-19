@@ -14,7 +14,7 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/cus
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_drawer.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/our_blog_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/our_partner_section.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/popular_Experiences.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/popular_experiences.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/reviews_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/search_text_feild.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/top_destination_section.dart';

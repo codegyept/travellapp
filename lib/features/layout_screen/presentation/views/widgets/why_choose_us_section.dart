@@ -15,7 +15,7 @@ class WhyChooseUsSection extends StatelessWidget {
       children: [
         const Text(
           AppStrings.whyChooseUsTitle,
-          style: const TextStyle(
+          style: TextStyle(
             color: AppColors.black,
           ),
         ),
@@ -23,13 +23,13 @@ class WhyChooseUsSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             WhyChooseUSItem(
-              text:AppStrings.whyChooseUsFastBooking,
+              text: AppStrings.whyChooseUsFastBooking,
               style: TextStyle(
                 color: AppColors.black,
                 fontSize: 15.0.sp,
               ),
               descriptionText: AppStrings.whyChooseUsFastBookingDescription,
-              descriptionTextStyle:TextStyle(
+              descriptionTextStyle: TextStyle(
                 fontSize: 12.0.sp,
                 color: AppColors.black,
               ),

@@ -11,29 +11,29 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/bes
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_offers_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_trips_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_app_bar_title.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/popular_Experiences.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/popular_experiences.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/reviews_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/search_text_feild.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/we_help_you_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/why_choose_us_section.dart';
 
-class TopDestinationScreen extends StatelessWidget
-{
-   TopDestinationScreen({super.key});
-final TextEditingController _textEditingController =TextEditingController();
+class TopDestinationScreen extends StatelessWidget {
+  TopDestinationScreen({super.key});
+
+  final TextEditingController _textEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading:IconButton(
-          icon:Icon(Icons.arrow_back_ios_new_outlined),
-          onPressed:()
-          {
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new_outlined),
+          onPressed: () {
             GoRouter.of(context).go("/");
           },
-        ) ,
+        ),
         surfaceTintColor: AppColors.whiteAppColor,
-        title: CustomAppBarTitle(),
+        title: const CustomAppBarTitle(),
         actions: [
           InkWell(
             onTap: () {},
@@ -55,27 +55,27 @@ final TextEditingController _textEditingController =TextEditingController();
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
-            crossAxisAlignment:CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SearchTextField(
                 controller: _textEditingController,
               ),
               const CustomSizedBox(),
-              Text(
+              const Text(
                 AppStrings.topDestinationTitle,
               ),
               const CustomSizedBox(),
-              AllTripsBody(),
+              const AllTripsBody(),
               const CustomSizedBox(),
-              BestOffersSection(),
+              const BestOffersSection(),
               const CustomSizedBox(),
-              BestTripsSection(),
+              const BestTripsSection(),
               const CustomSizedBox(),
-              PopularExperiencesSection(),
+              const PopularExperiencesSection(),
               const CustomSizedBox(),
-              WhyChooseUsSection(),
+              const WhyChooseUsSection(),
               const CustomSizedBox(),
-              WeHelpYouSection(),
+              const WeHelpYouSection(),
               CustomActionButton(
                 onTap: () {},
                 text: AppStrings.actionButtonName,
@@ -83,15 +83,12 @@ final TextEditingController _textEditingController =TextEditingController();
                 width: double.infinity,
                 borderRadius: BorderRadius.circular(12.0.r),
                 backGroundColor: AppColors.orange,
-                style: TextStyle(
-                    color: AppColors.whiteAppColor,
-                    fontSize: 20.0.sp,
-                    fontWeight: FontWeight.bold),
+                style: TextStyle(color: AppColors.whiteAppColor, fontSize: 20.0.sp, fontWeight: FontWeight.bold),
               ),
               const CustomSizedBox(),
-              BestOffersHorizontal(),
+              const BestOffersHorizontal(),
               const CustomSizedBox(),
-              ReviewsSection(),
+              const ReviewsSection(),
             ],
           ),
         ),

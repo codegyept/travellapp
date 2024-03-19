@@ -48,13 +48,7 @@ class CustomContainerTrip extends StatelessWidget {
               icon: CupertinoIcons.heart,
               iconColor: AppColors.redAppColor,
               onPressed: () {},
-              width: 35.0.w,
-              height: 40.0.h,
-              icon: Icon(
-                Icons.favorite_outline,
-                color: AppColors.redAppColor,
-                size: 22.0.sp,
-              ),
+              size: 35.0.w,
             ),
           ),
           Positioned(
@@ -65,7 +59,7 @@ class CustomContainerTrip extends StatelessWidget {
               children: [
                 Text(
                   cityName,
-                  style: TextStyle(color: AppColors.whiteAppColor),
+                  style: const TextStyle(color: AppColors.whiteAppColor),
                 ),
                 SizedBox(
                   height: 5.0.h,
@@ -83,7 +77,7 @@ class CustomContainerTrip extends StatelessWidget {
                     ),
                     Text(
                       cityName,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: AppColors.whiteAppColor,
                       ),
                       overflow: TextOverflow.ellipsis,
@@ -99,16 +93,16 @@ class CustomContainerTrip extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                 Text(
+                Text(
                   tripPrice,
-                  style: TextStyle(color: AppColors.whiteAppColor),
+                  style: const TextStyle(color: AppColors.whiteAppColor),
                 ),
                 SizedBox(
                   height: 4.0.h,
                 ),
-                 Text(
+                Text(
                   reservationType,
-                  style: TextStyle(color: AppColors.whiteAppColor),
+                  style: const TextStyle(color: AppColors.whiteAppColor),
                 ),
               ],
             ),

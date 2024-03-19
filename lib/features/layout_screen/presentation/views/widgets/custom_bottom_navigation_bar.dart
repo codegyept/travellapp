@@ -72,7 +72,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         });
       },
       backgroundColor: AppColors.white,
-      buttonBackgroundColor: AppColors.yellow,
+      buttonBackgroundColor: AppColors.orange,
       color: AppColors.blogItemBackgroundColor,
       animationDuration: const Duration(milliseconds: 300),
     );

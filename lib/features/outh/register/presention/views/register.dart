@@ -30,33 +30,29 @@ class Register extends StatelessWidget {
               Image(
                 height: 240.h,
                 width: 165.w,
-                image: AssetImage('assets/images/logo.png'),
+                image: const AssetImage('assets/images/logo.png'),
               ),
               SizedBox(height: 5.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('Register now',
-                      style: Theme.of(context).textTheme.displayLarge),
+                  Text('Register now', style: Theme.of(context).textTheme.displayLarge),
                 ],
               ),
               SizedBox(height: 10.h),
               CustomTextField(
                 hintText: 'your name',
-                suffixIcon: Icon(Icons.person_outline,
-                    color: AppColors.textAndBackgroundColorButton, size: 20.sp),
+                suffixIcon: Icon(Icons.person_outline, color: AppColors.textAndBackgroundColorButton, size: 20.sp),
               ),
               SizedBox(height: 20.h),
               CustomTextField(
                 hintText: 'youremail@mail.com',
-                suffixIcon: Icon(Icons.email_outlined,
-                    color: AppColors.textAndBackgroundColorButton, size: 20.sp),
+                suffixIcon: Icon(Icons.email_outlined, color: AppColors.textAndBackgroundColorButton, size: 20.sp),
               ),
               SizedBox(height: 20.h),
               CustomTextField(
                 hintText: 'password',
-                suffixIcon: Icon(Icons.lock_outline,
-                    color: AppColors.textAndBackgroundColorButton, size: 20.sp),
+                suffixIcon: Icon(Icons.lock_outline, color: AppColors.textAndBackgroundColorButton, size: 20.sp),
               ),
               SizedBox(height: 20.h),
               CustomActionButton(
@@ -68,7 +64,7 @@ class Register extends StatelessWidget {
                 style: Theme.of(context).textTheme.displayMedium,
                 height: 55.h,
               ),
-              RegisterBottomSection(),
+              const RegisterBottomSection(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

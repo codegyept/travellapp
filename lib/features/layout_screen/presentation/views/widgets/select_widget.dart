@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/home_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/travel_details_screen.dart';
-import 'package:rehlatyuae/features/profile_screen/presentaion/views/profile_screen.dart';
+import 'package:rehlatyuae/features/profile_screen/presentation/views/profile_screen.dart';
 
 Widget getSelectedWidget({required int index}) {
   Widget widget;
@@ -10,13 +10,13 @@ Widget getSelectedWidget({required int index}) {
       widget = HomeScreen();
       break;
     case 1:
-      widget = TravelDetailsScreen();
+      widget = const TravelDetailsScreen();
       break;
     case 2:
-      widget = ProfileScreen();
+      widget = const ProfileScreen();
       break;
     default:
-      widget = ProfileScreen();
+      widget = const ProfileScreen();
       break;
   }
   return widget;

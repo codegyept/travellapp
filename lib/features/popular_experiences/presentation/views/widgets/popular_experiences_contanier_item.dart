@@ -4,8 +4,10 @@ import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/icon_button_with_white_background.dart';
 
 class PopularExperiencesContainerItem extends StatelessWidget {
-  const PopularExperiencesContainerItem({Key? key, required this.width}) : super(key: key);
+  const PopularExperiencesContainerItem({super.key, required this.width});
+
   final double width;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -35,7 +37,7 @@ class PopularExperiencesContainerItem extends StatelessWidget {
               icon: Icon(
                 Icons.favorite_outline,
                 color: AppColors.redAppColor,
-                size:17.0.sp,
+                size: 17.0.sp,
               ),
             ),
           ),
@@ -45,7 +47,7 @@ class PopularExperiencesContainerItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Dubai",
                   style: TextStyle(color: AppColors.whiteAppColor),
                 ),
@@ -63,7 +65,7 @@ class PopularExperiencesContainerItem extends StatelessWidget {
                     SizedBox(
                       width: 2.0.w,
                     ),
-                    Text(
+                    const Text(
                       "United Arab Emirates",
                       style: TextStyle(
                         color: AppColors.whiteAppColor,
@@ -76,25 +78,21 @@ class PopularExperiencesContainerItem extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom:40,
+            bottom: 40,
             right: 8,
             child: Column(
-              crossAxisAlignment:CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
                   "43",
-                  style:TextStyle(
-                      color:AppColors.whiteAppColor
-                  ),
+                  style: TextStyle(color: AppColors.whiteAppColor),
                 ),
                 SizedBox(
-                  height:4.0.h,
+                  height: 4.0.h,
                 ),
                 const Text(
                   "/Person",
-                  style:TextStyle(
-                      color:AppColors.whiteAppColor
-                  ),
+                  style: TextStyle(color: AppColors.whiteAppColor),
                 ),
               ],
             ),
