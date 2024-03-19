@@ -8,6 +8,7 @@ import 'package:rehlatyuae/features/splash_screen/presentation/views/unboarding.
 import '../../../../core/utils/custom_button.dart';
 import '../../../../core/utils/default_text_button.dart';
 
+// TODO should be the shard element between onboarding pages fixed and another elements that should slide
 class OnBoarding extends StatefulWidget {
   // final SharedPreferences sharedPreferences;
 

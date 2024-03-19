@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/cusotm_bottom_sheet.dart';
+import 'package:rehlatyuae/core/utils/cusotm_bottom_sheet.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/drawer_item.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/my_booking_content_sheet.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/send_message_content_sheet.dart';
