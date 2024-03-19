@@ -1,9 +1,12 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/features/splash_screen/presentation/views/onboarding.dart';
 
+// TODO splash not work
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -43,8 +46,8 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           AnimatedSplashScreen(
-            splash: Image.asset('assets/images/splash.png'),
-            nextScreen: const Onbording(),
+            splash: SvgPicture.asset(AppAssets.mainLogo),
+            nextScreen: const OnBoarding(),
             splashTransition: SplashTransition.scaleTransition,
             duration: 3500,
           ),
