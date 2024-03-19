@@ -6,7 +6,7 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/cus
 import 'package:rehlatyuae/features/popular_experiences/presentation/views/widgets/popular_experiences_contanier_item.dart';
 
 class PopularExperiencesSection extends StatelessWidget {
-  const PopularExperiencesSection({Key? key}) : super(key: key);
+  const PopularExperiencesSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +29,7 @@ class PopularExperiencesSection extends StatelessWidget {
                   width : 120.0.w,
                 );
               },
-              separatorBuilder: (context, index)
-              {
+              separatorBuilder: (context, index) {
                 return SizedBox(
                   width: 5.0.w,
                 );

@@ -10,7 +10,7 @@ import 'package:rehlatyuae/features/all_trips/presentation/views/widgets/all_tri
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_offers_horizontal.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_offers_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_app_bar_title.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/popular_Experiences.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/popular_experiences.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/reviews_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/search_text_feild.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/top_destination_section.dart';
@@ -18,21 +18,22 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/we_
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/why_choose_us_section.dart';
 
 class BestTripsScreen extends StatelessWidget {
-   BestTripsScreen({Key? key}) : super(key: key);
+  BestTripsScreen({super.key});
+
   final TextEditingController _textEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading:IconButton(
-          icon:Icon(Icons.arrow_back_ios_new_outlined),
-          onPressed:()
-          {
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new_outlined),
+          onPressed: () {
             GoRouter.of(context).go("/");
           },
-        ) ,
+        ),
         surfaceTintColor: AppColors.whiteAppColor,
-        title: CustomAppBarTitle(),
+        title: const CustomAppBarTitle(),
         actions: [
           InkWell(
             onTap: () {},
@@ -54,27 +55,27 @@ class BestTripsScreen extends StatelessWidget {
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
-            crossAxisAlignment:CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SearchTextField(
                 controller: _textEditingController,
               ),
               const CustomSizedBox(),
-              Text(
+              const Text(
                 AppStrings.bestTripsTitle,
               ),
               const CustomSizedBox(),
-              AllTripsBody(),
+              const AllTripsBody(),
               const CustomSizedBox(),
               const TopDestinationSection(),
               const CustomSizedBox(),
-              BestOffersSection(),
+              const BestOffersSection(),
               const CustomSizedBox(),
-              PopularExperiencesSection(),
+              const PopularExperiencesSection(),
               const CustomSizedBox(),
-              WhyChooseUsSection(),
+              const WhyChooseUsSection(),
               const CustomSizedBox(),
-              WeHelpYouSection(),
+              const WeHelpYouSection(),
               CustomActionButton(
                 onTap: () {},
                 text: AppStrings.actionButtonName,
@@ -82,15 +83,12 @@ class BestTripsScreen extends StatelessWidget {
                 width: double.infinity,
                 borderRadius: BorderRadius.circular(12.0.r),
                 backGroundColor: AppColors.orange,
-                style: TextStyle(
-                    color: AppColors.whiteAppColor,
-                    fontSize: 20.0.sp,
-                    fontWeight: FontWeight.bold),
+                style: TextStyle(color: AppColors.whiteAppColor, fontSize: 20.0.sp, fontWeight: FontWeight.bold),
               ),
               const CustomSizedBox(),
-              BestOffersHorizontal(),
+              const BestOffersHorizontal(),
               const CustomSizedBox(),
-              ReviewsSection(),
+              const ReviewsSection(),
             ],
           ),
         ),

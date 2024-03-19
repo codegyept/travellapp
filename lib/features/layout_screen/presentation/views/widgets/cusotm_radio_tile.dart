@@ -39,10 +39,10 @@ class _CustomRadioTileState extends State<CustomRadioTile> {
         ),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
           border: Border.all(
-            width: 2,
-            color: const Color(0xFFF5F5F5),
+            width: 1.h,
+            color: AppColors.black.withOpacity(0.3),
           ),
         ),
         child: Row(

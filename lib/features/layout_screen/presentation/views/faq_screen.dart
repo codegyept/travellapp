@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
+import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_expansion_tile.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/title_section.dart';
 
@@ -12,8 +13,8 @@ class FAQsScreen extends StatelessWidget {
       body: ListView(
         children: const [
           TitleSection(
-            title: "FAQs",
-            subTitle: "FAQs",
+            title: AppStrings.faqs,
+            subTitle: AppStrings.faqs,
             imagePath: AppAssets.rectangle,
           ),
           CustomExpansionTile(

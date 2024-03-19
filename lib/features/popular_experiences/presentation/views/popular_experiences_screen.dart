@@ -18,22 +18,22 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/why
 import 'package:rehlatyuae/features/popular_experiences/presentation/views/widgets/popular_experiences_body.dart';
 
 class PopularExperiencesScreen extends StatelessWidget {
-   PopularExperiencesScreen({super.key});
+  PopularExperiencesScreen({super.key});
+
   final TextEditingController _textEditingController = TextEditingController();
+
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading:IconButton(
-          icon:Icon(Icons.arrow_back_ios_new_outlined),
-          onPressed:()
-          {
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new_outlined),
+          onPressed: () {
             GoRouter.of(context).go("/");
           },
-        ) ,
+        ),
         surfaceTintColor: AppColors.whiteAppColor,
-        title: CustomAppBarTitle(),
+        title: const CustomAppBarTitle(),
         actions: [
           InkWell(
             onTap: () {},
@@ -55,27 +55,27 @@ class PopularExperiencesScreen extends StatelessWidget {
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
-            crossAxisAlignment:CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SearchTextField(
                 controller: _textEditingController,
               ),
               const CustomSizedBox(),
-              Text(
+              const Text(
                 AppStrings.popularExperiencesTitle,
               ),
               const CustomSizedBox(),
-              PopularExperiencesBody(),
+              const PopularExperiencesBody(),
               const CustomSizedBox(),
               const TopDestinationSection(),
               const CustomSizedBox(),
-              BestOffersSection(),
+              const BestOffersSection(),
               const CustomSizedBox(),
-              BestTripsSection(),
+              const BestTripsSection(),
               const CustomSizedBox(),
-              WhyChooseUsSection(),
+              const WhyChooseUsSection(),
               const CustomSizedBox(),
-              WeHelpYouSection(),
+              const WeHelpYouSection(),
               CustomActionButton(
                 onTap: () {},
                 text: AppStrings.actionButtonName,
@@ -83,15 +83,12 @@ class PopularExperiencesScreen extends StatelessWidget {
                 width: double.infinity,
                 borderRadius: BorderRadius.circular(12.0.r),
                 backGroundColor: AppColors.orange,
-                style: TextStyle(
-                    color: AppColors.whiteAppColor,
-                    fontSize: 20.0.sp,
-                    fontWeight: FontWeight.bold),
+                style: TextStyle(color: AppColors.whiteAppColor, fontSize: 20.0.sp, fontWeight: FontWeight.bold),
               ),
               const CustomSizedBox(),
-              BestOffersHorizontal(),
+              const BestOffersHorizontal(),
               const CustomSizedBox(),
-              ReviewsSection(),
+              const ReviewsSection(),
             ],
           ),
         ),

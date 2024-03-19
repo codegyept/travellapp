@@ -57,9 +57,7 @@ class MyAccount extends StatelessWidget {
           ),
           trailing: Switch(
             value: true,
-            onChanged: (bool postion) {
-              print("$postion");
-            },
+            onChanged: (bool p) {},
             activeColor: AppColors.textAndBackgroundColorButton,
             inactiveThumbColor: AppColors.orange,
           ),

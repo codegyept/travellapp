@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
+import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/custom_expansion_tile.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/experiences_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/preview_travels_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/title_section.dart';
 
@@ -18,29 +21,33 @@ class AboutUsScreen extends StatelessWidget {
             imagePath: AppAssets.rectangle,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25).copyWith(top: 34),
-            child: const Text(
+            padding: EdgeInsets.symmetric(horizontal: 20.w).copyWith(
+              top: 34.h,
+            ),
+            child: Text(
               'The mighty Rinjani mountain of Gunung Rinjani is a massive volcano which towers over the island of Lombok. A climb to the top is one of the most exhilarating experiences you can have in Indonesia. At 3,726 meters tall, Gunung Rinjani is the second highest mountain in Indonesia, The mighty Rinjani mountain of Gunung Rinjani is a massive volcano which towers over the island of Lombok. A climb to the top is you can have in I',
               style: TextStyle(
-                color: Color(0xFF8D94A2),
-                fontSize: 16,
+                color: AppColors.grey,
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w400,
               ),
             ),
           ),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17),
-            margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-            decoration: const BoxDecoration(
-              color: Color(0xFF263238),
+            padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 17.h),
+            margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+            decoration: BoxDecoration(
+              color: AppColors.backgroundColorExpansionAndText,
               borderRadius: BorderRadius.vertical(
-                bottom: Radius.circular(9),
+                bottom: Radius.circular(9.r),
               ),
             ),
-            child: const Text(
+            child: Text(
               'The mighty Rinjani mountain of Gunung Rinjani is a massive volcano which towers over the island of Lombok. A climb to the top is one of the most exhilarating experiences you can have in Indonesia. At 3,726 meters tall, Gunung Rinjani is the second highest mountain in Indonesia, The mighty Rinjani mountain of Gunung Rinjani is a massive volcano which towers over the island of Lombok. A climb to the top is you can have in I',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 16,
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w400,
               ),
             ),
           ),
@@ -56,7 +63,8 @@ class AboutUsScreen extends StatelessWidget {
             title: "Number of evaluations received",
             content: "1000+ Reviews on Rehlatyuae by our Travelers",
           ),
-          const PreviewTravelsSection(imagesPaths: []),
+          const PreviewTravelsSection(hasBookButton: false),
+          const ExperiencesSections(),
         ],
       ),
     );

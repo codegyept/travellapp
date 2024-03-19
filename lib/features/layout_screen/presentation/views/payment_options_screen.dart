@@ -1,138 +1,78 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
-import 'package:rehlatyuae/core/utils/default_text_button.dart';
-import 'package:rehlatyuae/core/utils/custom_button.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/number_ticket_card.dart';
+import 'package:rehlatyuae/core/utils/app_strings.dart';
+import 'package:rehlatyuae/core/utils/custom_expansion_tile.dart';
+import 'package:rehlatyuae/core/utils/pickers.dart';
+import 'package:rehlatyuae/core/utils/primary_text_field.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/count_tickets_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/total_payment_section.dart';
 
-class PaymentOptionsScreen extends StatefulWidget {
+class PaymentOptionsScreen extends StatelessWidget {
   const PaymentOptionsScreen({super.key});
-
-  @override
-  State<PaymentOptionsScreen> createState() => _PaymentOptionsScreenState();
-}
-
-class _PaymentOptionsScreenState extends State<PaymentOptionsScreen> {
-  String selectedCard = '';
-  int adultNumber = 1, childCount = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Payment Options  ",
+        title: Text(
+          AppStrings.paymentOptions,
           style: TextStyle(
-            fontSize: 18,
+            fontSize: 16.sp,
             fontWeight: FontWeight.w700,
           ),
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 20.h),
-                child: const Column(
-                  children: [
-                    Text(
-                      "Select Number off ticket",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w700,
-                        height: 1.25,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              CountTicketCard(
-                name: 'Adult',
-                detail: 'Above 4 yrs',
-                count: adultNumber,
-                total: adultNumber * 10,
-                onIncreasePressed: () {
-                  setState(() {
-                    ++adultNumber;
-                  });
-                },
-                onDecreasePressed: adultNumber <= 1
-                    ? null
-                    : () {
-                        setState(() {
-                          --adultNumber;
-                        });
-                      },
-              ),
-              CountTicketCard(
-                name: 'Children',
-                detail: 'Under 3 yrs',
-                count: childCount,
-                total: childCount * 5,
-                onIncreasePressed: () {
-                  setState(() {
-                    ++childCount;
-                  });
-                },
-                onDecreasePressed: childCount <= 0
-                    ? null
-                    : () {
-                        setState(() {
-                          --childCount;
-                        });
-                      },
-              ),
-            ],
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(
-              horizontal: 20.w,
-              vertical: 15.h,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            PrimaryTextField(
+              label: AppStrings.yourDateBooking,
+              hint: AppStrings.selectDate,
+              controller: TextEditingController(),
+              readOnly: true,
+              onTap: () async {
+                var duration = const Duration();
+                await Pickers.choseDate(
+                  context: context,
+                  firstDate: DateTime.now().add(duration),
+                  initialDate: DateTime.now().add(duration),
+                );
+              },
+              suffix: const Icon(CupertinoIcons.calendar),
             ),
-            margin: const EdgeInsets.only(top: 50),
-            color: AppColors.backgroundWhite,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            const CountTicketsSection(),
+            CustomExpansionTile(
+              title: AppStrings.youHaveCoupon,
+              content: AppStrings.yourCoupon,
+              initiallyExpanded: false,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      "  \$6,699",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w700,
-                        height: 1.25,
-                      ),
-                    ),
-                    DefaultTextButton(
-                      onPressed: () {},
-                      text: "12/12/2024",
-                    )
-                  ],
-                ),
-                CustomActionButton(
-                  text: 'Next payment',
-                  borderRadius: BorderRadius.circular(16),
-                  backGroundColor: AppColors.textAndBackgroundColorButton,
-                  onTap: () {
-                    context.push('/paymentOptionsStep2Screen');
-                  },
-                  style: const TextStyle(color: AppColors.white),
-                  width: 160,
-                  height: 50,
-                ),
+                PrimaryTextField(
+                  controller: TextEditingController(),
+                  padding: EdgeInsets.symmetric(vertical: 10.h),
+                  textColor: AppColors.white,
+                )
               ],
             ),
-          ),
-        ],
+            PrimaryTextField(
+              label: AppStrings.description,
+              hint: AppStrings.pleaseInsertAllNotes,
+              isTextAria: true,
+              controller: TextEditingController(),
+            ),
+            TotalPaymentSection(
+              total: "\$6,699",
+              subtitle: "12/12/2024",
+              buttonLabel: AppStrings.nextPayment,
+              onButtonTap: () {
+                context.push('/paymentDetailsScreen');
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

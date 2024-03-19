@@ -6,7 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class Navbar extends StatefulWidget {
-  const Navbar({Key? key}) : super(key: key);
+  const Navbar({super.key});
 
   @override
   State<Navbar> createState() => _State();

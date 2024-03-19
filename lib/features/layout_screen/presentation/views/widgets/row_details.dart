@@ -4,11 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class RowDetails extends StatelessWidget {
   final String title;
   final String value;
+  final String? midValue;
   final Color textValueColor;
 
   const RowDetails({
     required this.title,
     required this.value,
+    this.midValue,
     this.textValueColor = Colors.black,
     super.key,
   });
@@ -32,6 +34,16 @@ class RowDetails extends StatelessWidget {
                 height: 1.3,
               ),
             ),
+            if (midValue != null)
+              Text(
+                midValue!,
+                style: const TextStyle(
+                  fontSize: 13,
+                  color: Color(0xFF606060),
+                  fontWeight: FontWeight.w500,
+                  height: 1.3,
+                ),
+              ),
             Text(
               value,
               style: TextStyle(

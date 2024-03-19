@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 
@@ -12,6 +10,7 @@ class IconButtonWithWhiteBackground extends StatelessWidget {
     required this.onPressed,
     required this.icon,
   });
+
   final double width;
   final double height;
   final void Function()? onPressed;
@@ -24,11 +23,11 @@ class IconButtonWithWhiteBackground extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         color: AppColors.whiteAppColor,
-        borderRadius:BorderRadius.circular(12.0.r),
+        borderRadius: BorderRadius.circular(12.0.r),
       ),
       child: IconButton(
-        onPressed:onPressed,
-        icon:icon,
+        onPressed: onPressed,
+        icon: icon,
       ),
     );
   }
