@@ -79,7 +79,7 @@ class BestOffersItem extends StatelessWidget {
                   "IMG Worlds of Adventure",
                   maxLines: 1,
                   style: TextStyle(
-                    color: AppColors.blackColorForTitleTexts,
+                    color: AppColors.black,
                     fontSize: 12.0.sp,
                   ),
                   textAlign: TextAlign.justify,
@@ -123,7 +123,7 @@ class BestOffersItem extends StatelessWidget {
                     const Text(
                       "48",
                       style: TextStyle(
-                        color: AppColors.blackColorForTitleTexts,
+                        color: AppColors.black,
                       ),
                       textAlign: TextAlign.justify,
                     ),
@@ -143,7 +143,7 @@ class BestOffersItem extends StatelessWidget {
                     const Text(
                       "4.2 (852)",
                       style: TextStyle(
-                        color: AppColors.blackColorForTitleTexts,
+                        color: AppColors.black,
                       ),
                       textAlign: TextAlign.justify,
                     ),

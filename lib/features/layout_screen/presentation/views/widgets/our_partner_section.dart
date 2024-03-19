@@ -14,8 +14,8 @@ class OurPartnerSection extends StatelessWidget {
       children: [
         const Text(
           AppStrings.ourPartnerTitle,
-          style: TextStyle(
-            color: AppColors.blackColorForTitleTexts,
+          style: const TextStyle(
+            color: AppColors.black,
           ),
         ),
         SizedBox(

@@ -15,7 +15,7 @@ class WeHelpYouSection extends StatelessWidget {
         Text(
           AppStrings.weHelpYouMakeBestTrip,
           style: TextStyle(
-            color: AppColors.blackColorForTitleTexts,
+            color: AppColors.black,
             fontSize: 16.0.sp,
             fontWeight: FontWeight.bold,
           ),
@@ -26,7 +26,7 @@ class WeHelpYouSection extends StatelessWidget {
         Text(
           AppStrings.weHelpYouMakeBestTripDescription,
           style: TextStyle(
-            color: AppColors.blackColorForTitleTexts,
+            color: AppColors.black,
             fontSize: 12.0.sp,
           ),
         ),
@@ -94,21 +94,21 @@ class WeHelpYouSection extends StatelessWidget {
         Row(
           children: [
             WhyChooseUSItem(
-              text: AppStrings.weHelpYouMakeBestTripSecondDescription,
-              style: TextStyle(
-                color: AppColors.blackColorForTitleTexts,
+              text:AppStrings.weHelpYouMakeBestTripSecondDescription,
+              style:TextStyle(
+                color: AppColors.black,
                 fontSize: 10.0.sp,
               ),
               child: Icon(
                 Icons.check_box_outlined,
-                color: AppColors.textAndBackgroundColorButton,
+                color:AppColors.textAndBackgroundColorButton,
                 size: 14.0.sp,
               ),
             ),
             WhyChooseUSItem(
-              text: AppStrings.weHelpYouMakeBestTripSecondDescription,
-              style: TextStyle(
-                color: AppColors.blackColorForTitleTexts,
+              text:AppStrings.weHelpYouMakeBestTripSecondDescription,
+              style:TextStyle(
+                color: AppColors.black,
                 fontSize: 10.0.sp,
               ),
               child: Icon(
@@ -125,9 +125,9 @@ class WeHelpYouSection extends StatelessWidget {
         Row(
           children: [
             WhyChooseUSItem(
-              text: AppStrings.weHelpYouMakeBestTripSecondDescription,
-              style: TextStyle(
-                color: AppColors.blackColorForTitleTexts,
+              text:AppStrings.weHelpYouMakeBestTripSecondDescription,
+              style:TextStyle(
+                color: AppColors.black,
                 fontSize: 10.0.sp,
               ),
               child: Icon(
@@ -140,9 +140,9 @@ class WeHelpYouSection extends StatelessWidget {
               width: 5.0.w,
             ),
             WhyChooseUSItem(
-              text: AppStrings.weHelpYouMakeBestTripSecondDescription,
-              style: TextStyle(
-                color: AppColors.blackColorForTitleTexts,
+              text:AppStrings.weHelpYouMakeBestTripSecondDescription,
+              style:TextStyle(
+                color: AppColors.black,
                 fontSize: 10.0.sp,
               ),
               child: Icon(

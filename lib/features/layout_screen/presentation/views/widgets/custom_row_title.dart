@@ -19,8 +19,8 @@ class CustomRowTitle extends StatelessWidget {
       children: [
         Text(
           text,
-          style: const TextStyle(
-            color: AppColors.blackColorForTitleTexts,
+          style: TextStyle(
+            color: AppColors.black,
           ),
         ),
         const Spacer(),
