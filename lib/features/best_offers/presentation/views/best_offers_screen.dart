@@ -6,11 +6,12 @@ import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/custom_circle_avatar.dart';
 import 'package:rehlatyuae/core/utils/custom_sized_box.dart';
-import 'package:rehlatyuae/core/utils/popular_experiences.dart';
 import 'package:rehlatyuae/features/best_offers/presentation/views/widgets/best_offers_body.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_offers_horizontal.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_trips_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_app_bar_title.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_drawer.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/popular_experiences.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/reviews_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/search_text_feild.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/top_destination_section.dart';
@@ -26,12 +27,6 @@ class BestOffersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_outlined),
-          onPressed: () {
-            GoRouter.of(context).go("/");
-          },
-        ),
         surfaceTintColor: AppColors.whiteAppColor,
         title: const CustomAppBarTitle(),
         actions: [
@@ -46,7 +41,7 @@ class BestOffersScreen extends StatelessWidget {
           ),
         ],
       ),
-      drawer: const Drawer(),
+      drawer:const CustomDrawer(),
       body: Padding(
         padding: EdgeInsetsDirectional.symmetric(
           vertical: 20.0.h,
@@ -77,13 +72,16 @@ class BestOffersScreen extends StatelessWidget {
               const CustomSizedBox(),
               const WeHelpYouSection(),
               CustomActionButton(
-                onTap: () {},
+                onTap: ()
+                {
+                  context.push(AppStrings.allTripsScreen);
+                },
                 text: AppStrings.actionButtonName,
                 height: 70.0.h,
                 width: double.infinity,
                 borderRadius: BorderRadius.circular(12.0.r),
                 backGroundColor: AppColors.orange,
-                style: TextStyle(color: AppColors.whiteAppColor, fontSize: 20.0.sp, fontWeight: FontWeight.bold),
+                style: Theme.of(context).textTheme.displayLarge,
               ),
               const CustomSizedBox(),
               const BestOffersHorizontal(),

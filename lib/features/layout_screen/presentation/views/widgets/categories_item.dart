@@ -3,18 +3,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class CategoriesItem extends StatelessWidget {
-  const CategoriesItem({super.key});
-
+  const CategoriesItem({super.key, required this.height, required this.width});
+  final double height;
+  final double width;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40.0.h,
-      width: 70.0.w,
+      height: height,
+      width: width,
       decoration: BoxDecoration(
-        color: AppColors.categoriesItemBackgroundColor,
-        borderRadius: BorderRadiusDirectional.circular(12.0.r),
+        color: AppColors.categoriesItemTextColor.withOpacity(0.2),
+        borderRadius: BorderRadiusDirectional.circular(10.0.r),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
             "assets/images/Asset 1-1.png",
@@ -23,11 +25,9 @@ class CategoriesItem extends StatelessWidget {
           SizedBox(
             width: 4.0.w,
           ),
-          const Text(
+           Text(
             "Waterfall",
-            style: TextStyle(
-              color: AppColors.categoriesItemTextColor,
-            ),
+            style:Theme.of(context).textTheme.labelSmall!.copyWith(fontSize: 10.0.sp),
           ),
         ],
       ),

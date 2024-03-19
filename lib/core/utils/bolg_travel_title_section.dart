@@ -111,9 +111,9 @@ class BolgTravelTitleSection extends StatelessWidget {
                     children: [
                       Text(
                         "\$$price",
-                        style: const TextStyle(
+                        style:  TextStyle(
                           color: AppColors.white,
-                          fontSize: 24,
+                          fontSize: 24.sp,
                           fontWeight: FontWeight.w700,
                         ),
                       ),

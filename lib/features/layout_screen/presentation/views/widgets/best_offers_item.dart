@@ -78,10 +78,7 @@ class BestOffersItem extends StatelessWidget {
                 Text(
                   "IMG Worlds of Adventure",
                   maxLines: 1,
-                  style: TextStyle(
-                    color: AppColors.black,
-                    fontSize: 12.0.sp,
-                  ),
+                  style: Theme.of(context).textTheme.bodyMedium,
                   textAlign: TextAlign.justify,
                 ),
                 SizedBox(
@@ -94,11 +91,9 @@ class BestOffersItem extends StatelessWidget {
                       color: AppColors.textAndBackgroundColorButton,
                       size: 14.0.sp,
                     ),
-                    const Text(
+                     Text(
                       "Dubai, United Arab Emirates",
-                      style: TextStyle(
-                        color: AppColors.textAndBackgroundColorButton,
-                      ),
+                      style: Theme.of(context).textTheme.titleMedium,
                       textAlign: TextAlign.justify,
                     ),
                   ],
@@ -106,32 +101,25 @@ class BestOffersItem extends StatelessWidget {
                 SizedBox(
                   height: 2.5.w,
                 ),
-                const Text(
-                  "This exceptional beach gets sasafadvdavdsdsfcasvsdvsdvsdvsd",
+                 Text(
+                  "This exceptional beach gets sasafadvd avdsdsfcasvsdvsdvsdvsd",
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
-                  style: TextStyle(
-                    color: AppColors.greySearchText,
-                  ),
-                  textAlign: TextAlign.justify,
+                  style:Theme.of(context).textTheme.headlineSmall,
                 ),
                 SizedBox(
                   height: 5.0.w,
                 ),
                 Row(
                   children: [
-                    const Text(
+                     Text(
                       "48",
-                      style: TextStyle(
-                        color: AppColors.black,
-                      ),
+                      style: Theme.of(context).textTheme.titleSmall,
                       textAlign: TextAlign.justify,
                     ),
-                    const Text(
+                     Text(
                       "/Person",
-                      style: TextStyle(
-                        color: AppColors.greySearchText,
-                      ),
+                      style: Theme.of(context).textTheme.headlineSmall,
                       textAlign: TextAlign.justify,
                     ),
                     const Spacer(),
@@ -140,11 +128,9 @@ class BestOffersItem extends StatelessWidget {
                       color: AppColors.textAndBackgroundColorButton,
                       size: 16.0.sp,
                     ),
-                    const Text(
+                     Text(
                       "4.2 (852)",
-                      style: TextStyle(
-                        color: AppColors.black,
-                      ),
+                      style: Theme.of(context).textTheme.titleSmall,
                       textAlign: TextAlign.justify,
                     ),
                   ],

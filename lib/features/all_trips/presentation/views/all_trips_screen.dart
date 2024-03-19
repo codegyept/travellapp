@@ -27,12 +27,6 @@ class AllTripsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_outlined),
-          onPressed: () {
-            GoRouter.of(context).push(AppStrings.homeScreen);
-          },
-        ),
         surfaceTintColor: AppColors.whiteAppColor,
         title: const CustomAppBarTitle(),
         actions: [
@@ -86,7 +80,7 @@ class AllTripsScreen extends StatelessWidget {
                 width: double.infinity,
                 borderRadius: BorderRadius.circular(12.0.r),
                 backGroundColor: AppColors.orange,
-                style: TextStyle(color: AppColors.whiteAppColor, fontSize: 20.0.sp, fontWeight: FontWeight.bold),
+                style: Theme.of(context).textTheme.displayLarge,
               ),
               const CustomSizedBox(),
               const BestOffersHorizontal(),

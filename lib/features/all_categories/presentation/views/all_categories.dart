@@ -6,23 +6,24 @@ import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/custom_circle_avatar.dart';
 import 'package:rehlatyuae/core/utils/custom_sized_box.dart';
+import 'package:rehlatyuae/features/all_categories/presentation/views/widgets/all_categories_body.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_offers_horizontal.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_offers_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_trips_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_app_bar_title.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_drawer.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/our_blog_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/our_partner_section.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/popular_experiences.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/reviews_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/search_text_feild.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/top_destination_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/we_help_you_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/why_choose_us_section.dart';
-import 'package:rehlatyuae/features/popular_experiences/presentation/views/widgets/popular_experiences_body.dart';
 
-class PopularExperiencesScreen extends StatelessWidget {
-  PopularExperiencesScreen({super.key});
-
+class AllCategoriesScreen extends StatelessWidget {
+   AllCategoriesScreen({super.key});
   final TextEditingController _textEditingController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,16 +58,21 @@ class PopularExperiencesScreen extends StatelessWidget {
               ),
               const CustomSizedBox(),
               const Text(
-                AppStrings.popularExperiencesTitle,
+                AppStrings.allCategoriesTitle,
               ),
               const CustomSizedBox(),
-              const PopularExperiencesBody(),
-              const CustomSizedBox(),
+              const AllCategoriesBody(),
               const TopDestinationSection(),
               const CustomSizedBox(),
               const BestOffersSection(),
               const CustomSizedBox(),
               const BestTripsSection(),
+              const CustomSizedBox(),
+              const PopularExperiencesSection(),
+              const CustomSizedBox(),
+              const OurBlogSection(),
+              const CustomSizedBox(),
+              const OurPartnerSection(),
               const CustomSizedBox(),
               const WhyChooseUsSection(),
               const CustomSizedBox(),
@@ -81,7 +87,7 @@ class PopularExperiencesScreen extends StatelessWidget {
                 width: double.infinity,
                 borderRadius: BorderRadius.circular(12.0.r),
                 backGroundColor: AppColors.orange,
-                style:Theme.of(context).textTheme.displayLarge,
+                style: Theme.of(context).textTheme.displayLarge,
               ),
               const CustomSizedBox(),
               const BestOffersHorizontal(),

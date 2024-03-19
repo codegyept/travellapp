@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -51,7 +50,7 @@ class CustomContainerTrip extends StatelessWidget {
               top: 10,
               right: 18,
               child: CustomIconButton(
-                icon: CupertinoIcons.heart,
+                icon: Icons.favorite_outline_outlined,
                 iconColor: AppColors.redAppColor,
                 onPressed: () {},
                 size: 35.0.w,
@@ -65,7 +64,7 @@ class CustomContainerTrip extends StatelessWidget {
                 children: [
                   Text(
                     cityName,
-                    style: const TextStyle(color: AppColors.whiteAppColor),
+                    style: Theme.of(context).textTheme.displayMedium,
                   ),
                   SizedBox(
                     height: 5.0.h,
@@ -83,9 +82,7 @@ class CustomContainerTrip extends StatelessWidget {
                       ),
                       Text(
                         cityName,
-                        style: const TextStyle(
-                          color: AppColors.whiteAppColor,
-                        ),
+                        style:Theme.of(context).textTheme.displaySmall,
                         overflow: TextOverflow.ellipsis,
                       ),
                     ],
@@ -101,14 +98,14 @@ class CustomContainerTrip extends StatelessWidget {
                 children: [
                   Text(
                     tripPrice,
-                    style: const TextStyle(color: AppColors.whiteAppColor),
+                    style:Theme.of(context).textTheme.displaySmall,
                   ),
                   SizedBox(
                     height: 4.0.h,
                   ),
                   Text(
                     reservationType,
-                    style: const TextStyle(color: AppColors.whiteAppColor),
+                    style:Theme.of(context).textTheme.displaySmall,
                   ),
                 ],
               ),

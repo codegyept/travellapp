@@ -346,7 +346,7 @@ Official Channels:
   static const searchTextFieldHintText = "Search by activities...";
   static const textButtonNameOfHomeScreen = "View all";
   static const categoriesTitle = "Categories";
-  static const topDestinationTitle = "Top Destinations";
+  static const topDestinationTitle = "All Destinations";
   static const bestOffersTitle = "Best Offers";
   static const bestTripsTitle = "Best Trips";
   static const popularExperiencesTitle = "Popular Experiences";
@@ -378,10 +378,12 @@ Official Channels:
   static const reviewActionButtonName = "Send";
   static const copyRight = "Copyright ©2024. All Rights Reserved. — by Rehlatyuai";
   static const allTripsTitle = "All Trip";
+  static const allCategoriesTitle = "All Categories";
 
   // navigator pages name
   static const homeScreen = "/HomeScreen";
   static const allTripsScreen = "/AllTripsScreen";
+  static const allCategoriesScreen = "/AllCategoriesScreen";
   static const bestOffersScreen = "/BestOffersScreen";
   static const bestTripsScreen = "/BestTripsScreen";
   static const ourBlogsScreen = "/OurBlogsScreen";
