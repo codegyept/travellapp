@@ -1,12 +1,11 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/features/splash_screen/presentation/views/onboarding.dart';
 
-// TODO splash not work
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -19,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Future.delayed(const Duration(milliseconds: 500), () {
+    Future.delayed(const Duration(milliseconds: 300), () {
       GoRouter.of(context).go('/onboarding');
     });
   }
@@ -33,25 +32,29 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                  'assets/images/img1.png',
-                ),
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            Image.asset(
+              'assets/images/splash.png',
+              fit: BoxFit.cover,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+            ),
+            SizedBox(
+              height: 800.h,
+              width: 500.w,
+              child: AnimatedSplashScreen(
+                backgroundColor: Colors.transparent,
+                splash: SvgPicture.asset('assets/images/main_logo.svg'),
+                nextScreen: const OnBoarding(),
+                splashTransition: SplashTransition.scaleTransition,
+                duration: 3500,
+                splashIconSize: 350.h,
               ),
             ),
-          ),
-          AnimatedSplashScreen(
-            splash: SvgPicture.asset(AppAssets.mainLogo),
-            nextScreen: const OnBoarding(),
-            splashTransition: SplashTransition.scaleTransition,
-            duration: 3500,
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

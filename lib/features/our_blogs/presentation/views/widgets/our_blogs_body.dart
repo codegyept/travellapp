@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rehlatyuae/features/our_blogs/presentation/widgets/all_blogs_item.dart';
+import 'package:rehlatyuae/features/our_blogs/presentation/views/widgets/all_blogs_item.dart';
 
 class OurBlogsBody extends StatelessWidget {
   const OurBlogsBody({super.key});

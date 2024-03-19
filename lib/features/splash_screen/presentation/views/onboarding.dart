@@ -135,9 +135,10 @@ class _OnBoardingState extends State<OnBoarding> {
       height: 10,
       width: currentIndex == index ? 25 : 10,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5),
-        color: AppColors.textAndBackgroundColorButton,
-      ),
+          borderRadius: BorderRadius.circular(5),
+          color: currentIndex == index
+              ? AppColors.textAndBackgroundColorButton
+              : AppColors.white),
     );
   }
 }
