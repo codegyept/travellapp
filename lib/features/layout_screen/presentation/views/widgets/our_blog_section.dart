@@ -16,7 +16,7 @@ class OurBlogSection extends StatelessWidget {
           text: AppStrings.ourBlogTitle,
           onPressed: ()
           {
-            context.go(AppStrings.ourBlogsScreen);
+            context.push(AppStrings.ourBlogsScreen);
           },
         ),
         SizedBox(
@@ -27,7 +27,8 @@ class OurBlogSection extends StatelessWidget {
               itemBuilder: (context, index) {
                 return const BlogContainerItem();
               },
-              separatorBuilder: (context, index) {
+              separatorBuilder: (context, index)
+              {
                 return SizedBox(
                   width: 5.0.w,
                 );

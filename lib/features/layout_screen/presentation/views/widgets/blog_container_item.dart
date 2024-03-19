@@ -41,18 +41,16 @@ class BlogContainerItem extends StatelessWidget {
                   color: AppColors.blogItemBackgroundColor.withOpacity(0.3),
                   borderRadius: BorderRadiusDirectional.circular(12.0.r),
                 ),
-                child: const Row(
+                child:  Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.star_border,
                       color: AppColors.whiteAppColor,
                     ),
                     Text(
                       "4.8",
-                      style: TextStyle(
-                        color: AppColors.whiteAppColor,
-                      ),
+                      style:Theme.of(context).textTheme.displaySmall,
                     ),
                   ],
                 ),
@@ -68,18 +66,16 @@ class BlogContainerItem extends StatelessWidget {
                   color: AppColors.blogItemBackgroundColor.withOpacity(0.3),
                   borderRadius: BorderRadiusDirectional.circular(12.0.r),
                 ),
-                child: const Row(
+                child:  Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.calendar_month,
                       color: AppColors.whiteAppColor,
                     ),
                     Text(
                       "2/2/2024",
-                      style: TextStyle(
-                        color: AppColors.whiteAppColor,
-                      ),
+                      style:Theme.of(context).textTheme.displaySmall,
                     ),
                   ],
                 ),
@@ -87,43 +83,28 @@ class BlogContainerItem extends StatelessWidget {
             ),
             Positioned(
               bottom: 0,
-              child: Container(
-                width: 240.0.w,
-                height: 80.0.h,
-                decoration: BoxDecoration(
-                  color: AppColors.blogItemContainerBackgroundColor.withOpacity(0.8),
-                  borderRadius: BorderRadiusDirectional.only(
-                    bottomEnd: Radius.circular(15.0.r),
-                    bottomStart: Radius.circular(15.0.r),
-                  ),
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12.0.w,
+                  vertical: 12.0.h,
                 ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 12.0.w,
-                    vertical: 12.0.h,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        "Blog name",
-                        style: TextStyle(
-                          color: AppColors.whiteAppColor,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6.0.h,
-                      ),
-                      const Text(
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        "Short Description Short Description Short Description",
-                        style: TextStyle(
-                          color: AppColors.whiteAppColor,
-                        ),
-                      ),
-                    ],
-                  ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                     Text(
+                      "Blog name",
+                      style: Theme.of(context).textTheme.displayMedium,
+                    ),
+                    SizedBox(
+                      height: 6.0.h,
+                    ),
+                     Text(
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      "Short Description Short Description Short Description",
+                      style: Theme.of(context).textTheme.displaySmall
+                    ),
+                  ],
                 ),
               ),
             ),

@@ -14,7 +14,7 @@ class BestOffersBody extends StatelessWidget {
         mainAxisSpacing: 10.0.h,
       ),
       itemBuilder: (context, index) => BestOffersItem(
-        width: 78.0.w,
+        width: 74.0.w,
       ),
       itemCount: 8,
       shrinkWrap: true,

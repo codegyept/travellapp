@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
@@ -17,7 +18,8 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/top
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/we_help_you_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/why_choose_us_section.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget
+{
   HomeScreen({super.key});
 
   final TextEditingController _textEditingController = TextEditingController();
@@ -57,13 +59,16 @@ class HomeScreen extends StatelessWidget {
               const CustomSizedBox(),
               const WeHelpYouSection(),
               CustomActionButton(
-                onTap: () {},
+                onTap: ()
+                {
+                  context.push(AppStrings.allTripsScreen);
+                },
                 text: AppStrings.actionButtonName,
                 height: 70.0.h,
                 width: double.infinity,
                 borderRadius: BorderRadius.circular(12.0.r),
                 backGroundColor: AppColors.orange,
-                style: TextStyle(color: AppColors.whiteAppColor, fontSize: 20.0.sp, fontWeight: FontWeight.bold),
+                style: Theme.of(context).textTheme.displayLarge,
               ),
               const CustomSizedBox(),
               const BestOffersHorizontal(),

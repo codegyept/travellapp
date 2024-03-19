@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
+import 'package:rehlatyuae/features/all_categories/presentation/views/all_categories.dart';
 import 'package:rehlatyuae/features/all_trips/presentation/views/all_trips_screen.dart';
 import 'package:rehlatyuae/features/auth_screen/presentation/views/forget_password_screen.dart';
 import 'package:rehlatyuae/features/auth_screen/presentation/views/login_screen.dart';
@@ -37,6 +38,10 @@ abstract class AppRouter {
       GoRoute(
         path: AppStrings.homeScreen,
         builder: (context, state) => const MainLayout(),
+      ),
+      GoRoute(
+        path: AppStrings.allCategoriesScreen,
+        builder: (context, state) =>  AllCategoriesScreen(),
       ),
       GoRoute(
         path: AppStrings.allTripsScreen,

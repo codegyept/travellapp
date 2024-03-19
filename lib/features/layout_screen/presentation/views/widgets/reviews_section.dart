@@ -13,11 +13,9 @@ class ReviewsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text(
+         Text(
           AppStrings.reviewTitle,
-          style: TextStyle(
-            color: AppColors.black,
-          ),
+          style: Theme.of(context).textTheme.labelMedium,
         ),
         const CustomSizedBox(),
         CustomCircleAvatar(
@@ -26,11 +24,9 @@ class ReviewsSection extends StatelessWidget {
             "assets/images/Ellipse 1.png",
           ),
         ),
-        const Text(
+         Text(
           AppStrings.weHelpYouMakeBestTripDescription,
-          style: TextStyle(
-            color: AppColors.black,
-          ),
+          style: Theme.of(context).textTheme.bodyLarge,
           overflow: TextOverflow.ellipsis,
           maxLines: 6,
         ),
@@ -85,11 +81,9 @@ class ReviewsSection extends StatelessWidget {
         SizedBox(
           height: 40.0.h,
         ),
-        const Text(
+         Text(
           AppStrings.subscribeToNewsletterTitle,
-          style: TextStyle(
-            color: AppColors.black,
-          ),
+          style: Theme.of(context).textTheme.labelMedium,
         ),
         Row(
           children: [
@@ -106,10 +100,7 @@ class ReviewsSection extends StatelessWidget {
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: AppStrings.reviewTextFieldName,
-                  hintStyle: TextStyle(
-                    color: AppColors.greySearchText,
-                    fontSize: 12.0.sp,
-                  ),
+                  hintStyle: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
             ),
@@ -129,10 +120,7 @@ class ReviewsSection extends StatelessWidget {
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: AppStrings.reviewTextFieldEmail,
-                  hintStyle: TextStyle(
-                    color: AppColors.greySearchText,
-                    fontSize: 12.0.sp,
-                  ),
+                  hintStyle: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
             ),
@@ -152,11 +140,9 @@ class ReviewsSection extends StatelessWidget {
         SizedBox(
           height: 50.0.h,
         ),
-        const Text(
+         Text(
           AppStrings.copyRight,
-          style: TextStyle(
-            color: AppColors.greySearchText,
-          ),
+          style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontSize:14.0.sp,),
         ),
       ],
     );

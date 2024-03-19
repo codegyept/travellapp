@@ -15,7 +15,7 @@ class TopDestinationSection extends StatelessWidget {
          CustomRowTitle(
           onPressed:()
           {
-            context.go(AppStrings.topDestinationScreen);
+            context.push(AppStrings.topDestinationScreen);
           },
           text: AppStrings.topDestinationTitle,
         ),

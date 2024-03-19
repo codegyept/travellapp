@@ -25,7 +25,7 @@ class CustomIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: size.h,
+      width: size.w,
       height: size.h,
       decoration: BoxDecoration(
         color: backgroundColor,

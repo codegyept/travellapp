@@ -17,7 +17,7 @@ class BestOffersSection extends StatelessWidget {
           text: AppStrings.bestOffersTitle,
           onPressed: ()
           {
-            context.go(AppStrings.bestOffersScreen);
+            context.push(AppStrings.bestOffersScreen);
           },
         ),
         ListView.separated(
@@ -27,7 +27,7 @@ class BestOffersSection extends StatelessWidget {
           itemBuilder: (context,index)
           {
             return BestOffersItem(
-              width:78.0.w,
+              width:74.0.w,
             );
           },
           separatorBuilder: (context, index) {
