@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
-import 'package:rehlatyuae/features/outh/login/presention/views/login.dart';
 import 'package:rehlatyuae/features/splash_screen/presentation/views/unboarding.dart';
+
 import '../../../../core/utils/custom_button.dart';
 import '../../../../core/utils/default_text_button.dart';
 
@@ -137,9 +137,10 @@ class _OnbordingState extends State<Onbording> {
       height: 10,
       width: currentIndex == index ? 25 : 10,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5),
-        color: AppColors.textAndBackgroundColorButton,
-      ),
+          borderRadius: BorderRadius.circular(5),
+          color: currentIndex == index
+              ? AppColors.textAndBackgroundColorButton
+              : AppColors.white),
     );
   }
 }

@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Future.delayed(const Duration(milliseconds: 500), () {
+    Future.delayed(const Duration(milliseconds: 300), () {
       GoRouter.of(context).go('/onboarding');
     });
   }
@@ -32,25 +32,29 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                  'assets/images/img.png',
-                ),
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            Image.asset(
+              'assets/images/splash.png',
+              fit: BoxFit.cover,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+            ),
+            SizedBox(
+              height: 800,
+              width: 500,
+              child: AnimatedSplashScreen(
+                backgroundColor: Colors.transparent,
+                splash: SvgPicture.asset('assets/images/main_logo.svg'),
+                nextScreen: const Onbording(),
+                splashTransition: SplashTransition.scaleTransition,
+                duration: 3500,
+                splashIconSize: 350,
               ),
             ),
-          ),
-          AnimatedSplashScreen(
-            splash: SvgPicture.asset('assets/images/splash.png'),
-            nextScreen: const Onbording(),
-            splashTransition: SplashTransition.scaleTransition,
-            duration: 3500,
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
