@@ -11,13 +11,15 @@ class CustomActionButton extends StatelessWidget {
     required this.width,
     required this.height,
   });
+
   final String text;
   final BorderRadius borderRadius;
   final Color backGroundColor;
   final GestureTapCallback onTap;
-  final TextStyle style;
+  final TextStyle? style;
   final double? width;
   final double? height;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

@@ -19,7 +19,7 @@ class CustomRowTitle extends StatelessWidget {
         Text(
           text,
           style: TextStyle(
-            color: AppColors.blackColorForTitleTexts,
+            color: AppColors.black,
           ),
         ),
         const Spacer(),

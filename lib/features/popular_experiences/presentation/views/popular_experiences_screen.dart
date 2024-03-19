@@ -82,7 +82,7 @@ class PopularExperiencesScreen extends StatelessWidget {
                 height: 70.0.h,
                 width: double.infinity,
                 borderRadius: BorderRadius.circular(12.0.r),
-                backGroundColor: AppColors.yellow,
+                backGroundColor: AppColors.orange,
                 style: TextStyle(
                     color: AppColors.whiteAppColor,
                     fontSize: 20.0.sp,

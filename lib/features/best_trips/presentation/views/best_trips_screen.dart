@@ -9,7 +9,6 @@ import 'package:rehlatyuae/core/utils/custom_sized_box.dart';
 import 'package:rehlatyuae/features/all_trips/presentation/views/widgets/all_trips_body.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_offers_horizontal.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_offers_section.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_trips_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_app_bar_title.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/popular_Experiences.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/reviews_section.dart';
@@ -82,7 +81,7 @@ class BestTripsScreen extends StatelessWidget {
                 height: 70.0.h,
                 width: double.infinity,
                 borderRadius: BorderRadius.circular(12.0.r),
-                backGroundColor: AppColors.yellow,
+                backGroundColor: AppColors.orange,
                 style: TextStyle(
                     color: AppColors.whiteAppColor,
                     fontSize: 20.0.sp,

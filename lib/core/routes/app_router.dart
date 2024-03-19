@@ -1,20 +1,25 @@
+
+
 import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/features/all_trips/presentation/views/All_trips_Screen.dart';
 import 'package:rehlatyuae/features/best_offers/presentation/views/best_offers_screen.dart';
 import 'package:rehlatyuae/features/best_trips/presentation/views/best_trips_screen.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/home_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/about_us_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/blog_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/faq_screen.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/home_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/payment_details_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/payment_options_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/privacy_policy_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/terms_conditions_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/travel_details_screen.dart';
 import 'package:rehlatyuae/features/our_blogs/presentation/views/our_blogs_screen.dart';
+import 'package:rehlatyuae/features/outh/login/presention/views/login.dart';
+import 'package:rehlatyuae/features/outh/register/presention/views/register.dart';
 import 'package:rehlatyuae/features/popular_experiences/presentation/views/popular_experiences_screen.dart';
 import 'package:rehlatyuae/features/profile_screen/presentaion/views/profile_screen.dart';
+import 'package:rehlatyuae/features/splash_screen/presentation/views/onboarding.dart';
 import 'package:rehlatyuae/features/splash_screen/presentation/views/splash_screen.dart';
 import 'package:rehlatyuae/features/top_destinations_section/presentation/views/top_destination_screen.dart';
 
@@ -23,7 +28,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: "/",
-        builder: (context, state) => const SplashScreen(),
+        builder: (context, state) => SplashScreen(),
       ),
       GoRoute(
         path: AppStrings.homeScreen,
@@ -88,6 +93,18 @@ abstract class AppRouter {
       GoRoute(
         path:AppStrings.blogScreen,
         builder: (context, state) => const BlogScreen(),
+      ),
+      GoRoute(
+        path: "/register",
+        builder: (context, state) => const Register(),
+      ),
+      GoRoute(
+        path: "/login",
+        builder: (context, state) => const Login(),
+      ),
+      GoRoute(
+        path: "/onboarding",
+        builder: (context, state) => Onbording(),
       ),
     ],
   );
