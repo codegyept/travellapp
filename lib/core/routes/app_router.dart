@@ -11,12 +11,12 @@ import 'package:rehlatyuae/features/best_trips/presentation/views/best_trips_scr
 import 'package:rehlatyuae/features/layout_screen/presentation/views/about_us_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/blog_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/faq_screen.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/home_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/payment_details_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/payment_options_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/privacy_policy_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/terms_conditions_screen.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/travel_details_screen.dart';
+import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/main_layout.dart';
 import 'package:rehlatyuae/features/our_blogs/presentation/views/our_blogs_screen.dart';
 import 'package:rehlatyuae/features/outh/login/presention/views/login.dart';
 import 'package:rehlatyuae/features/outh/register/presention/views/register.dart';
@@ -36,7 +36,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: AppStrings.homeScreen,
-        builder: (context, state) => HomeScreen(),
+        builder: (context, state) => const MainLayout(),
       ),
       GoRoute(
         path: AppStrings.allTripsScreen,

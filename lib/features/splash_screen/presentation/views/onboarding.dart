@@ -102,10 +102,10 @@ class _OnbordingState extends State<Onbording> {
                           height: 55.h,
                           onTap: () {
                             GoRouter.of(context).go('/homeScreen');
-                            _controller.nextPage(
-                              duration: const Duration(milliseconds: 100),
-                              curve: Curves.bounceIn,
-                            );
+                            // _controller.nextPage(
+                            //   duration: const Duration(milliseconds: 100),
+                            //   curve: Curves.bounceIn,
+                            // );
                           }),
                     SizedBox(
                       height: 50.h,

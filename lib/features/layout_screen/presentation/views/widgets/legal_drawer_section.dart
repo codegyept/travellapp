@@ -40,7 +40,6 @@ class LegalDrawerSection extends StatelessWidget {
             ),
           ],
           onTap: () {
-            context.pop();
             context.push('/privacyPolicyScreen');
           },
         ),
@@ -53,7 +52,6 @@ class LegalDrawerSection extends StatelessWidget {
             ),
           ],
           onTap: () {
-            context.pop();
             context.push('/termsConditionsScreen');
           },
         ),
@@ -78,7 +76,6 @@ class LegalDrawerSection extends StatelessWidget {
             ),
           ],
           onTap: () {
-            context.pop();
             context.push('/aboutUsScreen');
           },
         ),

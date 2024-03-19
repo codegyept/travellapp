@@ -7,7 +7,12 @@ import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
-  const CustomBottomNavigationBar({super.key});
+  final void Function(int)? onTap;
+
+  const CustomBottomNavigationBar({
+    required this.onTap,
+    super.key,
+  });
 
   @override
   State<CustomBottomNavigationBar> createState() => _CustomBottomNavigationBarState();
@@ -71,6 +76,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
       onTap: (selectedIndex) {
         setState(() {
           index = selectedIndex;
+          widget.onTap?.call(index);
         });
       },
       backgroundColor: AppColors.white,
