@@ -393,11 +393,20 @@ Official Channels:
   static const termsConditionsScreen = "/termsConditionsScreen";
   static const privacyPolicyScreen = "/privacyPolicyScreen";
   static const faqsScreen = "/faqsScreen";
-  static const paymentOptionsScreen =  "/paymentOptionsScreen";
-  static const paymentDetailsScreen =  "/paymentDetailsScreen";
-  static const profileScreen =  "/profileScreen";
-  static const travelDetailsScreen =   "/travelDetailsScreen";
-  static const blogScreen =  "/blogScreen";
+  static const paymentOptionsScreen = "/paymentOptionsScreen";
+  static const paymentDetailsScreen = "/paymentDetailsScreen";
+  static const profileScreen = "/profileScreen";
+  static const travelDetailsScreen = "/travelDetailsScreen";
+  static const blogScreen = "/blogScreen";
+
+  static const splashScreen = "/";
+  static const onboarding = "/onboarding";
+  static const loginScreen = "/loginScreen";
+  static const registerScreen = "/registerScreen";
+  static const forgetPasswordScreen = "/forgetPasswordScreen";
+  static const verificationScreen = "/verificationScreen";
+  static const updatePasswordScreen = "/updatePasswordScreen";
+
   static const profile = "Profile";
   static const edit = "Edit";
   static const about = "About";

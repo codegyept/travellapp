@@ -26,48 +26,68 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     return CurvedNavigationBar(
       items: [
         CurvedNavigationBarItem(
-          child: SvgPicture.asset(
-            AppAssets.homeIcon,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: SvgPicture.asset(
+              AppAssets.homeIcon,
+            ),
           ),
           label: "Home",
-          labelStyle: const TextStyle(
-            color: AppColors.white,
+          labelStyle: TextStyle(
+            color: index == 0 ? AppColors.textAndBackgroundColorButton : AppColors.white,
+            fontSize: 12.sp,
           ),
         ),
         CurvedNavigationBarItem(
-          child: SvgPicture.asset(
-            AppAssets.searchIcon,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: SvgPicture.asset(
+              AppAssets.searchIcon,
+            ),
           ),
           label: "Search",
-          labelStyle: const TextStyle(
-            color: AppColors.white,
+          labelStyle: TextStyle(
+            color: index == 1 ? AppColors.textAndBackgroundColorButton : AppColors.white,
+            fontSize: 12.sp,
           ),
         ),
         CurvedNavigationBarItem(
-          child: SvgPicture.asset(
-            AppAssets.bookingIcon,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: SvgPicture.asset(
+              AppAssets.bookingIcon,
+            ),
           ),
           label: "Booking",
-          labelStyle: const TextStyle(
-            color: AppColors.white,
+          labelStyle: TextStyle(
+            color: index == 2 ? AppColors.textAndBackgroundColorButton : AppColors.white,
+            fontSize: 12.sp,
           ),
         ),
         CurvedNavigationBarItem(
-          child: SvgPicture.asset(
-            AppAssets.exploreIcon,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: SvgPicture.asset(
+              AppAssets.exploreIcon,
+            ),
           ),
           label: "Explore",
-          labelStyle: const TextStyle(
-            color: AppColors.white,
+          labelStyle: TextStyle(
+            color: index == 3 ? AppColors.textAndBackgroundColorButton : AppColors.white,
+            fontSize: 12.sp,
           ),
         ),
         CurvedNavigationBarItem(
-          child: SvgPicture.asset(
-            AppAssets.accountIcon,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: SvgPicture.asset(
+              AppAssets.accountIcon,
+            ),
           ),
           label: "Account",
-          labelStyle: const TextStyle(
-            color: AppColors.white,
+          labelStyle: TextStyle(
+            color: index == 4 ? AppColors.textAndBackgroundColorButton : AppColors.white,
+            fontSize: 12.sp,
           ),
         ),
       ],
@@ -80,7 +100,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         });
       },
       backgroundColor: AppColors.white,
-      buttonBackgroundColor: AppColors.orange,
+      buttonBackgroundColor: AppColors.textAndBackgroundColorButton,
       color: AppColors.blogItemBackgroundColor,
       animationDuration: const Duration(milliseconds: 300),
     );
