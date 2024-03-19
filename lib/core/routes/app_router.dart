@@ -136,7 +136,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: "/onboarding",
-        builder: (context, state) => const Onbording(),
+        builder: (context, state) => const OnBoarding(),
       ),
     ],
   );

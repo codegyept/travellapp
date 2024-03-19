@@ -8,16 +8,16 @@ import 'package:rehlatyuae/features/splash_screen/presentation/views/unboarding.
 import '../../../../core/utils/custom_button.dart';
 import '../../../../core/utils/default_text_button.dart';
 
-class Onbording extends StatefulWidget {
+class OnBoarding extends StatefulWidget {
   // final SharedPreferences sharedPreferences;
 
-  const Onbording({super.key});
+  const OnBoarding({super.key});
 
   @override
-  State<Onbording> createState() => _OnbordingState();
+  State<OnBoarding> createState() => _OnBoardingState();
 }
 
-class _OnbordingState extends State<Onbording> {
+class _OnBoardingState extends State<OnBoarding> {
   int currentIndex = 0;
   late PageController _controller;
 
