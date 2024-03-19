@@ -8,16 +8,17 @@ import 'package:rehlatyuae/features/splash_screen/presentation/views/unboarding.
 import '../../../../core/utils/custom_button.dart';
 import '../../../../core/utils/default_text_button.dart';
 
-class Onbording extends StatefulWidget {
+// TODO should be the shard element between onboarding pages fixed and another elements that should slide
+class OnBoarding extends StatefulWidget {
   // final SharedPreferences sharedPreferences;
 
-  const Onbording({super.key});
+  const OnBoarding({super.key});
 
   @override
-  State<Onbording> createState() => _OnbordingState();
+  State<OnBoarding> createState() => _OnBoardingState();
 }
 
-class _OnbordingState extends State<Onbording> {
+class _OnBoardingState extends State<OnBoarding> {
   int currentIndex = 0;
   late PageController _controller;
 
@@ -66,8 +67,7 @@ class _OnbordingState extends State<Onbording> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Center(
-                        child: SvgPicture.asset('assets/images/main_logo.svg')),
+                    Center(child: SvgPicture.asset('assets/images/main_logo.svg')),
                     SizedBox(
                       height: 70.h,
                     ),
@@ -97,27 +97,25 @@ class _OnbordingState extends State<Onbording> {
                       CustomActionButton(
                           text: "Get Started",
                           borderRadius: BorderRadius.circular(12.r),
-                          backGroundColor:
-                              AppColors.textAndBackgroundColorButton,
+                          backGroundColor: AppColors.textAndBackgroundColorButton,
                           style: Theme.of(context).textTheme.displayMedium,
                           width: 400.w,
                           height: 55.h,
                           onTap: () {
                             GoRouter.of(context).go('/homeScreen');
-                            _controller.nextPage(
-                              duration: const Duration(milliseconds: 100),
-                              curve: Curves.bounceIn,
-                            );
+                            // _controller.nextPage(
+                            //   duration: const Duration(milliseconds: 100),
+                            //   curve: Curves.bounceIn,
+                            // );
                           }),
                     SizedBox(
                       height: 50.h,
                     ),
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                      Text('Already have an account?',
-                          style: Theme.of(context).textTheme.displaySmall),
+                      Text('Already have an account?', style: Theme.of(context).textTheme.displaySmall),
                       DefaultTextButton(
                         onPressed: () {
-                          GoRouter.of(context).go('/login');
+                          GoRouter.of(context).go('/loginScreen');
                         },
                         text: 'Login',
                       )

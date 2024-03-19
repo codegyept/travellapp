@@ -5,10 +5,11 @@ import 'package:rehlatyuae/core/utils/default_text_button.dart';
 
 class CustomRowTitle extends StatelessWidget {
   const CustomRowTitle({
-    Key? key,
+    super.key,
     required this.text,
     required this.onPressed,
-  }) : super(key: key);
+  });
+
   final String text;
   final VoidCallback? onPressed;
 
@@ -18,7 +19,7 @@ class CustomRowTitle extends StatelessWidget {
       children: [
         Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             color: AppColors.black,
           ),
         ),

@@ -5,13 +5,15 @@ import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class CustomExpansionTile extends StatefulWidget {
   final String title;
-  final String content;
+  final String? content;
+  final List<Widget> children;
   final bool initiallyExpanded;
 
   const CustomExpansionTile({
     required this.title,
-    required this.content,
+    this.content,
     this.initiallyExpanded = true,
+    this.children = const [],
     super.key,
   });
 
@@ -70,13 +72,20 @@ class _CustomExpansionTileState extends State<CustomExpansionTile> {
                 bottom: Radius.circular(9),
               ),
             ),
-            child: Text(
-              widget.content,
-              style: const TextStyle(
-                color: AppColors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w700,
-              ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (widget.content != null)
+                  Text(
+                    widget.content!,
+                    style: const TextStyle(
+                      color: AppColors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ...widget.children
+              ],
             ),
           ),
         ],
