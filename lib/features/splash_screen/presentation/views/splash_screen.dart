@@ -1,9 +1,9 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/features/splash_screen/presentation/views/onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -42,15 +42,15 @@ class _SplashScreenState extends State<SplashScreen> {
               height: MediaQuery.of(context).size.height,
             ),
             SizedBox(
-              height: 800,
-              width: 500,
+              height: 800.h,
+              width: 500.w,
               child: AnimatedSplashScreen(
                 backgroundColor: Colors.transparent,
                 splash: SvgPicture.asset('assets/images/main_logo.svg'),
                 nextScreen: const OnBoarding(),
                 splashTransition: SplashTransition.scaleTransition,
                 duration: 3500,
-                splashIconSize: 350,
+                splashIconSize: 350.h,
               ),
             ),
           ],
