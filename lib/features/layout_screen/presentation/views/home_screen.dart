@@ -3,14 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
-import 'package:rehlatyuae/core/utils/custom_circle_avatar.dart';
 import 'package:rehlatyuae/core/utils/custom_sized_box.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_offers_horizontal.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_offers_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_trips_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/categories_section.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_app_bar_title.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_drawer.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/our_blog_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/our_partner_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/popular_experiences.dart';
@@ -28,22 +25,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        surfaceTintColor: AppColors.whiteAppColor,
-        title: const CustomAppBarTitle(),
-        actions: [
-          InkWell(
-            onTap: () {},
-            child: CustomCircleAvatar(
-              radius: 40.0.r,
-              backgroundImage: const AssetImage(
-                "assets/images/Ellipse 1.png",
-              ),
-            ),
-          ),
-        ],
-      ),
-      drawer: const CustomDrawer(),
       body: Padding(
         padding: EdgeInsetsDirectional.symmetric(
           vertical: 20.0.h,
