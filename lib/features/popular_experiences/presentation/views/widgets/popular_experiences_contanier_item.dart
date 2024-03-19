@@ -1,31 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/icon_button_with_white_background.dart';
 
-class CustomContainerTrip extends StatelessWidget
-{
-  const CustomContainerTrip({
-    super.key,
-    required this.width,
-    required this.imageName,
-    required this.cityName,
-    required this.countryName,
-    required this.tripPrice,
-    required this.reservationType,
-  });
-
+class PopularExperiencesContainerItem extends StatelessWidget {
+  const PopularExperiencesContainerItem({Key? key, required this.width}) : super(key: key);
   final double width;
-  final String imageName;
-  final String cityName;
-  final String countryName;
-  final String tripPrice;
-  final String reservationType;
-
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return SizedBox(
       height: 180.0.h,
       width: width,
@@ -39,32 +21,32 @@ class CustomContainerTrip extends StatelessWidget
               borderRadius: BorderRadiusDirectional.circular(15.0.r),
             ),
             child: Image.asset(
-              imageName,
+              "assets/images/Rectangle 427.png",
               fit: BoxFit.cover,
             ),
           ),
           Positioned(
-            top: 10,
-            right: 13,
+            top: 8,
+            right: 10,
             child: IconButtonWithWhiteBackground(
               onPressed: () {},
-              width: 35.0.w,
-              height: 40.0.h,
+              width: 30.0.w,
+              height: 35.0.h,
               icon: Icon(
                 Icons.favorite_outline,
                 color: AppColors.redAppColor,
-                size: 22.0.sp,
+                size:17.0.sp,
               ),
             ),
           ),
           Positioned(
-            bottom: 30,
-            left: 10,
+            bottom: 15,
+            left: 5,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  cityName,
+                  "Dubai",
                   style: TextStyle(color: AppColors.whiteAppColor),
                 ),
                 SizedBox(
@@ -79,10 +61,10 @@ class CustomContainerTrip extends StatelessWidget
                       size: 14.0.sp,
                     ),
                     SizedBox(
-                      width: 1.0.w,
+                      width: 2.0.w,
                     ),
                     Text(
-                      cityName,
+                      "United Arab Emirates",
                       style: TextStyle(
                         color: AppColors.whiteAppColor,
                       ),
@@ -94,21 +76,25 @@ class CustomContainerTrip extends StatelessWidget
             ),
           ),
           Positioned(
-            bottom: 50,
-            right: 10,
+            bottom:40,
+            right: 8,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment:CrossAxisAlignment.center,
               children: [
-                 Text(
-                  tripPrice,
-                  style: TextStyle(color: AppColors.whiteAppColor),
+                const Text(
+                  "43",
+                  style:TextStyle(
+                      color:AppColors.whiteAppColor
+                  ),
                 ),
                 SizedBox(
-                  height: 4.0.h,
+                  height:4.0.h,
                 ),
-                 Text(
-                  reservationType,
-                  style: TextStyle(color: AppColors.whiteAppColor),
+                const Text(
+                  "/Person",
+                  style:TextStyle(
+                      color:AppColors.whiteAppColor
+                  ),
                 ),
               ],
             ),
