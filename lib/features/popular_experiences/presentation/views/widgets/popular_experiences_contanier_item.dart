@@ -53,9 +53,9 @@ class PopularExperiencesContainerItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                   Text(
                     "Dubai",
-                    style: TextStyle(color: AppColors.whiteAppColor),
+                    style: Theme.of(context).textTheme.displayMedium,
                   ),
                   SizedBox(
                     height: 5.0.h,
@@ -71,11 +71,9 @@ class PopularExperiencesContainerItem extends StatelessWidget {
                       SizedBox(
                         width: 2.0.w,
                       ),
-                      const Text(
+                       Text(
                         "United Arab Emirates",
-                        style: TextStyle(
-                          color: AppColors.whiteAppColor,
-                        ),
+                        style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       ),
                     ],
@@ -89,16 +87,16 @@ class PopularExperiencesContainerItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Text(
+                   Text(
                     "43",
-                    style: TextStyle(color: AppColors.whiteAppColor),
+                    style: Theme.of(context).textTheme.displaySmall,
                   ),
                   SizedBox(
                     height: 4.0.h,
                   ),
-                  const Text(
+                   Text(
                     "/Person",
-                    style: TextStyle(color: AppColors.whiteAppColor),
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                 ],
               ),

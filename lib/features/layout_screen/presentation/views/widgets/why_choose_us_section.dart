@@ -24,15 +24,9 @@ class WhyChooseUsSection extends StatelessWidget {
           children: [
             WhyChooseUSItem(
               text: AppStrings.whyChooseUsFastBooking,
-              style: TextStyle(
-                color: AppColors.black,
-                fontSize: 15.0.sp,
-              ),
+              style: Theme.of(context).textTheme.titleLarge!,
               descriptionText: AppStrings.whyChooseUsFastBookingDescription,
-              descriptionTextStyle: TextStyle(
-                fontSize: 12.0.sp,
-                color: AppColors.black,
-              ),
+              descriptionTextStyle: Theme.of(context).textTheme.bodyLarge,
               child: Image.asset(AppStrings.whyChooseUsFastBookingImage),
             ),
             SizedBox(
@@ -40,15 +34,9 @@ class WhyChooseUsSection extends StatelessWidget {
             ),
             WhyChooseUSItem(
               text: AppStrings.whyChooseUsEasyToShop,
-              style: TextStyle(
-                color: AppColors.black,
-                fontSize: 15.0.sp,
-              ),
+              style: Theme.of(context).textTheme.titleLarge!,
               descriptionText: AppStrings.whyChooseUsEasyToShopDescription,
-              descriptionTextStyle: TextStyle(
-                fontSize: 12.0.sp,
-                color: AppColors.black,
-              ),
+              descriptionTextStyle: Theme.of(context).textTheme.bodyLarge,
               child: Image.asset(AppStrings.whyChooseUsEasyToShopImage),
             ),
           ],
@@ -61,15 +49,9 @@ class WhyChooseUsSection extends StatelessWidget {
           children: [
             WhyChooseUSItem(
               text: AppStrings.whyChooseUs247Support,
-              style: TextStyle(
-                color: AppColors.black,
-                fontSize: 15.0.sp,
-              ),
+              style:  Theme.of(context).textTheme.titleLarge!,
               descriptionText: AppStrings.whyChooseUs247SupportDescription,
-              descriptionTextStyle: TextStyle(
-                fontSize: 12.0.sp,
-                color: AppColors.black,
-              ),
+              descriptionTextStyle: Theme.of(context).textTheme.bodyLarge,
               child: Image.asset(AppStrings.whyChooseUs247SupportImage),
             ),
             SizedBox(
@@ -77,15 +59,9 @@ class WhyChooseUsSection extends StatelessWidget {
             ),
             WhyChooseUSItem(
               text: AppStrings.whyChooseUsUniqueexPerience,
-              style: TextStyle(
-                color: AppColors.black,
-                fontSize: 15.0.sp,
-              ),
+              style: Theme.of(context).textTheme.titleLarge!,
               descriptionText: AppStrings.whyChooseUsUniqueexPerienceDescription,
-              descriptionTextStyle: TextStyle(
-                fontSize: 12.0.sp,
-                color: AppColors.black,
-              ),
+              descriptionTextStyle: Theme.of(context).textTheme.bodyLarge,
               child: Image.asset(AppStrings.whyChooseUsUniqueexPerienceImage),
             ),
           ],

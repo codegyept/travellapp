@@ -16,7 +16,7 @@ class PopularExperiencesSection extends StatelessWidget {
           text: AppStrings.popularExperiencesTitle,
           onPressed: ()
           {
-            context.go(AppStrings.popularExperiencesScreen);
+            context.push(AppStrings.popularExperiencesScreen);
           },
         ),
         SizedBox(

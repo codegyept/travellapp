@@ -16,7 +16,7 @@ class BestTripsSection extends StatelessWidget {
           text: AppStrings.bestTripsTitle,
           onPressed: ()
           {
-            context.go(AppStrings.bestTripsScreen);
+            context.push(AppStrings.bestTripsScreen);
           },
         ),
         SizedBox(
