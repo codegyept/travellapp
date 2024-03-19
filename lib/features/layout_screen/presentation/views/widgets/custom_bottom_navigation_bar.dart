@@ -1,6 +1,7 @@
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
@@ -66,6 +67,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         ),
       ],
       index: index,
+      height: 80.h,
       onTap: (selectedIndex) {
         setState(() {
           index = selectedIndex;

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
+import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
 import 'package:rehlatyuae/core/utils/default_text_button.dart';
 import 'package:rehlatyuae/core/utils/primary_text_field.dart';
@@ -79,7 +80,9 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 10.h),
                 CustomActionButton(
-                  onTap: () {},
+                  onTap: () {
+                    context.go(AppStrings.homeScreen);
+                  },
                   text: 'LogIn',
                   borderRadius: BorderRadius.circular(12.r),
                   backGroundColor: AppColors.textAndBackgroundColorButton,
@@ -95,7 +98,7 @@ class LoginScreen extends StatelessWidget {
                       style: TextStyle(
                         fontFamily: "Switzer",
                         color: Colors.white70,
-                        fontSize: 14.sp,
+                        fontSize: 12.sp,
                       ),
                     ),
                     DefaultTextButton(

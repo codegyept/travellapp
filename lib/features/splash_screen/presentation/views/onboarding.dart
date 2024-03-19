@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/features/splash_screen/presentation/views/unboarding.dart';
+
 import '../../../../core/utils/custom_button.dart';
 import '../../../../core/utils/default_text_button.dart';
 
@@ -65,8 +66,7 @@ class _OnbordingState extends State<Onbording> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Center(
-                        child: SvgPicture.asset('assets/images/main_logo.svg')),
+                    Center(child: SvgPicture.asset('assets/images/main_logo.svg')),
                     SizedBox(
                       height: 70.h,
                     ),
@@ -96,8 +96,7 @@ class _OnbordingState extends State<Onbording> {
                       CustomActionButton(
                           text: "Get Started",
                           borderRadius: BorderRadius.circular(12.r),
-                          backGroundColor:
-                              AppColors.textAndBackgroundColorButton,
+                          backGroundColor: AppColors.textAndBackgroundColorButton,
                           style: Theme.of(context).textTheme.displayMedium,
                           width: 400.w,
                           height: 55.h,
@@ -112,11 +111,10 @@ class _OnbordingState extends State<Onbording> {
                       height: 50.h,
                     ),
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                      Text('Already have an account?',
-                          style: Theme.of(context).textTheme.displaySmall),
+                      Text('Already have an account?', style: Theme.of(context).textTheme.displaySmall),
                       DefaultTextButton(
                         onPressed: () {
-                          GoRouter.of(context).go('/login');
+                          GoRouter.of(context).go('/loginScreen');
                         },
                         text: 'Login',
                       )

@@ -10,12 +10,14 @@ class CustomDialog extends StatelessWidget {
   final String subtitle;
   final String labelText;
   final Color color;
+  final void Function()? onTap;
 
   const CustomDialog({
     required this.title,
     required this.subtitle,
     required this.labelText,
     this.color = AppColors.textAndBackgroundColorButton,
+    this.onTap,
     super.key,
   });
 
@@ -68,6 +70,7 @@ class CustomDialog extends StatelessWidget {
                         backGroundColor: color,
                         onTap: () {
                           context.pop();
+                          onTap?.call();
                         },
                         width: double.infinity,
                         height: 50.h,
