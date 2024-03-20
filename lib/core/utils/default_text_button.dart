@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class DefaultTextButton extends StatelessWidget {
@@ -20,11 +19,9 @@ class DefaultTextButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: TextStyle(
-          color: AppColors.textAndBackgroundColorButton,
-          fontWeight: FontWeight.bold,
-          fontSize: 14.sp,
-        ),
+        style: Theme.of(context).textTheme.titleSmall?.copyWith(
+              color: AppColors.textAndBackgroundColorButton,
+            ),
       ),
     );
   }

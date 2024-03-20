@@ -75,11 +75,9 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
             onChanged: (value) {
               setState(() {});
             },
-            style: TextStyle(
-              fontSize: 14.sp,
-              color: widget.textColor,
-              fontWeight: FontWeight.w400,
-            ),
+            style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                  color: widget.textColor,
+                ),
             textDirection: widget.inputType == TextInputType.phone
                 ? TextDirection.ltr
                 : widget.controller.text.isNotEmpty && widget.controller.text.trim().isNotEmpty
@@ -90,11 +88,9 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
             maxLines: widget.isTextAria ? 3 : 1,
             decoration: InputDecoration(
               hintText: widget.hint,
-              hintStyle: TextStyle(
-                fontSize: 12.sp,
-                color: widget.textColor,
-                fontWeight: FontWeight.w400,
-              ),
+              hintStyle: Theme.of(context).textTheme.titleSmall?.copyWith(
+                    color: widget.textColor,
+                  ),
               contentPadding: EdgeInsets.symmetric(
                 horizontal: 15.w,
                 vertical: 10.h,
