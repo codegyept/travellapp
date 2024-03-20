@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
@@ -75,8 +76,9 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
             onChanged: (value) {
               setState(() {});
             },
-            style: Theme.of(context).textTheme.displayMedium?.copyWith(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: widget.textColor,
+                  letterSpacing: 1.5,
                 ),
             textDirection: widget.inputType == TextInputType.phone
                 ? TextDirection.ltr
@@ -122,11 +124,11 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
                       },
                       icon: isVisibleText
                           ? const Icon(
-                              Icons.visibility_off_outlined,
+                              CupertinoIcons.lock_open,
                               color: AppColors.textAndBackgroundColorButton,
                             )
                           : const Icon(
-                              Icons.visibility_outlined,
+                              CupertinoIcons.lock,
                               color: AppColors.textAndBackgroundColorButton,
                             ),
                     )

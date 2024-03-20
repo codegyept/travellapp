@@ -6,12 +6,12 @@ class DefaultTextButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.text,
-    this.fontSize,
+    this.style,
   });
 
   final VoidCallback? onPressed;
   final String text;
-  final double? fontSize;
+  final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,10 @@ class DefaultTextButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: Theme.of(context).textTheme.titleSmall?.copyWith(
-              color: AppColors.textAndBackgroundColorButton,
-            ),
+        style: style ??
+            Theme.of(context).textTheme.titleSmall?.copyWith(
+                  color: AppColors.textAndBackgroundColorButton,
+                ),
       ),
     );
   }

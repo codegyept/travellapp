@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
+import 'package:rehlatyuae/core/utils/default_text_button.dart';
 import 'package:rehlatyuae/features/auth/presentation/views/widgets/custom_otp_text_field.dart';
 
 class VerificationScreen extends StatelessWidget {
@@ -20,37 +21,36 @@ class VerificationScreen extends StatelessWidget {
         children: [
           Text(
             AppStrings.verification,
-            style: TextStyle(
-              fontSize: 30.sp,
-              fontWeight: FontWeight.w700,
-            ),
+            style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                  color: AppColors.black,
+                  fontSize: 28.sp,
+                ),
           ),
           SizedBox(
             height: 7.h,
           ),
           Text(
             AppStrings.checkYourEmail,
-            style: TextStyle(
-              fontSize: 16.sp,
-              color: AppColors.greySearchText,
-              fontWeight: FontWeight.w400,
-            ),
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  color: AppColors.greySearchText,
+                ),
           ),
           SizedBox(
             height: 30.h,
           ),
           const CustomOTPTextField(),
           SizedBox(
-            height: 100.h,
+            height: 80.h,
           ),
-          Text(
-            AppStrings.didYouReceive,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 14.sp,
-              color: AppColors.black,
-              fontWeight: FontWeight.w700,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              DefaultTextButton(
+                onPressed: () {},
+                text: AppStrings.didYouReceive,
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+            ],
           ),
           SizedBox(
             height: 30.h,
