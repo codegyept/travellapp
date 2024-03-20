@@ -56,24 +56,14 @@ class _CustomRadioTileState extends State<CustomRadioTile> {
                 ),
                 Text(
                   widget.name,
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: AppColors.grey,
-                    fontWeight: FontWeight.w400,
-                    height: 1.3,
-                  ),
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 const SizedBox(
                   width: 8,
                 ),
                 Text(
                   widget.number,
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: AppColors.grey,
-                    fontWeight: FontWeight.w400,
-                    height: 1.3,
-                  ),
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ],
             ),

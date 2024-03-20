@@ -19,10 +19,9 @@ class PaymentOptionsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           AppStrings.paymentOptions,
-          style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.w700,
-          ),
+          style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                color: AppColors.black,
+              ),
         ),
       ),
       body: SingleChildScrollView(

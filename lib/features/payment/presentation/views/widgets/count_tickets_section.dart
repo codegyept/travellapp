@@ -27,11 +27,7 @@ class _CountTicketsSectionState extends State<CountTicketsSection> {
             children: [
               Text(
                 AppStrings.selectNumberTicket,
-                style: TextStyle(
-                  fontSize: 14.sp,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                ),
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
             ],
           ),
@@ -74,26 +70,16 @@ class _CountTicketsSectionState extends State<CountTicketsSection> {
         ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 10.h),
-          child: const Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "Total Amount",
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  height: 1.42,
-                ),
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
               Text(
                 "\$0.00",
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  height: 1.42,
-                ),
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
             ],
           ),

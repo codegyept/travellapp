@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class RowDetails extends StatelessWidget {
   final String title;
@@ -27,31 +28,20 @@ class RowDetails extends StatelessWidget {
           children: [
             Text(
               title,
-              style: const TextStyle(
-                fontSize: 13,
-                color: Color(0xFF606060),
-                fontWeight: FontWeight.w500,
-                height: 1.3,
-              ),
+              style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                    color: AppColors.grey,
+                  ),
             ),
             if (midValue != null)
               Text(
                 midValue!,
-                style: const TextStyle(
-                  fontSize: 13,
-                  color: Color(0xFF606060),
-                  fontWeight: FontWeight.w500,
-                  height: 1.3,
-                ),
+                style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                      color: AppColors.grey,
+                    ),
               ),
             Text(
               value,
-              style: TextStyle(
-                fontSize: 14,
-                color: textValueColor,
-                fontWeight: FontWeight.w500,
-                height: 1.32,
-              ),
+              style: Theme.of(context).textTheme.titleSmall,
             ),
           ],
         )

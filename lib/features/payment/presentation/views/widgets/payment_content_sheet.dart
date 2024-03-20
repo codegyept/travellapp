@@ -32,21 +32,15 @@ class PaymentContentSheet extends StatelessWidget {
       children: [
         Text(
           "Total Amount",
-          style: TextStyle(
-            fontSize: 15.sp,
-            color: AppColors.backgroundColorExpansionAndText,
-            fontWeight: FontWeight.w400,
-            height: 1.3,
-          ),
+          style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                color: AppColors.grayLight,
+              ),
         ),
         Text(
           "\$ $totalPayment",
-          style: TextStyle(
-            fontSize: 30.sp,
-            color: Colors.black,
-            fontWeight: FontWeight.w700,
-            height: 1.32,
-          ),
+          style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                color: AppColors.black,
+              ),
         ),
         RowDetails(
           title: "Date",

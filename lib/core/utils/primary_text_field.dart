@@ -56,11 +56,7 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
           if (widget.label != null)
             Text(
               widget.label!,
-              style: TextStyle(
-                fontSize: 14.sp,
-                color: AppColors.black,
-                fontWeight: FontWeight.w700,
-              ),
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           if (widget.label != null)
             SizedBox(
