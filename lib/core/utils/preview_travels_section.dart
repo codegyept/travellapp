@@ -18,37 +18,33 @@ class PreviewTravelsSection extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25).copyWith(top: 25),
+          padding: EdgeInsets.symmetric(horizontal: 20.w).copyWith(top: 25.h),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
+              Text(
                 "Preview",
-                style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w700),
+                style: Theme.of(context).textTheme.labelMedium,
               ),
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(4),
                   color: const Color(0xFFF6F8FA),
                 ),
-                child: const Row(
+                child: Row(
                   children: [
                     Icon(
                       Icons.star,
                       color: Colors.amber,
-                      size: 20,
+                      size: 20.h,
                     ),
                     SizedBox(
-                      width: 5,
+                      width: 5.w,
                     ),
                     Text(
                       "4,8",
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
+                      style: Theme.of(context).textTheme.labelSmall,
                     ),
                   ],
                 ),
@@ -88,7 +84,7 @@ class PreviewTravelsSection extends StatelessWidget {
                 context.push(AppStrings.paymentOptionsScreen);
               },
               width: double.infinity,
-              height: 50,
+              height: 50.h,
             ),
           ),
       ],

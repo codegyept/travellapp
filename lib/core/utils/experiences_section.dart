@@ -13,16 +13,16 @@ class ExperiencesSections extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25).copyWith(top: 25),
-          child: const Text(
+          padding: EdgeInsets.symmetric(horizontal: 20.w).copyWith(top: 20.h),
+          child: Text(
             "Similar experiences you'd love",
-            style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w700),
+            style: Theme.of(context).textTheme.labelMedium,
           ),
         ),
         SizedBox(
           height: 215.h,
           child: ListView.separated(
-            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 10.h),
             scrollDirection: Axis.horizontal,
             itemCount: 15,
             itemBuilder: (context, index) => CustomContainerTrip(
@@ -33,20 +33,20 @@ class ExperiencesSections extends StatelessWidget {
               tripPrice: '43',
               reservationType: '/Person',
             ),
-            separatorBuilder: (context, index) => const SizedBox(width: 12),
+            separatorBuilder: (context, index) => SizedBox(width: 12.w),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25).copyWith(top: 25),
-          child: const Text(
+          padding: EdgeInsets.symmetric(horizontal: 20.w).copyWith(top: 10.h),
+          child: Text(
             "Popular Experiences",
-            style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w700),
+            style: Theme.of(context).textTheme.labelMedium,
           ),
         ),
         SizedBox(
           height: 215.h,
           child: ListView.separated(
-            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 10.h),
             scrollDirection: Axis.horizontal,
             itemCount: 15,
             itemBuilder: (context, index) => CustomContainerTrip(
@@ -57,7 +57,7 @@ class ExperiencesSections extends StatelessWidget {
               tripPrice: '43',
               reservationType: '/Person',
             ),
-            separatorBuilder: (context, index) => const SizedBox(width: 12),
+            separatorBuilder: (context, index) => SizedBox(width: 12.w),
           ),
         ),
       ],
