@@ -21,21 +21,16 @@ class ProfileCardDetails extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(
-              fontSize: 14.sp,
-              color: AppColors.grayLight,
-              fontWeight: FontWeight.w400,
-            ),
+            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                  color: AppColors.grayLight,
+                ),
           ),
           SizedBox(
             height: 7.h,
           ),
           Text(
             value,
-            style: TextStyle(
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w400,
-            ),
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
         ],
       ),

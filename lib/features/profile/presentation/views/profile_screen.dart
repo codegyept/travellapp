@@ -18,10 +18,9 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           AppStrings.profile,
-          style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.w700,
-          ),
+          style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                color: AppColors.black,
+              ),
         ),
         actions: [
           DefaultTextButton(
@@ -46,10 +45,9 @@ class ProfileScreen extends StatelessWidget {
                     children: [
                       Text(
                         AppStrings.about,
-                        style: TextStyle(
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.w700,
-                        ),
+                        style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                              color: AppColors.black,
+                            ),
                       ),
                       SizedBox(
                         width: 60.w,

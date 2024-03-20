@@ -15,10 +15,9 @@ class EditProfileScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           AppStrings.editProfile,
-          style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.w700,
-          ),
+          style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                color: AppColors.black,
+              ),
         ),
       ),
       body: ListView(
