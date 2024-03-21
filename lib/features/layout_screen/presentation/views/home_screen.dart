@@ -18,8 +18,7 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/top
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/we_help_you_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/why_choose_us_section.dart';
 
-class HomeScreen extends StatelessWidget
-{
+class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
   final TextEditingController _textEditingController = TextEditingController();
@@ -28,10 +27,10 @@ class HomeScreen extends StatelessWidget
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsetsDirectional.symmetric(
+        padding: EdgeInsets.symmetric(
           vertical: 20.0.h,
           horizontal: 17.0.w,
-        ),
+        ).copyWith(bottom: 0),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
@@ -59,8 +58,7 @@ class HomeScreen extends StatelessWidget
               const CustomSizedBox(),
               const WeHelpYouSection(),
               CustomActionButton(
-                onTap: ()
-                {
+                onTap: () {
                   context.push(AppStrings.allTripsScreen);
                 },
                 text: AppStrings.actionButtonName,

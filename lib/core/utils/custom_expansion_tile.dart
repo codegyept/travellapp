@@ -77,7 +77,9 @@ class _CustomExpansionTileState extends State<CustomExpansionTile> {
                 if (widget.content != null)
                   Text(
                     widget.content!,
-                    style: Theme.of(context).textTheme.displayMedium,
+                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                          color: AppColors.white,
+                        ),
                   ),
                 ...widget.children
               ],

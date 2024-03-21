@@ -17,13 +17,9 @@ class RatingsReviewsSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             "Ratings & Reviews",
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-            ),
+            style: Theme.of(context).textTheme.labelMedium,
           ),
           SizedBox(
             height: 10.h,
@@ -38,13 +34,9 @@ class RatingsReviewsSection extends StatelessWidget {
               SizedBox(
                 width: 5.w,
               ),
-              const Text(
+              Text(
                 "4.2 (852)",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
             ],
           ),
