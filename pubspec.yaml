@@ -50,6 +50,7 @@ dependencies:
   curved_labeled_navigation_bar: ^2.0.2
   dio: ^5.4.1
   bloc_concurrency: ^0.2.4
+  flutter_rating_bar: ^4.0.1
 
 
 dev_dependencies:
