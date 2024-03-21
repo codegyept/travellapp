@@ -13,7 +13,7 @@ class ExperiencesSections extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.w).copyWith(top: 20.h),
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: Text(
             "Similar experiences you'd love",
             style: Theme.of(context).textTheme.labelMedium,

@@ -6,9 +6,10 @@ ThemeData appTheme() {
   return ThemeData(
     primaryColor: AppColors.textAndBackgroundColorButton,
     scaffoldBackgroundColor: AppColors.backgroundWhite,
-    colorScheme: ColorScheme.fromSwatch(
-      primarySwatch: AppColors.materialPrimary,
-    ),
+    // colorScheme: ColorScheme.fromSwatch(
+    //   primarySwatch: AppColors.materialPrimary,
+    //   backgroundColor: AppColors.white,
+    // ),
     textTheme: TextTheme(
       headlineLarge: TextStyle(
         fontFamily: 'Switzer',

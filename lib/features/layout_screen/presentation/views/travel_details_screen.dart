@@ -54,22 +54,6 @@ class _TravelDetailsScreenState extends State<TravelDetailsScreen> {
           ),
           const PreviewTravelsSection(),
           const RatingsReviewsSection(),
-          const CustomExpansionTile(
-            title: "Highlights",
-            content:
-                "With more techy bells n’ webullish than our free version.With more techy bells n’ webullish than our free version.",
-            initiallyExpanded: false,
-          ),
-          const CustomExpansionTile(
-            title: "Inclusions",
-            content: "14,000+ Guests served",
-            initiallyExpanded: false,
-          ),
-          const CustomExpansionTile(
-            title: "Cancellation policy",
-            content: "1000+ Reviews on Rehlatyuae by our Travelers",
-            initiallyExpanded: false,
-          ),
           const ExperiencesSections(),
         ],
       ),
