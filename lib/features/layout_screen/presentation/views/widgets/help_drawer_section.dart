@@ -23,12 +23,9 @@ class HelpDrawerSection extends StatelessWidget {
             children: [
               Text(
                 "Help",
-                style: TextStyle(
-                  fontSize: 16.sp,
-                  color: AppColors.backgroundColorExpansionAndText,
-                  fontWeight: FontWeight.w700,
-                  height: 1.3,
-                ),
+                style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                      color: AppColors.black,
+                    ),
               ),
             ],
           ),

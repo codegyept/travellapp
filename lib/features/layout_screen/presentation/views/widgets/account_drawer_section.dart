@@ -23,12 +23,9 @@ class AccountDrawerSection extends StatelessWidget {
             children: [
               Text(
                 "My Account",
-                style: TextStyle(
-                  fontSize: 16.sp,
-                  color: AppColors.backgroundColorExpansionAndText,
-                  fontWeight: FontWeight.w700,
-                  height: 1.3,
-                ),
+                style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                      color: AppColors.black,
+                    ),
               ),
             ],
           ),
@@ -39,11 +36,7 @@ class AccountDrawerSection extends StatelessWidget {
           trailing: [
             Text(
               "\$0.0",
-              style: TextStyle(
-                fontSize: 15.sp,
-                color: AppColors.backgroundColorExpansionAndText,
-                fontWeight: FontWeight.w400,
-              ),
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ],
         ),
@@ -53,11 +46,7 @@ class AccountDrawerSection extends StatelessWidget {
           trailing: [
             Text(
               "USD\$",
-              style: TextStyle(
-                fontSize: 12.sp,
-                color: AppColors.backgroundColorExpansionAndText,
-                fontWeight: FontWeight.w400,
-              ),
+              style: Theme.of(context).textTheme.titleSmall,
             ),
             const Icon(
               Icons.arrow_forward_ios_sharp,
@@ -84,11 +73,7 @@ class AccountDrawerSection extends StatelessWidget {
           trailing: [
             Text(
               "English",
-              style: TextStyle(
-                fontSize: 12.sp,
-                color: AppColors.backgroundColorExpansionAndText,
-                fontWeight: FontWeight.w400,
-              ),
+              style: Theme.of(context).textTheme.titleSmall,
             ),
             const Icon(
               Icons.arrow_forward_ios_sharp,
