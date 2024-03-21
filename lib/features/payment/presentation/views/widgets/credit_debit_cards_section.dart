@@ -4,7 +4,7 @@ import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_icon_button.dart';
-import 'package:rehlatyuae/features/payment/presentation/views/widgets/add_card_bottom_sheet.dart';
+import 'package:rehlatyuae/features/payment/presentation/views/add_card_bottom_sheet.dart';
 import 'package:rehlatyuae/features/payment/presentation/views/widgets/cusotm_radio_tile.dart';
 
 class CreditDebitCardsSection extends StatefulWidget {
@@ -48,11 +48,9 @@ class _CreditDebitCardsSectionState extends State<CreditDebitCardsSection> {
           children: [
             Text(
               AppStrings.creditDebitCards,
-              style: TextStyle(
-                fontSize: 16.sp,
-                color: AppColors.black,
-                fontWeight: FontWeight.w400,
-              ),
+              style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                    color: AppColors.black,
+                  ),
             ),
             SizedBox(
               height: 15.h,
@@ -111,14 +109,9 @@ class _CreditDebitCardsSectionState extends State<CreditDebitCardsSection> {
                     const SizedBox(
                       width: 15,
                     ),
-                    const Text(
+                    Text(
                       AppStrings.addNewCard,
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: AppColors.black,
-                        fontWeight: FontWeight.w400,
-                        height: 1.42,
-                      ),
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ],
                 ),

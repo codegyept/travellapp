@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
@@ -38,21 +39,16 @@ class ProfilePhotoSection extends StatelessWidget {
             ),
             Text(
               "Ryo Elif radioman",
-              style: TextStyle(
-                fontSize: 20.sp,
-                fontWeight: FontWeight.w400,
-              ),
+              style: Theme.of(context).textTheme.labelMedium,
             ),
             SizedBox(
               height: 7.h,
             ),
             Text(
               "S1 Information",
-              style: TextStyle(
-                fontSize: 16.sp,
-                color: AppColors.greySearchText,
-                fontWeight: FontWeight.w400,
-              ),
+              style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                    color: AppColors.grayLight,
+                  ),
             ),
           ],
         ),

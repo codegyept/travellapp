@@ -56,21 +56,15 @@ class TitleSection extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(
-                    fontSize: 32.sp,
-                    color: AppColors.white,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: Theme.of(context).textTheme.headlineLarge,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 50, bottom: 26),
+                  padding: EdgeInsets.only(top: 50.h, bottom: 26.w),
                   child: Text(
                     subTitle,
-                    style: TextStyle(
-                      fontSize: 32.sp,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w700,
-                    ),
+                    style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                          color: AppColors.black,
+                        ),
                   ),
                 ),
               ],

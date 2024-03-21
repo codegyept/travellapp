@@ -32,11 +32,9 @@ class AddCardBottomSheet extends StatelessWidget {
                   ),
                   Text(
                     AppStrings.addNewCard,
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w700,
-                    ),
+                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                          color: AppColors.black,
+                        ),
                   ),
                   const IconButton(
                     onPressed: null,
@@ -64,7 +62,7 @@ class AddCardBottomSheet extends StatelessWidget {
                   Expanded(
                     child: PrimaryTextField(
                       controller: TextEditingController(),
-                      label: "Valid Thru",
+                      label: "Valid thru",
                       hint: "MM",
                       padding: EdgeInsets.zero,
                       inputType: TextInputType.number,
@@ -88,8 +86,8 @@ class AddCardBottomSheet extends StatelessWidget {
                   Expanded(
                     child: PrimaryTextField(
                       controller: TextEditingController(),
-                      label: "CVV",
-                      hint: "--0",
+                      label: "cvv",
+                      hint: "---",
                       padding: EdgeInsets.zero,
                       inputType: TextInputType.number,
                     ),

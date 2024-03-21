@@ -57,38 +57,22 @@ class OrderSummarySection extends StatelessWidget {
                   children: [
                     Text(
                       AppStrings.orderSummary,
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     Text(
                       "IMG World",
-                      style: TextStyle(
-                        fontSize: 12.sp,
-                        color: AppColors.grey,
-                        fontWeight: FontWeight.w400,
-                      ),
+                      style: Theme.of(context).textTheme.labelSmall,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "${AppStrings.adult}: $adultCount",
-                          style: TextStyle(
-                            fontSize: 12.sp,
-                            color: AppColors.grey,
-                            fontWeight: FontWeight.w400,
-                          ),
+                          style: Theme.of(context).textTheme.labelSmall,
                         ),
                         Text(
                           "${AppStrings.children}: 1",
-                          style: TextStyle(
-                            fontSize: 12.sp,
-                            color: AppColors.grey,
-                            fontWeight: FontWeight.w400,
-                          ),
+                          style: Theme.of(context).textTheme.labelSmall,
                         ),
                       ],
                     )
@@ -108,11 +92,7 @@ class OrderSummarySection extends StatelessWidget {
               ),
               Text(
                 address,
-                style: TextStyle(
-                  fontSize: 12.sp,
-                  color: AppColors.grey,
-                  fontWeight: FontWeight.w400,
-                ),
+                style: Theme.of(context).textTheme.labelSmall,
               ),
             ],
           ),
@@ -124,19 +104,15 @@ class OrderSummarySection extends StatelessWidget {
             children: [
               Text(
                 AppStrings.totalAmount,
-                style: TextStyle(
-                  fontSize: 12.sp,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                ),
+                style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                      fontWeight: FontWeight.w700,
+                    ),
               ),
               Text(
                 "\$$total",
-                style: TextStyle(
-                  fontSize: 12.sp,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                ),
+                style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                      fontWeight: FontWeight.w700,
+                    ),
               ),
             ],
           ),

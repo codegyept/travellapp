@@ -92,14 +92,13 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         ),
       ],
       index: index,
-      height: 80.h,
       onTap: (selectedIndex) {
         setState(() {
           index = selectedIndex;
           widget.onTap?.call(index);
         });
       },
-      backgroundColor: AppColors.white,
+      backgroundColor: Colors.transparent,
       buttonBackgroundColor: AppColors.textAndBackgroundColorButton,
       color: AppColors.blogItemBackgroundColor,
       animationDuration: const Duration(milliseconds: 300),

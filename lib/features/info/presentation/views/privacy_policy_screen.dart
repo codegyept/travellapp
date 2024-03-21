@@ -12,7 +12,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Scrollbar(
-        thickness: 8,
+        thickness: 6.w,
         interactive: true,
         trackVisibility: true,
         thumbVisibility: true,

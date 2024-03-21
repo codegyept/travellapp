@@ -26,21 +26,19 @@ class UpdatePasswordScreen extends StatelessWidget {
               children: [
                 Text(
                   AppStrings.updatePassword,
-                  style: TextStyle(
-                    fontSize: 30.sp,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                        color: AppColors.black,
+                        fontSize: 28.sp,
+                      ),
                 ),
                 SizedBox(
                   height: 7.h,
                 ),
                 Text(
                   AppStrings.youCanNowUpdate,
-                  style: TextStyle(
-                    fontSize: 16.sp,
-                    color: AppColors.greySearchText,
-                    fontWeight: FontWeight.w400,
-                  ),
+                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                        color: AppColors.greySearchText,
+                      ),
                 ),
               ],
             ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rehlatyuae/core/utils/app_assets.dart';
-import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/account_drawer_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/help_drawer_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/legal_drawer_section.dart';
@@ -26,11 +25,7 @@ class CustomDrawer extends StatelessWidget {
               padding: EdgeInsets.only(top: 10.h),
               child: Text(
                 "Version 2.2.22",
-                style: TextStyle(
-                  fontSize: 16.sp,
-                  color: AppColors.grey,
-                  fontWeight: FontWeight.w400,
-                ),
+                style: Theme.of(context).textTheme.labelSmall,
               ),
             ),
           ],
