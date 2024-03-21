@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
@@ -81,6 +82,7 @@ class PreviewTravelsSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
               backGroundColor: AppColors.textAndBackgroundColorButton,
               onTap: () {
+                SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
                 context.push(AppStrings.paymentOptionsScreen);
               },
               width: double.infinity,

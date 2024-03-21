@@ -62,6 +62,7 @@ class AccountDrawerSection extends StatelessWidget {
               builder: (context) => const CustomBottomSheet(
                 title: 'Select Currency',
                 avatarText: '\$',
+                isPaymentSheet: false,
                 contentSheet: CurrencyContentSheet(),
               ),
             );
@@ -89,6 +90,7 @@ class AccountDrawerSection extends StatelessWidget {
               builder: (context) => const CustomBottomSheet(
                 title: 'Select Language',
                 avatarText: 'AR',
+                isPaymentSheet: false,
                 contentSheet: LanguageContentSheet(),
               ),
             );
