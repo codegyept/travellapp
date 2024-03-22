@@ -15,7 +15,8 @@ class BestOffers with _$BestOffers
    required final String name,
    required final String address,
    required final String description,
-   required final int oldPrice,
+   @JsonKey(name: "oldPrice")
+   required final int adultPrice,
    required final int childPrice,
    required final String imagePath,
    required final List<AddressModel> addresses,
