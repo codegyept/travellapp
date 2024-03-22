@@ -18,6 +18,7 @@ class AppColors {
   static const grey = Colors.grey;
   static const backgroundColor = Colors.white70;
   static const orange = Colors.amber;
+  static const yellow = Color(0xffF8E545);
   static Color green = Colors.green.shade500;
   static Color red = Colors.red.shade900;
   static Color navbackground = Colors.grey.shade900;
