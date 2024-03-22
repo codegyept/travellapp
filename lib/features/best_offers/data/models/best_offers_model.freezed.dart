@@ -24,7 +24,8 @@ mixin _$BestOffers {
   String get name => throw _privateConstructorUsedError;
   String get address => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
-  int get oldPrice => throw _privateConstructorUsedError;
+  @JsonKey(name: "oldPrice")
+  int get adultPrice => throw _privateConstructorUsedError;
   int get childPrice => throw _privateConstructorUsedError;
   String get imagePath => throw _privateConstructorUsedError;
   List<AddressModel> get addresses => throw _privateConstructorUsedError;
@@ -48,7 +49,7 @@ abstract class $BestOffersCopyWith<$Res> {
       String name,
       String address,
       String description,
-      int oldPrice,
+      @JsonKey(name: "oldPrice") int adultPrice,
       int childPrice,
       String imagePath,
       List<AddressModel> addresses,
@@ -73,7 +74,7 @@ class _$BestOffersCopyWithImpl<$Res, $Val extends BestOffers>
     Object? name = null,
     Object? address = null,
     Object? description = null,
-    Object? oldPrice = null,
+    Object? adultPrice = null,
     Object? childPrice = null,
     Object? imagePath = null,
     Object? addresses = null,
@@ -97,9 +98,9 @@ class _$BestOffersCopyWithImpl<$Res, $Val extends BestOffers>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      oldPrice: null == oldPrice
-          ? _value.oldPrice
-          : oldPrice // ignore: cast_nullable_to_non_nullable
+      adultPrice: null == adultPrice
+          ? _value.adultPrice
+          : adultPrice // ignore: cast_nullable_to_non_nullable
               as int,
       childPrice: null == childPrice
           ? _value.childPrice
@@ -138,7 +139,7 @@ abstract class _$$BestOffersImplCopyWith<$Res>
       String name,
       String address,
       String description,
-      int oldPrice,
+      @JsonKey(name: "oldPrice") int adultPrice,
       int childPrice,
       String imagePath,
       List<AddressModel> addresses,
@@ -161,7 +162,7 @@ class __$$BestOffersImplCopyWithImpl<$Res>
     Object? name = null,
     Object? address = null,
     Object? description = null,
-    Object? oldPrice = null,
+    Object? adultPrice = null,
     Object? childPrice = null,
     Object? imagePath = null,
     Object? addresses = null,
@@ -185,9 +186,9 @@ class __$$BestOffersImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      oldPrice: null == oldPrice
-          ? _value.oldPrice
-          : oldPrice // ignore: cast_nullable_to_non_nullable
+      adultPrice: null == adultPrice
+          ? _value.adultPrice
+          : adultPrice // ignore: cast_nullable_to_non_nullable
               as int,
       childPrice: null == childPrice
           ? _value.childPrice
@@ -221,7 +222,7 @@ class _$BestOffersImpl implements _BestOffers {
       required this.name,
       required this.address,
       required this.description,
-      required this.oldPrice,
+      @JsonKey(name: "oldPrice") required this.adultPrice,
       required this.childPrice,
       required this.imagePath,
       required final List<AddressModel> addresses,
@@ -242,7 +243,8 @@ class _$BestOffersImpl implements _BestOffers {
   @override
   final String description;
   @override
-  final int oldPrice;
+  @JsonKey(name: "oldPrice")
+  final int adultPrice;
   @override
   final int childPrice;
   @override
@@ -268,7 +270,7 @@ class _$BestOffersImpl implements _BestOffers {
 
   @override
   String toString() {
-    return 'BestOffers(id: $id, name: $name, address: $address, description: $description, oldPrice: $oldPrice, childPrice: $childPrice, imagePath: $imagePath, addresses: $addresses, images: $images, isFavourite: $isFavourite)';
+    return 'BestOffers(id: $id, name: $name, address: $address, description: $description, adultPrice: $adultPrice, childPrice: $childPrice, imagePath: $imagePath, addresses: $addresses, images: $images, isFavourite: $isFavourite)';
   }
 
   @override
@@ -281,8 +283,8 @@ class _$BestOffersImpl implements _BestOffers {
             (identical(other.address, address) || other.address == address) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.oldPrice, oldPrice) ||
-                other.oldPrice == oldPrice) &&
+            (identical(other.adultPrice, adultPrice) ||
+                other.adultPrice == adultPrice) &&
             (identical(other.childPrice, childPrice) ||
                 other.childPrice == childPrice) &&
             (identical(other.imagePath, imagePath) ||
@@ -302,7 +304,7 @@ class _$BestOffersImpl implements _BestOffers {
       name,
       address,
       description,
-      oldPrice,
+      adultPrice,
       childPrice,
       imagePath,
       const DeepCollectionEquality().hash(_addresses),
@@ -329,7 +331,7 @@ abstract class _BestOffers implements BestOffers {
       required final String name,
       required final String address,
       required final String description,
-      required final int oldPrice,
+      @JsonKey(name: "oldPrice") required final int adultPrice,
       required final int childPrice,
       required final String imagePath,
       required final List<AddressModel> addresses,
@@ -348,7 +350,8 @@ abstract class _BestOffers implements BestOffers {
   @override
   String get description;
   @override
-  int get oldPrice;
+  @JsonKey(name: "oldPrice")
+  int get adultPrice;
   @override
   int get childPrice;
   @override

@@ -8,7 +8,7 @@ part 'address_model.g.dart';
 class AddressModel with _$AddressModel
 {
   const factory AddressModel({
-    required  final int id,
+    required final int id,
     required final String name,
     required final String description,
   }) = _AddressModel;

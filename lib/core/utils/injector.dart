@@ -5,6 +5,7 @@ import 'package:rehlatyuae/core/api/dio_consumer.dart';
 import 'package:rehlatyuae/features/best_offers/data/repositories/best_offers_repo_impl.dart';
 
 import '../../features/best_offers/domain/repositories/best_offers_repo.dart';
+import '../../features/best_offers/presentation/cubits/best_offers_cubit.dart';
 
 final GetIt getIt = GetIt.instance;
 
@@ -14,7 +15,12 @@ void setupInjector() {
       dio: Dio(),
     ),
   );
+
+  // repositories objects
   getIt.registerLazySingleton<BestOffersRepo>(
         () => BestOffersRepoImpl(apiConsumer: getIt.get<ApiConsumer>()),
   );
+
+  // cubits
+  getIt.registerFactory(() => BestOffersCubit(bestOffersRepo: getIt()));
 }
