@@ -12,7 +12,7 @@ _$BestOffersImpl _$$BestOffersImplFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String,
       address: json['address'] as String,
       description: json['description'] as String,
-      oldPrice: json['oldPrice'] as int,
+      adultPrice: json['oldPrice'] as int,
       childPrice: json['childPrice'] as int,
       imagePath: json['imagePath'] as String,
       addresses: (json['addresses'] as List<dynamic>)
@@ -30,7 +30,7 @@ Map<String, dynamic> _$$BestOffersImplToJson(_$BestOffersImpl instance) =>
       'name': instance.name,
       'address': instance.address,
       'description': instance.description,
-      'oldPrice': instance.oldPrice,
+      'oldPrice': instance.adultPrice,
       'childPrice': instance.childPrice,
       'imagePath': instance.imagePath,
       'addresses': instance.addresses,

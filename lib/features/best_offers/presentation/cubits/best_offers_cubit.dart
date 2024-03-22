@@ -21,7 +21,7 @@ class BestOffersCubit extends Cubit<BestOffersState> {
       limit: limit,
     );
     results.fold(
-      (error) => emit(BestOffersState.error(error)),
+      (error) =>emit(BestOffersState.error(error)),
       (bestOffers) => emit(BestOffersState.loaded(bestOffers)),
     );
   }

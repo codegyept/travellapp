@@ -15,20 +15,19 @@ class BestOffersRepoImpl implements BestOffersRepo {
   BestOffersRepoImpl({required this.apiConsumer});
 
   @override
-  Future<Either<String, List<BestOffers>>> fetchBestOffers({int?startIndex = 0 , int?limit = 10}) async {
+  Future<Either<String, List<BestOffers>>> fetchBestOffers(
+      {int? startIndex = 0, int? limit = 10}) async {
     try {
-      var  bestOffers = await apiConsumer.get(
-        EndPoints.bestOffersEndPoint,
-        queryParameters:
-        {
-          "start":startIndex,
-          "limit":limit,
-        }
-      );
-      final bestOffersList = bestOffers.map((e)=>BestOffers.fromJson(e.data)).toList();
+      var bestOffers =
+          await apiConsumer.get(EndPoints.bestOffersEndPoint, queryParameters: {
+        "start": startIndex,
+        "limit": limit,
+      });
+      final bestOffersList =
+          bestOffers.map((e) => BestOffers.fromJson(e.data)).toList();
       return right(bestOffersList);
-    } on ServerExceptions catch (e) {
-      return Left(e.errorModel.errorMessage);
+    } on ServerExceptions catch (error) {
+      return Left(error.errorModel.errorMessage);
     }
   }
 }
