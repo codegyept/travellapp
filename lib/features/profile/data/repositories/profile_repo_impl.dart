@@ -19,21 +19,26 @@ class ProfileRepoImpl implements ProfileRepo {
       var client = await apiConsumer.get(
         EndPoints.getProfileEndPoint,
       );
-      final clientModel = Client.fromJson(client);
+      final clientModel = Client.fromJson(client['data']['client']);
       return Right(clientModel);
     } on ServerExceptions catch (error) {
-      return Left(error.errorModel.errorMessage);
+      return Left(error.errorModel.message);
     }
   }
 
   @override
-  Future<Either<String, Unit>> editProfile({required Client client, required File image}) async {
+  Future<Either<String, Unit>> editProfile({required Client client, required File? image}) async {
     try {
       Map<String, dynamic> clientMap = client.toJson();
-      clientMap['image_path'] = MultipartFile.fromFile(
-        image.path,
-        filename: image.path.split('/').last,
-      );
+      if (image != null) {
+        clientMap['image_path'] = await MultipartFile.fromFile(
+          image.path,
+          filename: image.path.split('/').last,
+        );
+      } else {
+        clientMap.remove('image_path');
+      }
+      clientMap['phone'] = int.parse(clientMap['phone']);
       await apiConsumer.post(
         EndPoints.editProfileEndPoint,
         data: clientMap,
@@ -41,17 +46,17 @@ class ProfileRepoImpl implements ProfileRepo {
       );
       return const Right(unit);
     } on ServerExceptions catch (error) {
-      return Left(error.errorModel.errorMessage);
+      return Left(error.errorModel.message);
     }
   }
 
   @override
-  Future<Either<String, Unit>> deleteAccount({required int clientId}) async {
+  Future<Either<String, Unit>> deleteAccount() async {
     try {
       await apiConsumer.delete(EndPoints.deleteAccountEndPoint);
       return const Right(unit);
     } on ServerExceptions catch (error) {
-      return Left(error.errorModel.errorMessage);
+      return Left(error.errorModel.message);
     }
   }
 }

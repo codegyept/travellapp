@@ -2,17 +2,14 @@ import 'package:dio/dio.dart';
 
 import 'error_model.dart';
 
-class ServerExceptions implements Exception
-{
+class ServerExceptions implements Exception {
   final ErrorModel errorModel;
+
   ServerExceptions({required this.errorModel});
-
 }
-void handelDioException(DioException e)
-{
-  switch(e.type)
-  {
 
+void handelDioException(DioException e) {
+  switch (e.type) {
     case DioExceptionType.connectionTimeout:
       throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
     case DioExceptionType.sendTimeout:
@@ -23,20 +20,19 @@ void handelDioException(DioException e)
       throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
     case DioExceptionType.cancel:
       throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
-    case DioExceptionType.connectionError:
+    case DioExceptionType.connectionError: // no internet
       throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
     case DioExceptionType.unknown:
       throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
     case DioExceptionType.badCertificate:
-      switch(e.response?.statusCode)
-      {
+      switch (e.response?.statusCode) {
         case 400:
           throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
         case 401:
           throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
         case 403:
           throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
-        case 404:
+        case 404: // no body,
           throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
         case 409:
           throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
