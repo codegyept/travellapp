@@ -28,20 +28,14 @@ class PrivacySection extends StatelessWidget {
             ),
             child: Text(
               title,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w700,
-              ),
+              style: Theme.of(context).textTheme.displayMedium,
             ),
           ),
           Text(
             content,
-            style: TextStyle(
-              color: AppColors.grey,
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w400,
-            ),
+            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                  color: AppColors.grey,
+                ),
           ),
         ],
       ),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
@@ -55,11 +56,7 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
           if (widget.label != null)
             Text(
               widget.label!,
-              style: TextStyle(
-                fontSize: 14.sp,
-                color: AppColors.black,
-                fontWeight: FontWeight.w700,
-              ),
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           if (widget.label != null)
             SizedBox(
@@ -75,11 +72,10 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
             onChanged: (value) {
               setState(() {});
             },
-            style: TextStyle(
-              fontSize: 14.sp,
-              color: widget.textColor,
-              fontWeight: FontWeight.w400,
-            ),
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  color: widget.textColor,
+                  letterSpacing: 1.5,
+                ),
             textDirection: widget.inputType == TextInputType.phone
                 ? TextDirection.ltr
                 : widget.controller.text.isNotEmpty && widget.controller.text.trim().isNotEmpty
@@ -90,11 +86,9 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
             maxLines: widget.isTextAria ? 3 : 1,
             decoration: InputDecoration(
               hintText: widget.hint,
-              hintStyle: TextStyle(
-                fontSize: 12.sp,
-                color: widget.textColor,
-                fontWeight: FontWeight.w400,
-              ),
+              hintStyle: Theme.of(context).textTheme.titleSmall?.copyWith(
+                    color: widget.textColor,
+                  ),
               contentPadding: EdgeInsets.symmetric(
                 horizontal: 15.w,
                 vertical: 10.h,
@@ -126,11 +120,11 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
                       },
                       icon: isVisibleText
                           ? const Icon(
-                              Icons.visibility_off_outlined,
+                              CupertinoIcons.lock_open,
                               color: AppColors.textAndBackgroundColorButton,
                             )
                           : const Icon(
-                              Icons.visibility_outlined,
+                              CupertinoIcons.lock,
                               color: AppColors.textAndBackgroundColorButton,
                             ),
                     )

@@ -31,16 +31,11 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 75.h),
                 Image.asset('assets/images/logo.png'),
                 SizedBox(height: 30.h),
-                const Row(
+                Row(
                   children: [
                     Text(
                       'LogIn today',
-                      style: TextStyle(
-                        fontFamily: "Switzer",
-                        color: Colors.white70,
-                        fontSize: 33,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      style: Theme.of(context).textTheme.headlineLarge,
                     ),
                   ],
                 ),
@@ -95,17 +90,13 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     Text(
                       'Didn’t have any account?',
-                      style: TextStyle(
-                        fontFamily: "Switzer",
-                        color: Colors.white70,
-                        fontSize: 12.sp,
-                      ),
+                      style: Theme.of(context).textTheme.displaySmall,
                     ),
                     DefaultTextButton(
                       onPressed: () {
                         context.push('/registerScreen');
                       },
-                      text: ' Sign Up here',
+                      text: 'Sign Up here',
                     ),
                   ],
                 ),

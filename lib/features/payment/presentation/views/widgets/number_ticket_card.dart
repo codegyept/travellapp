@@ -36,24 +36,14 @@ class CountTicketCard extends StatelessWidget {
                   children: [
                     Text(
                       name,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: AppColors.black,
-                        fontWeight: FontWeight.w400,
-                        height: 1.42,
-                      ),
+                      style: Theme.of(context).textTheme.titleSmall,
                     ),
                     SizedBox(
                       height: 7.h,
                     ),
                     Text(
                       detail,
-                      style: const TextStyle(
-                        fontSize: 12,
-                        color: AppColors.grey,
-                        fontWeight: FontWeight.w400,
-                        height: 1.3,
-                      ),
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ],
                 ),
@@ -75,12 +65,7 @@ class CountTicketCard extends StatelessWidget {
                     ),
                     Text(
                       "$count",
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: AppColors.black,
-                        fontWeight: FontWeight.w400,
-                        height: 1.42,
-                      ),
+                      style: Theme.of(context).textTheme.titleSmall,
                     ),
                     SizedBox(
                       width: 8.w,
@@ -101,12 +86,7 @@ class CountTicketCard extends StatelessWidget {
                 child: Text(
                   "\$ $total",
                   textAlign: TextAlign.end,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    color: AppColors.black,
-                    fontWeight: FontWeight.w400,
-                    height: 1.42,
-                  ),
+                  style: Theme.of(context).textTheme.titleSmall,
                 ),
               ),
             ],

@@ -23,12 +23,9 @@ class HelpDrawerSection extends StatelessWidget {
             children: [
               Text(
                 "Help",
-                style: TextStyle(
-                  fontSize: 16.sp,
-                  color: AppColors.backgroundColorExpansionAndText,
-                  fontWeight: FontWeight.w700,
-                  height: 1.3,
-                ),
+                style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                      color: AppColors.black,
+                    ),
               ),
             ],
           ),
@@ -51,6 +48,7 @@ class HelpDrawerSection extends StatelessWidget {
               builder: (context) => const CustomBottomSheet(
                 title: 'My Booking',
                 avatarText: 'MY',
+                isPaymentSheet: false,
                 contentSheet: MyBookingContentSheet(),
               ),
             );
@@ -75,6 +73,7 @@ class HelpDrawerSection extends StatelessWidget {
                 title: 'Send message',
                 avatarText: 'ME',
                 labelButton: 'Send',
+                isPaymentSheet: false,
                 contentSheet: SendMessageContentSheet(),
               ),
             );

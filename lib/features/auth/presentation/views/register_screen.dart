@@ -32,16 +32,11 @@ class RegisterScreen extends StatelessWidget {
                 SizedBox(height: 75.h),
                 Image.asset('assets/images/logo.png'),
                 SizedBox(height: 30.h),
-                const Row(
+                Row(
                   children: [
                     Text(
                       'Register now',
-                      style: TextStyle(
-                        fontFamily: "Switzer",
-                        color: Colors.white70,
-                        fontSize: 33,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      style: Theme.of(context).textTheme.headlineLarge,
                     ),
                   ],
                 ),
@@ -51,7 +46,6 @@ class RegisterScreen extends StatelessWidget {
                   hint: 'your name',
                   padding: EdgeInsets.only(bottom: 20.h),
                   textColor: AppColors.white,
-                  inputType: TextInputType.emailAddress,
                   suffix: const Icon(
                     CupertinoIcons.person,
                     color: AppColors.textAndBackgroundColorButton,
@@ -90,18 +84,12 @@ class RegisterScreen extends StatelessWidget {
                   height: 60.h,
                   width: double.infinity,
                 ),
-                SizedBox(height: 15.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'If you have an account?',
-                      style: TextStyle(
-                        fontFamily: "Switzer",
-                        color: Colors.white70,
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      style: Theme.of(context).textTheme.displaySmall,
                     ),
                     DefaultTextButton(
                       onPressed: () {
@@ -114,12 +102,7 @@ class RegisterScreen extends StatelessWidget {
                 Text(
                   'By clicking Sing up, you agree to our ',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontFamily: "Switzer",
-                    color: Colors.white70,
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: Theme.of(context).textTheme.displaySmall,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -132,12 +115,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     Text(
                       'and',
-                      style: TextStyle(
-                        fontFamily: "Switzer",
-                        color: Colors.white70,
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      style: Theme.of(context).textTheme.displaySmall,
                     ),
                     DefaultTextButton(
                       onPressed: () {

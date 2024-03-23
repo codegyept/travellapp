@@ -36,20 +36,18 @@ class CustomRatingBar extends StatelessWidget {
               ),
               Text(
                 '$starCount/5',
-                style: const TextStyle(
-                  color: AppColors.black,
-                  fontSize: 12,
-                ),
+                style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                      color: AppColors.black,
+                    ),
               ),
             ],
           ),
         ),
         trailing: Text(
           '$ratingCount',
-          style: const TextStyle(
-            color: AppColors.black,
-            fontSize: 12,
-          ),
+          style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                color: AppColors.black,
+              ),
         ),
         barRadius: Radius.circular(10.r),
         lineHeight: 6.h,

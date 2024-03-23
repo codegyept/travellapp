@@ -10,6 +10,7 @@ class BolgTravelTitleSection extends StatelessWidget {
   final String address;
   final String price;
   final String imagePath;
+  final bool isTrip;
   final void Function()? onLikePressed;
 
   const BolgTravelTitleSection({
@@ -18,6 +19,7 @@ class BolgTravelTitleSection extends StatelessWidget {
     required this.price,
     required this.imagePath,
     this.onLikePressed,
+    this.isTrip = true,
     super.key,
   });
 
@@ -53,11 +55,12 @@ class BolgTravelTitleSection extends StatelessWidget {
                     context.pop();
                   },
                 ),
-                CustomIconButton(
-                  icon: CupertinoIcons.heart,
-                  iconColor: AppColors.redAppColor,
-                  onPressed: onLikePressed,
-                ),
+                if (isTrip)
+                  CustomIconButton(
+                    icon: CupertinoIcons.heart,
+                    iconColor: AppColors.redAppColor,
+                    onPressed: onLikePressed,
+                  ),
               ],
             ),
           ),
@@ -67,64 +70,52 @@ class BolgTravelTitleSection extends StatelessWidget {
             right: 0,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 35.h),
-              child: Row(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
+                  Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         title,
-                        style: const TextStyle(
-                          color: AppColors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 5.h,
+                        style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                              color: AppColors.white,
+                              fontWeight: FontWeight.w400,
+                            ),
                       ),
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          const Icon(
-                            Icons.location_on_outlined,
-                            size: 18,
-                            color: AppColors.textAndBackgroundColorButton,
-                          ),
-                          Text(
-                            address,
-                            style: const TextStyle(
-                              fontSize: 14,
-                              color: AppColors.textAndBackgroundColorButton,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3,
+                          if (isTrip)
+                            Text(
+                              "\$$price",
+                              style: Theme.of(context).textTheme.displayLarge,
                             ),
+                          Text(
+                            isTrip ? " /Person" : '7,3 2024',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                                  color: AppColors.grayLight,
+                                ),
                           ),
                         ],
                       ),
                     ],
                   ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
-                        "\$$price",
-                        style:  TextStyle(
-                          color: AppColors.white,
-                          fontSize: 24.sp,
-                          fontWeight: FontWeight.w700,
-                        ),
+                      const Icon(
+                        Icons.location_on_outlined,
+                        size: 18,
+                        color: AppColors.textAndBackgroundColorButton,
                       ),
-                      const Text(
-                        "/Person",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: AppColors.grayLight,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3,
-                        ),
+                      Text(
+                        address,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).textTheme.titleMedium,
                       ),
                     ],
                   ),

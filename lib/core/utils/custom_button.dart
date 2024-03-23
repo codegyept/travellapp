@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rehlatyuae/core/utils/app_colors.dart';
 
 class CustomActionButton extends StatelessWidget {
   const CustomActionButton({
@@ -36,12 +34,7 @@ class CustomActionButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: style ??
-                TextStyle(
-                  color: AppColors.white,
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w700,
-                ),
+            style: style ?? Theme.of(context).textTheme.displayMedium,
           ),
         ),
       ),

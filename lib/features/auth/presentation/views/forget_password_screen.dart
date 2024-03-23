@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
+import 'package:rehlatyuae/core/utils/default_text_button.dart';
 import 'package:rehlatyuae/core/utils/primary_text_field.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
@@ -25,21 +26,19 @@ class ForgetPasswordScreen extends StatelessWidget {
               children: [
                 Text(
                   AppStrings.forgotPassword,
-                  style: TextStyle(
-                    fontSize: 30.sp,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                        color: AppColors.black,
+                        fontSize: 28.sp,
+                      ),
                 ),
                 SizedBox(
                   height: 7.h,
                 ),
                 Text(
                   AppStrings.enterYourInformation,
-                  style: TextStyle(
-                    fontSize: 16.sp,
-                    color: AppColors.greySearchText,
-                    fontWeight: FontWeight.w400,
-                  ),
+                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                        color: AppColors.greySearchText,
+                      ),
                 ),
               ],
             ),
@@ -50,16 +49,17 @@ class ForgetPasswordScreen extends StatelessWidget {
             inputType: TextInputType.emailAddress,
           ),
           SizedBox(
-            height: 100.h,
+            height: 80.h,
           ),
-          Text(
-            AppStrings.tryAnotherWay,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 14.sp,
-              color: AppColors.black,
-              fontWeight: FontWeight.w700,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              DefaultTextButton(
+                onPressed: () {},
+                text: AppStrings.tryAnotherWay,
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+            ],
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w).copyWith(

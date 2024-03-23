@@ -21,23 +21,18 @@ class ParagraphSection extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(
-              fontSize: 16.sp,
-              color: Colors.black,
-              fontWeight: FontWeight.w700,
-              height: 1.25,
-            ),
+            style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                  color: AppColors.black,
+                ),
           ),
           SizedBox(
             height: 7.h,
           ),
           Text(
             subTitle,
-            style: TextStyle(
-              color: AppColors.grey,
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w400,
-            ),
+            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                  color: AppColors.grey,
+                ),
           ),
         ],
       ),

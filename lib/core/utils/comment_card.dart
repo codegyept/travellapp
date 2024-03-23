@@ -40,20 +40,15 @@ class CommentCard extends StatelessWidget {
                     name,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 4,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
-                    ),
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
               ),
               Text(
                 date,
-                style: const TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.grey,
-                ),
+                style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                      color: AppColors.grayLight,
+                    ),
               ),
             ],
           ),
@@ -64,10 +59,7 @@ class CommentCard extends StatelessWidget {
             comment,
             maxLines: 4,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w400,
-            ),
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
         ],
       ),

@@ -14,7 +14,7 @@ class BestOffersItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 135.0.h,
+      height: 150.0.h,
       width: 150.0.w,
       padding: EdgeInsetsDirectional.symmetric(
         horizontal: 8.0.w,
@@ -91,7 +91,7 @@ class BestOffersItem extends StatelessWidget {
                       color: AppColors.textAndBackgroundColorButton,
                       size: 14.0.sp,
                     ),
-                     Text(
+                    Text(
                       "Dubai, United Arab Emirates",
                       style: Theme.of(context).textTheme.titleMedium,
                       textAlign: TextAlign.justify,
@@ -101,23 +101,23 @@ class BestOffersItem extends StatelessWidget {
                 SizedBox(
                   height: 2.5.w,
                 ),
-                 Text(
+                Text(
                   "This exceptional beach gets sasafadvd avdsdsfcasvsdvsdvsdvsd",
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
-                  style:Theme.of(context).textTheme.headlineSmall,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 SizedBox(
                   height: 5.0.w,
                 ),
                 Row(
                   children: [
-                     Text(
+                    Text(
                       "48",
                       style: Theme.of(context).textTheme.titleSmall,
                       textAlign: TextAlign.justify,
                     ),
-                     Text(
+                    Text(
                       "/Person",
                       style: Theme.of(context).textTheme.headlineSmall,
                       textAlign: TextAlign.justify,
@@ -128,7 +128,7 @@ class BestOffersItem extends StatelessWidget {
                       color: AppColors.textAndBackgroundColorButton,
                       size: 16.0.sp,
                     ),
-                     Text(
+                    Text(
                       "4.2 (852)",
                       style: Theme.of(context).textTheme.titleSmall,
                       textAlign: TextAlign.justify,

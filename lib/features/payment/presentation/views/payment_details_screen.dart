@@ -20,10 +20,9 @@ class PaymentDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           AppStrings.paymentDetails,
-          style: TextStyle(
-            fontSize: 15.sp,
-            fontWeight: FontWeight.w700,
-          ),
+          style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                color: AppColors.black,
+              ),
         ),
       ),
       body: SingleChildScrollView(

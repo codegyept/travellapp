@@ -7,7 +7,8 @@ import 'package:rehlatyuae/core/routes/app_router.dart';
 import 'core/utils/bloc_observer.dart';
 import 'core/utils/injector.dart';
 
-void main() {
+void main()
+{
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = MyBlocObserver();
   setupInjector();
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (context, child) {
           return MaterialApp.router(
-            theme: apptheme(),
+            theme: appTheme(),
             debugShowCheckedModeBanner: false,
             routerConfig: AppRouter.router,
           );

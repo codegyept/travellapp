@@ -37,12 +37,7 @@ class TotalPaymentSection extends StatelessWidget {
             children: [
               Text(
                 "  $total",
-                style: TextStyle(
-                  fontSize: 20.sp,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  height: 1.25,
-                ),
+                style: Theme.of(context).textTheme.labelMedium,
               ),
               DefaultTextButton(
                 onPressed: onSubtitleTap,
