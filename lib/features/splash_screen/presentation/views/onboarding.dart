@@ -8,7 +8,6 @@ import 'package:rehlatyuae/features/splash_screen/presentation/views/unboarding.
 import '../../../../core/utils/custom_button.dart';
 import '../../../../core/utils/default_text_button.dart';
 
-// TODO should be the shard element between onboarding pages fixed and another elements that should slide
 class OnBoarding extends StatefulWidget {
   // final SharedPreferences sharedPreferences;
 
@@ -130,15 +129,17 @@ class _OnBoardingState extends State<OnBoarding> {
     );
   }
 
-  Container buildDot(int index, BuildContext context) {
-    return Container(
-      height: 10,
-      width: currentIndex == index ? 25 : 10,
+  AnimatedContainer buildDot(int index, BuildContext context) {
+    return AnimatedContainer(
+      margin: EdgeInsets.only(right: 3.h),
+      height: 10.h,
+      width: currentIndex == index ? 25.w : 10.w,
+      duration: const Duration(milliseconds: 400),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
           color: currentIndex == index
               ? AppColors.textAndBackgroundColorButton
-              : AppColors.white),
+              : AppColors.white,
+          shape: BoxShape.circle),
     );
   }
 }
