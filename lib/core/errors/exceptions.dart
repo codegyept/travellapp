@@ -11,29 +11,45 @@ class ServerExceptions implements Exception {
 void handelDioException(DioException e) {
   switch (e.type) {
     case DioExceptionType.connectionTimeout:
-      throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
+      throw ServerExceptions(
+        errorModel: ErrorModel.fromJson({'message': 'Connection timeout'}),
+      );
     case DioExceptionType.sendTimeout:
-      throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
+      throw ServerExceptions(
+        errorModel: ErrorModel.fromJson({'message': 'Send timeout'}),
+      );
     case DioExceptionType.receiveTimeout:
-      throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
-    case DioExceptionType.badResponse:
-      throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
+      throw ServerExceptions(
+        errorModel: ErrorModel.fromJson({'message': 'Receive timeout'}),
+      );
     case DioExceptionType.cancel:
-      throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
+      throw ServerExceptions(
+        errorModel: ErrorModel.fromJson({'message': 'Request canceled'}),
+      );
     case DioExceptionType.connectionError: // no internet
-      throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
+      throw ServerExceptions(
+        errorModel: ErrorModel.fromJson({'message': 'Connection error'}),
+      );
     case DioExceptionType.unknown:
-      throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
+      throw ServerExceptions(
+        errorModel: ErrorModel.fromJson({'message': 'Unknown Problem'}),
+      );
+    // TODO this case related with response also
+    case DioExceptionType.badResponse:
     case DioExceptionType.badCertificate:
       switch (e.response?.statusCode) {
         case 400:
           throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
+        // TODO what will do if this case happened
         case 401:
           throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
+        // TODO what will do if this case happened
         case 403:
           throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
-        case 404: // no body,
-          throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
+        case 404:
+          throw ServerExceptions(
+            errorModel: ErrorModel.fromJson({'message': 'URL not found'}),
+          );
         case 409:
           throw ServerExceptions(errorModel: ErrorModel.fromJson(e.response!.data));
         case 422:

@@ -6,7 +6,7 @@ class DioInterceptor extends Interceptor {
     options.headers["Accept-Language"] = "en";
     // TODO this header for test because auth screens not connected with apis
     options.headers["Authorization"] =
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3JlaGxhdGl1YWUuY29tL2FwaS92MS9jbGllbnQvcmVnaXN0ZXIiLCJpYXQiOjE3MTEyNzc4NTEsImV4cCI6MTcxMTM2NDI1MSwibmJmIjoxNzExMjc3ODUxLCJqdGkiOiIxdzVWWHNxOTNsbE55VllNIiwic3ViIjoiMjkiLCJwcnYiOiI0MWVmYjdiYWQ3ZjZmNjMyZTI0MDViZDNhNzkzYjhhNmJkZWM2Nzc3In0.KbMulI7V-7Uk8D5QRm0TsWo99oImYOAN7NKceb9jeNo";
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3JlaGxhdGl1YWUuY29tL2FwaS92MS9jbGllbnQvbG9naW4iLCJpYXQiOjE3MTEzMTQ2NzksImV4cCI6MTcxMTQwMTA3OSwibmJmIjoxNzExMzE0Njc5LCJqdGkiOiIzWnRtbTlLWlRxQzlqVmlOIiwic3ViIjoiMSIsInBydiI6IjQxZWZiN2JhZDdmNmY2MzJlMjQwNWJkM2E3OTNiOGE2YmRlYzY3NzcifQ.4nv8aBREOqgoKGRoEVpF02bKhcae7So-LHVPloBT5KA";
     super.onRequest(options, handler);
   }
 }
