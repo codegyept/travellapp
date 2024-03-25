@@ -23,7 +23,7 @@ class BlogsRepositoryImpl implements BlogsRepository
       return right(blogsList);
     } on ServerExceptions catch (error)
     {
-      return Left(error.errorModel.errorMessage);
+      return Left(error.errorModel.message);
     }
   }
 }
