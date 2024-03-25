@@ -1,4 +1,4 @@
-class AppValidator {
+abstract class AppValidator {
   static const emailRegex =
       r'^[a-zA-Z0-9.!#$%&*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$';
   static const phoneRegex = r'^[0-9,--+-]+$';
@@ -11,8 +11,6 @@ class AppValidator {
       return 'Email is required';
     } else if (!RegExp(emailRegex).hasMatch(value)) {
       return 'The email is not valid';
-    } else if (!value.endsWith('@gmail.com')) {
-      return 'The email must be end be @gmail.com';
     }
     return null;
   }
@@ -62,7 +60,7 @@ class AppValidator {
     return null;
   }
 
-  static String? validateConflictPassword(String? value, String? pass) {
+  static String? validateConfirmPassword(String? value, String? pass) {
     if (value == null || value.isEmpty) {
       return 'Password confirmation is required';
     } else if (value != pass) {

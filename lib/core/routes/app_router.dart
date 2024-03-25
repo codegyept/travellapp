@@ -133,11 +133,11 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: AppStrings.verificationScreen,
-        builder: (context, state) => const VerificationScreen(),
+        builder: (context, state) => VerificationScreen(email: state.extra as String),
       ),
       GoRoute(
         path: AppStrings.updatePasswordScreen,
-        builder: (context, state) => const UpdatePasswordScreen(),
+        builder: (context, state) => UpdatePasswordScreen(token: state.extra as String),
       ),
       // GoRoute(
       //   path: "/register",
