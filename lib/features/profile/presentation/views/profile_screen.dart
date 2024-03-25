@@ -93,7 +93,7 @@ class ProfileScreen extends StatelessWidget {
                           context: context,
                           builder: (c) => CustomDialog(
                             title: "Are you sure to delete the account?",
-                            subtitle: "\$12.00",
+                            subtitle: "Are you sure",
                             labelText: "Yes !",
                             color: AppColors.redAppColor,
                             onTap: () async {

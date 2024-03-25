@@ -21,11 +21,17 @@ class ProfileCubit extends Cubit<ProfileState> {
   }
 
   Future<void> deleteAccount() async {
-    emit(const ProfileState.loading());
+    _update(const ProfileState.loading());
     final results = await profileRepo.deleteAccount();
     results.fold(
-      (error) => emit(ProfileState.error(error)),
-      (client) => emit(const ProfileState.deleteSuccess()),
+      (error) => _update(ProfileState.error(error)),
+      (client) => _update(const ProfileState.deleteSuccess()),
     );
+  }
+
+  void _update(ProfileState state) {
+    if (!isClosed) {
+      emit(state);
+    }
   }
 }

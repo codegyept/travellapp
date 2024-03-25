@@ -37,11 +37,17 @@ class EditProfileCubit extends Cubit<EditProfileState> {
       phone: phoneEditingController.text,
       address: addressEditingController.text,
     );
-    emit(const EditProfileState.loading());
+    _update(const EditProfileState.loading());
     final results = await profileRepo.editProfile(client: editeClient, image: image);
     results.fold(
-      (error) => emit(EditProfileState.error(error)),
-      (unit) => emit(const EditProfileState.loaded()),
+      (error) => _update(EditProfileState.error(error)),
+      (unit) => _update(const EditProfileState.loaded()),
     );
+  }
+
+  void _update(EditProfileState state) {
+    if (!isClosed) {
+      emit(state);
+    }
   }
 }

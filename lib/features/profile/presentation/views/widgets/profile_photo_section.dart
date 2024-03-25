@@ -49,7 +49,7 @@ class _ProfilePhotoSectionState extends State<ProfilePhotoSection> {
                         });
                       },
                     ),
-                    backgroundColor: AppColors.redAppColor,
+                    backgroundColor: AppColors.whiteAppColor,
                     borderWidth: 10.h,
                     radius: 70.h,
                   ),

@@ -38,7 +38,6 @@ class ProfileRepoImpl implements ProfileRepo {
       } else {
         clientMap.remove('image_path');
       }
-      clientMap['phone'] = int.parse(clientMap['phone']);
       await apiConsumer.post(
         EndPoints.editProfileEndPoint,
         data: clientMap,
