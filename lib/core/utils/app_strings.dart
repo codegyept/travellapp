@@ -401,6 +401,7 @@ Official Channels:
   static const paymentOptionsScreen = "/paymentOptionsScreen";
   static const paymentDetailsScreen = "/paymentDetailsScreen";
   static const profileScreen = "/profileScreen";
+  static const editProfileScreen = "/editProfileScreen";
   static const travelDetailsScreen = "/travelDetailsScreen";
   static const blogScreen = "/blogScreen";
   static const splashScreen = "/";

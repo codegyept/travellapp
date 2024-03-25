@@ -21,6 +21,7 @@ import 'package:rehlatyuae/features/our_blogs/presentation/views/our_blogs_scree
 import 'package:rehlatyuae/features/payment/presentation/views/payment_details_screen.dart';
 import 'package:rehlatyuae/features/payment/presentation/views/payment_options_screen.dart';
 import 'package:rehlatyuae/features/popular_experiences/presentation/views/popular_experiences_screen.dart';
+import 'package:rehlatyuae/features/profile/data/models/client_model.dart';
 import 'package:rehlatyuae/features/profile/presentation/views/edit_profile_screen.dart';
 import 'package:rehlatyuae/features/profile/presentation/views/profile_screen.dart';
 import 'package:rehlatyuae/features/splash_screen/presentation/views/onboarding.dart';
@@ -39,7 +40,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: AppStrings.allCategoriesScreen,
-        builder: (context, state) =>  AllCategoriesScreen(),
+        builder: (context, state) => AllCategoriesScreen(),
       ),
       GoRoute(
         path: AppStrings.categoryNameScreen,
@@ -108,8 +109,8 @@ abstract class AppRouter {
         builder: (context, state) => const ProfileScreen(),
       ),
       GoRoute(
-        path: "/editProfileScreen",
-        builder: (context, state) => const EditProfileScreen(),
+        path: AppStrings.editProfileScreen,
+        builder: (context, state) => EditProfileScreen(client: state.extra! as Client),
       ),
       GoRoute(
         path: AppStrings.travelDetailsScreen,
@@ -143,11 +144,11 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: AppStrings.verificationScreen,
-        builder: (context, state) => const VerificationScreen(),
+        builder: (context, state) => VerificationScreen(email: state.extra as String),
       ),
       GoRoute(
         path: AppStrings.updatePasswordScreen,
-        builder: (context, state) => const UpdatePasswordScreen(),
+        builder: (context, state) => UpdatePasswordScreen(token: state.extra as String),
       ),
       // GoRoute(
       //   path: "/register",
