@@ -9,9 +9,11 @@ import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_offers_item.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_row_title.dart';
 
-class BestOffersSection extends StatelessWidget {
-  const BestOffersSection({super.key});
+import '../../../../best_offers/data/models/best_offers_model.dart';
 
+class BestOffersSection extends StatelessWidget {
+  const BestOffersSection({super.key, required this.bestOffers});
+  final List<BestOffers>?bestOffers;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -31,6 +33,7 @@ class BestOffersSection extends StatelessWidget {
               itemBuilder: (context, index) {
                 return BestOffersItem(
                   width: 74.0.w,
+                  bestOffers: bestOffers?[index],
                 );
               },
               separatorBuilder: (context, index) {
