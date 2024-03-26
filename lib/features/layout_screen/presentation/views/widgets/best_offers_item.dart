@@ -3,18 +3,21 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/icon_button_with_white_background.dart';
 
+import '../../../../best_offers/data/models/best_offers_model.dart';
+
 class BestOffersItem extends StatelessWidget {
   const BestOffersItem({
     super.key,
     required this.width,
+    required this.bestOffers,
   });
 
   final double width;
-
+  final BestOffers?bestOffers;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150.0.h,
+      height: 170.0.h,
       width: 150.0.w,
       padding: EdgeInsetsDirectional.symmetric(
         horizontal: 8.0.w,
@@ -47,7 +50,7 @@ class BestOffersItem extends StatelessWidget {
                     borderRadius: BorderRadiusDirectional.circular(15.0.r),
                   ),
                   child: Image.asset(
-                    "assets/images/Rectangle 427.png",
+                    bestOffers?.imagePath ?? "",
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -76,7 +79,7 @@ class BestOffersItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "IMG Worlds of Adventure",
+                bestOffers?.name ??  "IMG Worlds of Adventure",
                   maxLines: 1,
                   style: Theme.of(context).textTheme.bodyMedium,
                   textAlign: TextAlign.justify,
@@ -113,10 +116,36 @@ class BestOffersItem extends StatelessWidget {
                 Row(
                   children: [
                     Text(
+                      "100",
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                    Container(
+                      width:65.0.w,
+                      height:20.0.h,
+                      margin: EdgeInsetsDirectional.symmetric(horizontal: 10.0.w),
+                      padding: EdgeInsetsDirectional.symmetric(horizontal:6.0.w,vertical: 1.3.h),
+                      decoration:BoxDecoration(
+                        color:AppColors.green,
+                        borderRadius:BorderRadius.circular(8.0.r),
+                      ),
+                      child: Text(
+                        "Save 45 %",
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 5.0.w,
+                ),
+                Row(
+                  children: [
+                    Text(
                       "48",
                       style: Theme.of(context).textTheme.titleSmall,
                       textAlign: TextAlign.justify,
                     ),
+                    SizedBox(width: 5.0.w,),
                     Text(
                       "/Person",
                       style: Theme.of(context).textTheme.headlineSmall,

@@ -1,8 +1,11 @@
-class EndPoints {
-  static String baseUrl = "https://rehlatiuae.com/api/v1/";
+class EndPoints
+{
+  static String baseUrl ="https://rehlatiuae.com/api/v1/";
   static String bestOffersEndPoint = "home/bestOffers";
+  static String blogsEndPoint = "home/blogs";
+  static String layoutEndPoint = "home";
 
-  // Profile Feature EndPoints
+// Profile Feature EndPoints
   static String getProfileEndPoint = "client/user-profile";
   static String editProfileEndPoint = "client/updateProfile";
   static String deleteAccountEndPoint = "client/deleteProfile";
@@ -10,5 +13,5 @@ class EndPoints {
   // Auth Feature EndPoints
   static String forgetPasswordEndPoint = "client/forgetPassword";
   static String verificationEmailEndPoint = "client/password/reset";
-  static String resetPasswordEndPoint = "client/confirm";
+  static String resetPasswordEndPoint = "client/password/confirm";
 }

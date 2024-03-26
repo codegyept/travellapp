@@ -14,7 +14,7 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/bes
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/best_trips_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_app_bar_title.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/reviews_section.dart';
-import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/search_text_feild.dart';
+import 'package:rehlatyuae/core/utils/search_text_feild.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/we_help_you_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/why_choose_us_section.dart';
 
@@ -62,7 +62,7 @@ class TopDestinationScreen extends StatelessWidget {
               const CustomSizedBox(),
               const AllTripsBody(),
               const CustomSizedBox(),
-              const BestOffersSection(),
+              const BestOffersSection(bestOffers: [],),
               const CustomSizedBox(),
               const BestTripsSection(),
               const CustomSizedBox(),
