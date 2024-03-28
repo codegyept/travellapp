@@ -1,8 +1,12 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import 'package:logger/logger.dart';
 import 'package:rehlatyuae/core/api/api_consumer.dart';
 import 'package:rehlatyuae/core/api/dio_consumer.dart';
 import 'package:rehlatyuae/features/best_offers/data/repositories/best_offers_repo_impl.dart';
+import '../../features/all_categories/data/repositories/category_repo_impl.dart';
+import '../../features/all_categories/domian/repositories/category_repo.dart';
+import '../../features/all_categories/presentation/blocs/categories_bloc.dart';
 import '../../features/auth/data/repositories/auth_repo_impl.dart';
 import '../../features/auth/domain/repositories/auth_repo.dart';
 import '../../features/auth/presentation/cubit/forget_password_cubit/forget_password_cubit.dart';
@@ -10,6 +14,9 @@ import '../../features/auth/presentation/cubit/update_password_cubit/update_pass
 import '../../features/auth/presentation/cubit/verification_email_cubit/verification_email_cubit.dart';
 import '../../features/best_offers/domain/repositories/best_offers_repo.dart';
 import '../../features/best_offers/presentation/cubits/best_offers_cubit.dart';
+import '../../features/best_trips/data/repositories/best_trips_repo_impl.dart';
+import '../../features/best_trips/domian/repositories/best_trips_repo.dart';
+import '../../features/best_trips/presentation/blocs/best_trips_bloc.dart';
 import '../../features/layout_screen/data/repositories/layout_repo_impl.dart';
 import '../../features/layout_screen/domian/repositories/layout_repo.dart';
 import '../../features/layout_screen/presentation/cubits/layout_cubit.dart';
@@ -25,6 +32,9 @@ final GetIt getIt = GetIt.instance;
 
 void setupInjector()
 {
+  getIt.registerLazySingleton<Logger>(
+        () =>Logger(),
+  );
   getIt.registerLazySingleton<ApiConsumer>(
         () =>
         DioConsumer(
@@ -35,6 +45,13 @@ void setupInjector()
   // repositories objects
   getIt.registerLazySingleton<BestOffersRepo>(
         () => BestOffersRepoImpl(apiConsumer: getIt.get<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<CategoryRepo>(
+        () => CategoryRepoImpl(apiConsumer: getIt.get<ApiConsumer>()),
+  );
+
+  getIt.registerLazySingleton<BestTripsRepo>(
+        () => BestTripsRepoImpl(apiConsumer: getIt.get<ApiConsumer>()),
   );
 
   getIt.registerLazySingleton<BlogsRepository>(() =>
@@ -54,6 +71,10 @@ void setupInjector()
   getIt.registerLazySingleton<AuthRepo>(
         () => AuthRepoImpl(apiConsumer: getIt.get<ApiConsumer>()),
   );
+
+
+
+
   // cubits
   getIt.registerFactory(() => BestOffersCubit(bestOffersRepo: getIt()));
 
@@ -70,4 +91,8 @@ void setupInjector()
   getIt.registerFactory(() => EditProfileCubit(profileRepo: getIt()));
 
   getIt.registerFactory(() => LayoutCubit(layoutRepository:getIt()));
+
+  getIt.registerFactory(() => CategoriesBloc(categoryRepo:getIt()));
+
+  getIt.registerFactory(() => BestTripsBloc(bestTripsRepo:getIt()));
 }

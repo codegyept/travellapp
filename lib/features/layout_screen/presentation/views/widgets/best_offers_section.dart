@@ -12,8 +12,8 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/cus
 import '../../../../best_offers/data/models/best_offers_model.dart';
 
 class BestOffersSection extends StatelessWidget {
-  const BestOffersSection({super.key, required this.bestOffers});
-  final List<BestOffers>?bestOffers;
+  const BestOffersSection({super.key, required this.bestOffers,});
+  final List<BestOffers>bestOffers;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,10 +30,12 @@ class BestOffersSection extends StatelessWidget {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               scrollDirection: Axis.vertical,
-              itemBuilder: (context, index) {
+              itemBuilder: (context, index)
+              {
                 return BestOffersItem(
                   width: 74.0.w,
-                  bestOffers: bestOffers?[index],
+                  bestOffers: bestOffers[index],
+                  // review:bestOffers[index].reviews != null? bestOffers[index].reviews![index] : [][index],
                 );
               },
               separatorBuilder: (context, index) {
@@ -41,18 +43,15 @@ class BestOffersSection extends StatelessWidget {
                   height: 10.0.h,
                 );
               },
-              itemCount: 3,
+              itemCount: bestOffers.length,
             ),
             Positioned(
-              bottom: 160,
+              bottom: 140,
               right: 0,
               child: Container(
                 width: 40.0.w,
                 height: 35.0.h,
                 decoration: BoxDecoration(
-                  // image:  DecorationImage(
-                  //   image: AssetImage(AppStrings.whatsUpLogo,),
-                  // ),
                   color: AppColors.green,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(8.0.r),

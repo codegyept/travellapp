@@ -18,7 +18,8 @@ import 'package:rehlatyuae/core/utils/search_text_feild.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/we_help_you_section.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/why_choose_us_section.dart';
 
-class TopDestinationScreen extends StatelessWidget {
+class TopDestinationScreen extends StatelessWidget
+{
   TopDestinationScreen({super.key});
 
   final TextEditingController _textEditingController = TextEditingController();
@@ -59,38 +60,56 @@ class TopDestinationScreen extends StatelessWidget {
               const Text(
                 AppStrings.topDestinationTitle,
               ),
-              const CustomSizedBox(),
-              const AllTripsBody(),
-              const CustomSizedBox(),
-              const BestOffersSection(bestOffers: [],),
-              const CustomSizedBox(),
-              const BestTripsSection(),
-              const CustomSizedBox(),
-              const PopularExperiencesSection(),
-              const CustomSizedBox(),
-              const WhyChooseUsSection(),
-              const CustomSizedBox(),
-              const WeHelpYouSection(),
-              CustomActionButton(
-                onTap: ()
-                {
-                  context.push(AppStrings.allTripsScreen);
-                },
-                text: AppStrings.actionButtonName,
-                height: 70.0.h,
-                width: double.infinity,
-                borderRadius: BorderRadius.circular(12.0.r),
-                backGroundColor: AppColors.orange,
-                style:Theme.of(context).textTheme.displayLarge,
-              ),
-              const CustomSizedBox(),
-              const BestOffersHorizontal(),
-              const CustomSizedBox(),
-              const ReviewsSection(),
+              const AllTripsBody(bestTripsScrollController: null,),
+              GeneralBottomHomeSection(),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class GeneralBottomHomeSection extends StatelessWidget
+{
+  const GeneralBottomHomeSection({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Column(
+      children: [
+        const CustomSizedBox(),
+
+        const CustomSizedBox(),
+        const BestOffersSection(bestOffers: [],),
+        const CustomSizedBox(),
+        const BestTripsSection(bestTrips: [],),
+        const CustomSizedBox(),
+        const PopularExperiencesSection(popularExperiences: [],),
+        const CustomSizedBox(),
+        const WhyChooseUsSection(),
+        const CustomSizedBox(),
+        const WeHelpYouSection(),
+        CustomActionButton(
+          onTap: ()
+          {
+            context.push(AppStrings.allTripsScreen);
+          },
+          text: AppStrings.actionButtonName,
+          height: 70.0.h,
+          width: double.infinity,
+          borderRadius: BorderRadius.circular(12.0.r),
+          backGroundColor: AppColors.orange,
+          style:Theme.of(context).textTheme.displayLarge,
+        ),
+        const CustomSizedBox(),
+        const BestOffersHorizontal(),
+        const CustomSizedBox(),
+        const ReviewsSection(reviews: [],),
+      ],
     );
   }
 }

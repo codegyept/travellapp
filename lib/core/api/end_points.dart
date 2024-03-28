@@ -4,6 +4,8 @@ class EndPoints
   static String bestOffersEndPoint = "home/bestOffers";
   static String blogsEndPoint = "home/blogs";
   static String layoutEndPoint = "home";
+  static String categoryEndPoint = "home/categories";
+  static String bestTripsEndPoint = "home/bestTrips";
 
 // Profile Feature EndPoints
   static String getProfileEndPoint = "client/user-profile";
