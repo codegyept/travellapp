@@ -5,11 +5,15 @@ import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/custom_row_title.dart';
 import 'package:rehlatyuae/features/popular_experiences/presentation/views/widgets/popular_experiences_contanier_item.dart';
 
-class PopularExperiencesSection extends StatelessWidget {
-  const PopularExperiencesSection({super.key});
+import '../../features/popular_experiences/data/models/popular_experiences_model.dart';
 
+
+class PopularExperiencesSection extends StatelessWidget {
+  const PopularExperiencesSection({super.key, required this.popularExperiences});
+  final List<PopularExperiences>?popularExperiences;
   @override
   Widget build(BuildContext context) {
+    // getIt<Logger>().w("Popular experiences ${popularExperiences?.length}");
     return Column(
       children: [
         CustomRowTitle(
@@ -20,18 +24,20 @@ class PopularExperiencesSection extends StatelessWidget {
           },
         ),
         SizedBox(
-          height:170.0.h,
+          height:190.0.h,
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              itemCount: 10,
+              itemCount: popularExperiences!.length,
               itemBuilder: (context, index) {
                 return PopularExperiencesContainerItem(
-                  width : 140.0.w,
-                  percentageSave: "Save 45 %",
-                  oldTripPrice: 100,
+                  width : 150.0.w,
+                  percentageSave:popularExperiences?[index].saving ?? "",
+                  oldTripPrice:popularExperiences?[index].beforePrice?? "",
+                  popularExperiences:popularExperiences?[index],
                 );
               },
-              separatorBuilder: (context, index) {
+              separatorBuilder: (context, index)
+              {
                 return SizedBox(
                   width: 5.0.w,
                 );

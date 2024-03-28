@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:logger/logger.dart';
 import 'package:rehlatyuae/core/utils/app_colors.dart';
 import 'package:rehlatyuae/core/utils/app_strings.dart';
 import 'package:rehlatyuae/core/utils/custom_button.dart';
@@ -21,7 +22,8 @@ import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/we_
 import 'package:rehlatyuae/features/layout_screen/presentation/views/widgets/why_choose_us_section.dart';
 import '../cubits/layout_cubit.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget
+{
   HomeScreen({super.key});
 
   final TextEditingController _textEditingController = TextEditingController();
@@ -39,7 +41,9 @@ class HomeScreen extends StatelessWidget {
             loading: () => const Center(
               child: CircularProgressIndicator(),
             ),
-            loaded: (layoutModel) {
+            loaded: (layoutModel)
+            {
+              getIt<Logger>().w("Popular experiences ${layoutModel.popularExperience?.length}");
               return Scaffold(
               body: Padding(
                 padding: EdgeInsets.symmetric(
@@ -65,19 +69,28 @@ class HomeScreen extends StatelessWidget {
                          bestOffers: layoutModel.bestOffers ?? [],
                        ),
                       const CustomSizedBox(),
-                      const BestTripsSection(),
+                       BestTripsSection(
+                        bestTrips: layoutModel.bestTrips ?? [],
+                      ),
                       const CustomSizedBox(),
-                      const PopularExperiencesSection(),
+                       PopularExperiencesSection(
+                        popularExperiences:layoutModel.popularExperience ?? [] ,
+                      ),
                       const CustomSizedBox(),
-                      const OurBlogSection(),
+                       OurBlogSection(
+                        blogs:layoutModel.blogs ?? [],
+                      ),
                       const CustomSizedBox(),
-                      const OurPartnerSection(),
+                       OurPartnerSection(
+                        ourPartners:layoutModel.ourPartners?? [],
+                      ),
                       const CustomSizedBox(),
                       const WhyChooseUsSection(),
                       const CustomSizedBox(),
                       const WeHelpYouSection(),
                       CustomActionButton(
-                        onTap: () {
+                        onTap: ()
+                        {
                           context.push(AppStrings.allTripsScreen);
                         },
                         text: AppStrings.actionButtonName,
@@ -85,12 +98,14 @@ class HomeScreen extends StatelessWidget {
                         width: double.infinity,
                         borderRadius: BorderRadius.circular(12.0.r),
                         backGroundColor: AppColors.orange,
-                        style: Theme.of(context).textTheme.displayLarge,
+                        style:Theme.of(context).textTheme.displayLarge,
                       ),
                       const CustomSizedBox(),
                       const BestOffersHorizontal(),
                       const CustomSizedBox(),
-                      const ReviewsSection(),
+                       ReviewsSection(
+                        reviews:layoutModel.reviews ?? [],
+                      ),
                     ],
                   ),
                 ),
@@ -98,7 +113,7 @@ class HomeScreen extends StatelessWidget {
             );
             },
             error: (errorMessage) => ErrorWidget(
-              errorMessage: errorMessage,
+              errorMessage
             ),
           );
         },
@@ -107,22 +122,3 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class ErrorWidget extends StatelessWidget
-{
-  const ErrorWidget({
-    super.key,
-    required this.errorMessage,
-  });
-
-  final String errorMessage;
-
-  @override
-  Widget build(BuildContext context)
-  {
-    return ScaffoldMessenger(
-      child: SnackBar(
-        content: Text(errorMessage,),
-      ),
-    );
-  }
-}

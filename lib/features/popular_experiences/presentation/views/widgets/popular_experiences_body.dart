@@ -17,6 +17,7 @@ class PopularExperiencesBody extends StatelessWidget
       ),
       itemBuilder: (context,index)=> PopularExperiencesContainerItem(
         width:140.w,
+        popularExperiences: null,
       ),
       itemCount:8,
       shrinkWrap:true,
